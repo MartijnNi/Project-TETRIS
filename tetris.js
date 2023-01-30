@@ -39,13 +39,13 @@ drawBoard();
 //the pieces and their colors
 
 const PIECES = [
-	[Z, "#ff6666"],
-	[S, "#66ff66"],
-	[T, "#66ffff"],
-	[O, "#6666ff"],
-	[L, "#B266ff"],
-	[I, "#ff66ff"],
-	[J, "#ff66b2"],
+	[Z, "#ff0000"],
+	[S, "#ff9900"],
+	[T, "#ffoooo"],
+	[O, "#00ff00"],
+	[L, "#00ffff"],
+	[I, "#0000ff"],
+	[J, "#ff00ff"],
 ];
 
 //initiate a piece
