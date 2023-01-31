@@ -41,7 +41,7 @@ drawBoard();
 const PIECES = [
 	[Z, "#ff0000"],
 	[S, "#ff9900"],
-	[T, "#ffoooo"],
+	[T, "#ff00bb"],
 	[O, "#00ff00"],
 	[L, "#00ffff"],
 	[I, "#0000ff"],
@@ -227,7 +227,7 @@ let gameOver = false;
 function drop(){
 	let now = Date.now();
 	let delta = now - dropStart;
-	if(delta > 100) {
+	if(delta > 1000) {
 		p.moveDown();
 		dropStart = Date.now();
 	}
@@ -237,6 +237,6 @@ function drop(){
 	
 }
 
-drop();
+drop()
 
 
