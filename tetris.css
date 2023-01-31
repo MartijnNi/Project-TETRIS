@@ -1,0 +1,12 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+  }
+
+#score {
+    display: inline-block;
+}
+.playerScore{
+    padding-top: 3rem;
+    font-size: 61px;
+    font-weight: bold;
+}
