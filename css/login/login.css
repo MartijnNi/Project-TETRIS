@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    z-index: 99;
+}
+
+body{
+    z-index: 100;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*Section login container - page 1*/
+
+.login-container{
+    z-index: 99;
+    width: auto;
+    height: 125vh;
+    background-image: url(/media/algemeen/wallpaper8bitdown.png);
+    background-size:cover;
+    background-position: center top;
+    display: flex;
+}
+
+
