@@ -6,23 +6,23 @@ body {
     align-items: center;
     margin: 0;
     background-color: black;
-}
+  }
 
-#game-board{
+  #game-board {
     background-color: #CCC;
-    width: 100vmin; /* makes sure the playing field is perfect square*/
+    width: 100vmin;
     height: 100vmin;
     display: grid;
+    grid-template-rows: repeat(21, 1fr);
     grid-template-columns: repeat(21, 1fr);
-    grid-template-rows: repeat(21, 1fr); 
-}
+  }
 
-.snake {
-    background-color:'#D7E3F9' ;
-    border: .25vmin;
-}
+  .snake {
+    background-color: hsl(200, 100%, 50%);
+    border: .25vmin solid black;
+  }
 
-.food{
-    background-color:'#FA5C98'; 
-    border: .25vmin
-}
+  .food {
+    background-color: hsl(50, 100%, 50%);
+    border: .25vmin solid black;
+  }
