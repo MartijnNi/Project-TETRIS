@@ -5,7 +5,7 @@ myaudio = document.getElementById("/tetrisAudio/03. A-Type Music (Korobeiniki).m
 
 const ROW = 20;
 const COL = (COLUMN = 10);
-const SQ = (squareSize = 20);
+const SQ = (squareSize = 30);
 const VACANT = "#2c2c2c" ; // kleur van de lege blokjes
 
 //teken het blok
@@ -108,10 +108,6 @@ Piece.prototype.hardDrop = function () {
 		p = randomPiece();
 		this.y++;
 		this.y++;
-	} else {
-		//lock in the piece and generate a new piece
-		this.lock();
-		p = randomPiece();
 	}
 };
 
@@ -210,8 +206,9 @@ Piece.prototype.lock = function () {
 			if (this.y + r < 0) {
 				//stop request animation frame]
 				gameOver = true;
-				break;
 				alert("Game Over! Jouw score is " + score + "");
+				refreshPage();
+				
 			}
 			//lock the piece
 			board[this.y + r][this.x + c] = this.color;
@@ -350,5 +347,21 @@ if (score < 1) {
 function refreshPage(){
     window.location.reload();
 }
+
+function showGameOver() {
+	cancelAnimationFrame(rAF);
+	gameOver = true;
+  
+	context.fillStyle = 'black';
+	context.globalAlpha = 0.75;
+	context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
+  
+	context.globalAlpha = 1;
+	context.fillStyle = 'white';
+	context.font = '36px monospace';
+	context.textAlign = 'center';
+	context.textBaseline = 'middle';
+	context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
+  }
 
 
