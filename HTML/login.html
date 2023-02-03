@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="/css/login/login.css">
     <link rel="stylesheet" href="../css/navfooter.css">
     <title>RetroGen</title>
@@ -24,10 +25,10 @@
 
     <div class="navbar-links">
         <ul>
-            <li><a href="#">Inloggen</a></li>
-            <li><a href="#">Account</a></li>
             <li><a href="#">Profiel</a></li>
-            <li><a href="#">Friends</a></li>
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Vrienden</a></li>
+            <li><a href="#">Inloggen</a></li>
         </ul>
     </div>
 </nav>
@@ -38,10 +39,11 @@
         <div class="flip-container">
             <div class="flipper" id="flipper">
                 <div class="front">
-                    <h1 class="title">Login</h1>
+                    <h1 class="title">Inloggen</h1>
                     <form>
                                 <input type="text" name="gebruikersnaamInlog" placeholder="Gebruikersnaam" />
-                                <input type="password" name="wachtwoordInlog" placeholder="Wachtwoord" />
+                                <input type="password" name="wachtwoordInlog" id="id_password" placeholder="Wachtwoord" />
+                                <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
                                 <input type="button" value="Login"/>
                     </form>
                     <a class="flipbutton" id="loginButton" href="#">Create my account →</a>
@@ -51,7 +53,7 @@
                     <h1 class="title">Register</h1>
                     <form>
                             <input type="text" name="gebruikersnaamRegistreren" placeholder="Gebruikersnaam" />
-                            <input type="password" name="wachtwoordRegistreren" placeholder="Wachtwoord" />
+                            <input type="password" id="id_password_register" name="wachtwoordRegistreren" placeholder="Wachtwoord" />
                             <input type="password" name="wachtwoordRegistrerenHerhalen" placeholder="Herhaal wachtwoord" />
                             <input type="button" value="Account maken!"/>
                     </form>
