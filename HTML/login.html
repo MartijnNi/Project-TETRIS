@@ -4,32 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/login/login.css">
-    <link rel="stylesheet" href="../css/templates/navfooter.css">
+    <link rel="stylesheet" href="../css/navfooter.css">
     <title>RetroGen</title>
 </head>
 <body>
+
 <!------------- Navbar -------------->
+
 <nav class="navbar">
-    <div class="brand-titel">RetroGen</div>
+    <div class="brand-titel"><h1>RetroGen</h1>
+    </div>
+
     <a href="#" class="toggle-button">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
     </a>
+
     <div class="navbar-links">
         <ul>
+            <li><a href="#">Inloggen</a></li>
+            <li><a href="#">Account</a></li>
             <li><a href="#">Profiel</a></li>
-            <li><a href="#">Profiel</a></li>
-            <li><a href="#">Profiel</a></li>
+            <li><a href="#">Friends</a></li>
         </ul>
     </div>
 </nav>
+
 <!----------- Navbar End ------------>
 
     <section class="login-container">
-        <h1></h1>
+        <div class="flip-container">
+            <div class="flipper" id="flipper">
+                <div class="front">
+                    <h1 class="title">Login</h1>
+                    <form>
+                                <input type="text" name="gebruikersnaamInlog" placeholder="Gebruikersnaam" />
+                                <input type="password" name="wachtwoordInlog" placeholder="Wachtwoord" />
+                                <input type="button" value="Login"/>
+                    </form>
+                    <a class="flipbutton" id="loginButton" href="#">Create my account →</a>
+                </div>
+                
+                <div class="back">
+                    <h1 class="title">Register</h1>
+                    <form>
+                            <input type="text" name="gebruikersnaamRegistreren" placeholder="Gebruikersnaam" />
+                            <input type="password" name="wachtwoordRegistreren" placeholder="Wachtwoord" />
+                            <input type="password" name="wachtwoordRegistrerenHerhalen" placeholder="Herhaal wachtwoord" />
+                            <input type="button" value="Account maken!"/>
+                    </form>
+                    <a class="flipbutton" id="registerButton" href="#">Login to my account →</a>
+                </div>
+            </div>
+            </div>
     </section>
 
 
@@ -53,10 +82,8 @@
 
 
 <!----------- Js ------------>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+<script src="/Js/navToggle.js"></script>
+<script src="/Js/Login/cardflip.js"></script>
+<!----------- Eind Js ------------>
 </body>
 </html>
