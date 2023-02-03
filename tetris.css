@@ -5,8 +5,28 @@
 #score {
     display: inline-block;
 }
+.buttonsFlexbox {
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+}
 .playerScore{
     padding-top: 3rem;
-    font-size: 61px;
+    font-size: 15px;
     font-weight: bold;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  canvas {
+    border: 1px solid white;
+  }
+  

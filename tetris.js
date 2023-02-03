@@ -1,11 +1,12 @@
 const cvs = document.getElementById("tetris");
 const ctx = cvs.getContext("2d");
 const scoreElement = document.getElementById("score");
+myaudio = document.getElementById("/tetrisAudio/03. A-Type Music (Korobeiniki).mp3");
 
 const ROW = 20;
 const COL = (COLUMN = 10);
-const SQ = (squareSize = 60);
-const VACANT = "WHITE"; // kleur van de lege blokjes
+const SQ = (squareSize = 20);
+const VACANT = "#2c2c2c" ; // kleur van de lege blokjes
 
 //teken het blok
 function drawSquare(x, y, color) {
@@ -40,21 +41,22 @@ drawBoard();
 //the pieces and their colors
 
 const PIECES = [
+	[I, "#00ffff"],
+	[O, "#ffff00"],
+	[T, "#800080"],
+	[S, "#00ff00"],
 	[Z, "#ff0000"],
-	[S, "#ff9900"],
-	[T, "#ff00bb"],
-	[O, "#00ff00"],
-	[L, "#00ffff"],
-	[I, "#0000ff"],
-	[J, "#ff00ff"],
+	[J, "#0000ff"],
+	[L, "#ff7f00"],
+	/*[U, "#ffffff"],*/
 ];
 
 //generate random piece
-function randomPiece(){
-	let r = randomN = Math.floor(Math.random() * PIECES.length) // 0-6
+function randomPiece() {
+	let r = (randomN = Math.floor(Math.random() * PIECES.length)); // 0-6
 	return new Piece(PIECES[r][0], PIECES[r][1]);
 }
- let p = randomPiece();
+let p = randomPiece();
 //the objext piece
 
 function Piece(tetromino, color) {
@@ -79,63 +81,86 @@ Piece.prototype.fill = function (color) {
 			}
 		}
 	}
-}
+};
 
 //draw a piece to the board
 
 Piece.prototype.draw = function () {
-	this.fill(this.color)
-}
+	this.fill(this.color);
+};
 
 //undraw piece
 
 Piece.prototype.unDraw = function () {
-	this.fill(VACANT)
-}
+	this.fill(VACANT);
+};
 
-//move down the piece
 
-Piece.prototype.moveDown = function() {
-	if (!this.collision(0,1,this.activeTetromino)){
+
+Piece.prototype.hardDrop = function () {
+	if (!this.collision(0, 1, this.activeTetromino)) {
 		this.unDraw();
+		do {
 		this.y++;
+		} while (!this.collision(0, 1, this.activeTetromino))
 		this.draw();
-	}else{
+		this.lock();
+		p = randomPiece();
+		this.y++;
+		this.y++;
+	} else {
 		//lock in the piece and generate a new piece
 		this.lock();
 		p = randomPiece();
-
 	}
-}
+};
+
+
+
+
+
+//move down the piece
+
+Piece.prototype.moveDown = function () {
+	if (!this.collision(0, 1, this.activeTetromino)) {
+		this.unDraw();
+		this.y++;
+		this.draw();
+	} else {
+		//lock in the piece and generate a new piece
+		this.lock();
+		p = randomPiece();
+	}
+};
 
 //move right function
-Piece.prototype.moveRight = function() {
-	if (!this.collision(1,0,this.activeTetromino)){
+Piece.prototype.moveRight = function () {
+	if (!this.collision(1, 0, this.activeTetromino)) {
 		this.unDraw();
 		this.x++;
 		this.draw();
-	}else{
+	} else {
 		//lock in the piece and generate a new piece
 	}
-}
+};
 
 //move right function
-Piece.prototype.moveLeft = function() {
-	if (!this.collision(-1,0,this.activeTetromino)){
+Piece.prototype.moveLeft = function () {
+	if (!this.collision(-1, 0, this.activeTetromino)) {
 		this.unDraw();
 		this.x--;
 		this.draw();
-	}else{
+	} else {
 		//lock in the piece and generate a new piece
 	}
-}
+};
 //rotate function
-Piece.prototype.rotate = function() {
-	let nextPattern = this.tetromino[(this.tetrominoN + 1)%this.tetromino.length]
+Piece.prototype.rotate = function () {
+	let nextPattern = this.tetromino[(this.tetrominoN + 1) % this.tetromino.length];
 	let kick = 0;
 
-	if (this.collision(0,0,nextPattern)){
-		if (this.x > COL/2){
+	if (this.collision(0, 0, nextPattern)) {
+		if (this.x > COL / 2) {
 			//right wall
 			kick = -1;
 		} else {
@@ -144,36 +169,37 @@ Piece.prototype.rotate = function() {
 		}
 	}
 
-	if (!this.collision(kick,0,nextPattern)){
+	if (!this.collision(kick, 0, nextPattern)) {
 		this.unDraw();
 		this.x += kick;
-		this.tetrominoN = (this.tetrominoN + 1)%this.tetromino.length; // (0+1)%4 = 1
-		this.activeTetromino = this.tetromino[this.tetrominoN]
+		this.tetrominoN = (this.tetrominoN + 1) % this.tetromino.length; // (0+1)%4 = 1
+		this.activeTetromino = this.tetromino[this.tetrominoN];
 		this.draw();
-	} 
-}
-
+	}
+};
 
 // control piece function
 
 document.addEventListener("keydown", CONTROL);
 
-function CONTROL(event){
-	if (event.keyCode == 37){
+function CONTROL(event) {
+	if (event.keyCode == 37) {
 		p.moveLeft();
-	}else if (event.keyCode == 38) {
+	} else if (event.keyCode == 38) {
 		p.rotate();
-	}else if (event.keyCode == 39) {
+	} else if (event.keyCode == 39) {
 		p.moveRight();
-	}else if (event.keyCode == 40) {
+	} else if (event.keyCode == 40) {
 		p.moveDown();
+	} else if (event.keyCode == 32) {
+		p.hardDrop();
+		
 	}
 }
 
-
-let score = 0
+let score = 0;
 //lock function
-Piece.prototype.lock = function(){
+Piece.prototype.lock = function () {
 	for (r = 0; r < this.activeTetromino.length; r++) {
 		for (c = 0; c < this.activeTetromino.length; c++) {
 			//we skip the vacant squares
@@ -181,52 +207,54 @@ Piece.prototype.lock = function(){
 				continue;
 			}
 			//pieces tolock on top = game over
-			if (this.y + r < 0){
-				alert ("Game Over!");
+			if (this.y + r < 0) {
 				//stop request animation frame]
 				gameOver = true;
 				break;
+				alert("Game Over! Jouw score is " + score + "");
 			}
 			//lock the piece
-			board[this.y+r][this.x+c]=this.color;
+			board[this.y + r][this.x + c] = this.color;
 		}
 	}
 	//remove full rows
-	for(r = 0; r < ROW; r++) {
-		let isRowFull =  true;
-		for (c = 0; c < COL; c++){
-			isRowFull = isRowFull && (board[r][c] != VACANT)
+
+
+	for (r = 0; r < ROW; r++) { //forloop to loop over all the rows of the board
+		let isRowFull = true; //new variable to true
+		for (c = 0; c < COL; c++) { // full loop to loop over the columns
+			isRowFull = isRowFull && board[r][c] != VACANT; //
 		}
-		if(isRowFull){
+		if (isRowFull) {
 			//if the row is full
-			//we move all the blocks down
-			for (y = r; y > 1; y--) {
-				for (c = 0; c < COL; c++){
-					board[y][c] = board[y-1][c]
+			//we move all the rows above it down
+			for (y = r; y > 1; y--) { 
+				for (c = 0; c < COL; c++) {
+					board[y][c] = board[y - 1][c];
 				}
 			}
 			//top row board[0][..] has no row above it
-			for (c = 0; c < COL; c++){
-				board[0][c] = VACANT
+			for (c = 0; c < COL; c++) {
+				board[0][c] = VACANT;
 			}
-			//increment the score
-			score += 10;
+			score += 1;
 		}
 	}
+	
 	//update the board
 	drawBoard();
 
 	//update the score
-	scoreElement.innerHTML =score;
-}
+	scoreElement.innerHTML = score;
+};
 
 //collision detection function
 
-Piece.prototype.collision = function(x,y,piece){
+Piece.prototype.collision = function (x, y, piece) {
 	for (r = 0; r < piece.length; r++) {
 		for (c = 0; c < piece.length; c++) {
 			//if square is empty, skip it
-			if(!piece[r][c]){
+			if (!piece[r][c]) {
 				continue;
 			}
 			//coordinates of piece after movement
@@ -234,39 +262,93 @@ Piece.prototype.collision = function(x,y,piece){
 			let newY = this.y + r + y;
 
 			//conditions
-			if(newX < 0 || newX >= COL || newY >= ROW) {
+			if (newX < 0 || newX >= COL || newY >= ROW) {
 				return true;
 			}
 			//skip newY
-			if (newY < 0){
+			if (newY < 0) {
 				continue;
 			}
 			//check if there is a locked piece on the board
-			if(board[newY][newX] != VACANT){
+			if (board[newY][newX] != VACANT) {
 				return true;
 			}
 		}
 	}
 	return false;
-}
+};
 
 //drop the piece every 1s
 
 let dropStart = Date.now();
 let gameOver = false;
-function drop(){
-	let now = Date.now();
-	let delta = now - dropStart;
-	if(delta > 1000) {
-		p.moveDown();
-		dropStart = Date.now();
+if (score < 1) {
+	function drop() {
+		let now = Date.now();
+		let delta = now - dropStart;
+		document.getElementById("tetrisAudio").play()
+		if (score >= 0) {
+			if (delta > 1000) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 5) {
+			if (delta > 850) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 10) {
+			if (delta > 700) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 15) {
+			if (delta > 550) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 20) {
+			if (delta > 400) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 25) {
+			if (delta > 250) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 30) {
+			if (delta > 200) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 35) {
+			if (delta > 150) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 40) {
+			if (delta > 100) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (!gameOver) {
+			requestAnimationFrame(drop);
+		}
 	}
-	if (!gameOver){
-		requestAnimationFrame(drop);
-	}
-	
 }
 
-drop()
+function refreshPage(){
+    window.location.reload();
+}
 
 
