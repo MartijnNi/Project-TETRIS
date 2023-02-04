@@ -1,48 +1,58 @@
-import { getInputDirection } from "./input.js";
+import { getInputDirection } from "./input.js"
 
-export const snake_speed = 5
+export const SNAKE_SPEED = 5
 const snakeBody = [{ x: 11, y: 11 }]
-let newSegment = 0
+let newSegments = 0
 
 export function update() {
-    addSegments()
-    const inputDirection = getInputDirection()
-    for (let i = snakeBody.length - 2; i >= 0; i--) {
-      snakeBody[i + 1] = { ...snakeBody[i] }
-    }
-  
-    snakeBody[0].x += inputDirection.x
-    snakeBody[0].y += inputDirection.y
+  addSegments()
+
+  const inputDirection = getInputDirection()
+  for (let i = snakeBody.length - 2; i >= 0; i--) {  //makes the tail follow the snake
+    snakeBody[i + 1] = { ...snakeBody[i] }
   }
 
-export function draw(gameBoard) {   //this creates the starting position of the snake and adds it as a div to the board
-    snakeBody.forEach(segment => {
-      const snakeElement = document.createElement('div')
-      snakeElement.style.gridRowStart = segment.x
-      snakeElement.style.gridColumnStart = segment.y
-      snakeElement.classList.add('snake')
-      gameBoard.appendChild(snakeElement)
-    })
-  }
-
-export function expandSnake(amount) { 
-newSegment += amount
+  snakeBody[0].x += inputDirection.x
+  snakeBody[0].y += inputDirection.y
 }
 
-export function onSnake(position) {
-  return snakeBody.some(segment => {
-    return equalPositions(segment, position) //* this will turn out as true
+export function draw(gameBoard) {
+  snakeBody.forEach(segment => {
+    const snakeElement = document.createElement('div')  //creates the snakehead on the board
+    snakeElement.style.gridRowStart = segment.y
+    snakeElement.style.gridColumnStart = segment.x
+    snakeElement.classList.add('snake')
+    gameBoard.appendChild(snakeElement)
   })
 }
- 
-function equalPositions(pos1, pos2) {         //if snake is on the food *
-  return pos1.x === pos2.x && pos1.y === pos2.y
+
+export function expandSnake(amount) {
+  newSegments += amount
 }
-  
+
+export function onSnake(position, { ignoreHead = false } = {}) {
+  return snakeBody.some((segment, index) => {
+    if (ignoreHead && index === 0) return false
+    return equalPositions(segment, position)
+  })
+}
+
+export function getSnakeHead() {
+  return snakeBody[0]
+}
+
+export function snakeIntersection() {            //if the snake touches him self he dies
+  return onSnake(snakeBody[0], { ignoreHead: true })
+}
+
+function equalPositions(pos1, pos2) {
+  return pos1.x === pos2.x && pos1.y === pos2.y  // looks if the snake is on the same position as the food 
+}
+
 function addSegments() {
-  for (let i = 0; i < newSegment; i++) {           //pushes a new segment to the back of the snake
-    snakeBody.push({ ...snakeBody[snakeBody.length - 1]})
+  for (let i = 0; i < newSegments; i++) {        //adds a new segment to the snake 
+    snakeBody.push({ ...snakeBody[snakeBody.length - 1] })
   }
 
-  newSegment = 0
+  newSegments = 0
 }
