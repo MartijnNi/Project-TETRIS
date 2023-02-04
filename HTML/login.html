@@ -40,21 +40,21 @@
             <div class="flipper" id="flipper">
                 <div class="front">
                     <h1 class="title">Inloggen</h1>
-                    <form>
+                    <form method="post" name="loginCard" action="registerenCard.php">
                                 <input type="text" name="gebruikersnaamInlog" placeholder="Gebruikersnaam" />
-                                <input type="password" name="wachtwoordInlog" id="id_password" placeholder="Wachtwoord" />
                                 <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
-                                <input type="button" value="Login"/>
+                                <input type="password" name="wachtwoordInlog" id="id_password" placeholder="Wachtwoord" />
+                                <input type="button" name="loginButton" value="Login"/>
                     </form>
                     <a class="flipbutton" id="loginButton" href="#">Create my account →</a>
                 </div>
                 
                 <div class="back">
                     <h1 class="title">Register</h1>
-                    <form>
+                    <form method="post" name="loginCard" action="registerenCard.php">
                             <input type="text" name="gebruikersnaamRegistreren" placeholder="Gebruikersnaam" />
-                            <input type="password" id="id_password_register" name="wachtwoordRegistreren" placeholder="Wachtwoord" />
-                            <input type="password" name="wachtwoordRegistrerenHerhalen" placeholder="Herhaal wachtwoord" />
+                            <input type="email" id="id_password_register" name="emailRegistreren" placeholder="email" />
+                            <input type="password" name="wachtwoordRegistreren" placeholder="Wachtwoord" />
                             <input type="button" value="Account maken!"/>
                     </form>
                     <a class="flipbutton" id="registerButton" href="#">Login to my account →</a>
