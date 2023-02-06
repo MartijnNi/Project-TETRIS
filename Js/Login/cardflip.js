@@ -23,6 +23,6 @@ const togglePassword = document.querySelector('#togglePassword');
     this.classList.toggle('fa-eye-slash');
 });
 
-
+  //Update
 
 
