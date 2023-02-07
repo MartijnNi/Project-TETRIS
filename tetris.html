@@ -12,6 +12,10 @@
 		</div>
 		<div class="boardFlexbox">
 		<canvas id="tetris" width="300" height="600"></canvas>
+		<div id="gameover-screen" class="screen" style="display:none">
+			<h1>Game over</h1>
+			<button id="restartTetris" onclick="drop()">Restart</button>
+		</div>
 		<div class="playerScore">
 			<p>Lines cleared:</p> 
 			<div id="score">0</div>

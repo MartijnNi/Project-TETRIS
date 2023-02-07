@@ -55,6 +55,7 @@ const PIECES = [
 function randomPiece() {
 	let r = (randomN = Math.floor(Math.random() * PIECES.length)); // 0-6
 	return new Piece(PIECES[r][0], PIECES[r][1]);
+	
 }
 let p = randomPiece();
 //the objext piece
@@ -206,14 +207,17 @@ Piece.prototype.lock = function () {
 			if (this.y + r < 0) {
 				//stop request animation frame]
 				gameOver = true;
-				alert("Game Over! Jouw score is " + score + "");
-				refreshPage();
-				
+				r = this.activeTetromino.length
+				break;
 			}
 			//lock the piece
 			board[this.y + r][this.x + c] = this.color;
 		}
 	}
+	if (gameOver == true) {
+			alert("test")
+			refreshPage()
+		}
 	//remove full rows
 
 
