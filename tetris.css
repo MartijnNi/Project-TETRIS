@@ -1,0 +1,51 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #D7E3F9;
+  }
+
+#score {
+    display: inline-block;
+}
+
+.boardFlexbox {
+  justify-content: center;
+  display: flex;
+}
+.buttonsFlexbox {
+  display: flex;
+  justify-content: center;
+}
+.playerScore{
+    padding-top: 3rem;
+    font-size: 15px;
+    font-weight: bold;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  canvas {
+    margin-top: 2rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+
+  .button startTetris {
+    color: red;
+  }
+  
+  .grid {
+    border: 2px solid red;
+    width: 80px;
+    height: 80px;
+  }
+
+  
+
+  
