@@ -21,7 +21,7 @@ body{
     z-index: 99;
     width: auto;
     height: 125vh;
-    background-image: url(/media/algemeen/wallpaper8bitdown.png);
+    background-image: url(/media/gamepage/bg-spcae.png);
     background-size:cover;
     background-position: center top;
     display: flex;
@@ -126,7 +126,7 @@ input{
         z-index: 99;
         width: auto;
         height: 125vh;
-        background-image: url(/media/algemeen/wallpaper8bitdown.png);
+        background-image: url(/media/gamepage/bg-spcae.png);
         background-size:cover;
         background-position: center top;
         display: flex;

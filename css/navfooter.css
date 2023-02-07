@@ -1,5 +1,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
     @import url('https://fonts.cdnfonts.com/css/super-legend-boy?styles=62384');
+*{
+    padding: 0;
+    margin: 0;
+    z-index: 99;
+}
 
 .body{
     margin: 0rem;
@@ -10,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items:auto;
-    background-color: #0a2330;
+    background-color: #191636;
     color: aliceblue;
 }
 
@@ -76,6 +81,7 @@
     background-color:aliceblue;
     border-radius: 10px;
 }
+
 
 /* menu shrink to hamburger menu */
 

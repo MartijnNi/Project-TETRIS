@@ -6,4 +6,3 @@ toggleButton.addEventListener('click', () => {
 })
 
 
-//update
