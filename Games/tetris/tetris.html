@@ -40,20 +40,21 @@
 			<button id="resetTetris" onclick="refreshPage()">Reset</button>
 		</div>
 		<div class="boardFlexbox">
-		<canvas id="tetris" width="300" height="600"></canvas>
-		<div id="gameover-screen" class="screen" style="display:none">
-			<h1>Game over</h1>
-			<button id="restartTetris" onclick="drop()">Restart</button>
+		    <canvas id="tetris" width="300" height="600"></canvas>
+		    <div id="gameover-screen" class="screen" style="display:none">
+			    <h1>Game over</h1>
+			    <button id="restartTetris" onclick="drop()">Restart</button>
 		</div>
 		<div class="playerScore">
-			<p>Lines cleared:</p> 
-			<div id="score">0</div>
+			    <p>Lines cleared:</p> 
+			    <div id="score">0</div>
 		</div>
 	</div>
+
+
+    <!----------- Js ------------>
 		<script src="tetrominoes.js"></script>
 		<script src="tetris.js"></script>
-		<audio id="tetrisAudio">
-            <source src="/tetrisAudio/03. A-Type Music (Korobeiniki).mp3" type="audio/mpeg">
-          </audio> 
+		<audio id="tetrisAudio"><source src="/tetrisAudio/03. A-Type Music (Korobeiniki).mp3" type="audio/mpeg"></audio> 
 	</body>
 </html>
