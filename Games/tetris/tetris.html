@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="tetris.css">
     <link rel="stylesheet" href="/css/navfooter.css">
     <title>RetroGen</title>
 	</head>
@@ -33,18 +33,16 @@
     </div>
 </nav>
 <!------------- Navbar End -------------->
-
-
 		<div class="buttonsFlexbox">
 			<button id="startTetris" onclick="drop()">Start</button>
 			<button id="resetTetris" onclick="refreshPage()">Reset</button>
 		</div>
 		<div class="boardFlexbox">
-		    <canvas id="tetris" width="300" height="600"></canvas>
-		    <div id="gameover-screen" class="screen" style="display:none">
-			    <h1>Game over</h1>
-			    <button id="restartTetris" onclick="drop()">Restart</button>
-		</div>
+            <canvas class="tetrisCanvas" id="tetris" width="300" height="600"></canvas>
+            <div id="game-over" class="screen">
+                <p>Game Over!</p>
+                <button id="btn" class="btn" onclick="refreshPage()">restart</button>
+            </div>
 		<div class="playerScore">
 			    <p>Lines cleared:</p> 
 			    <div id="score">0</div>
