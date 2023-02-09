@@ -56,7 +56,7 @@
 }
 
 .navbar-links a:hover{
-    background-color: #051117;
+    background-color: #25214b;
     border-radius: 0.5rem;
 }
 
@@ -85,20 +85,33 @@
 
 /* menu shrink to hamburger menu */
 
-@media (max-width: 700px){
+@media (max-width: 850px){
+    
+    .brand-titel h1{
+        font-family: 'Nabla', cursive;
+        float: left;
+        font-size: 1.9rem;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+        justify-content: flex-start;
+    }
+    
     .toggle-button{
         display: flex;
     }
 
     .navbar-links{
         display: none;
-        background-color: #0a2330;
+        width: auto;
+        background-color: #191636;
         border-radius: 0.5rem;
         padding: 1rem;
-        margin: 0%;
-        width: 25%;
-        padding-top: 5rem;
+        width: auto;
+        margin-top: 4rem;
         margin-right: 0rem;
+        border: rgb(0, 0, 0) solid 2px;
+        border-top:#191636 ;
+        float: right;
     }
 
     a.toggle-button{
@@ -112,19 +125,22 @@
     .navbar-links ul{
         width: 100%;
         flex-direction: column;
+        width: auto;
     }
     
     .navbar-links li {
         padding-left: 0rem;
+        margin: 0rem;
     }
     
     .navbar-links a{
         padding: 0.5rem;
+        margin: 0rem;
+
     }
     .navbar-links li a {
         width: 100%;
         text-align: center;
-        float:right;
     }
     
     .navbar-links.active {
@@ -132,4 +148,5 @@
         z-index: 100;
     }
 }
+
 

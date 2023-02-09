@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/super-legend-boy?styles=62384');
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 *{
     padding: 0;
@@ -12,7 +12,7 @@
 .titel-container{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 7rem;
+    margin-top: 4rem;
     width:fit-content;
 }
 
@@ -24,10 +24,60 @@
     font-weight: 100;
 }
 
+h2 {
+  color: whitesmoke;
+  text-align: center;
+  display: none;
+}
+
+h3 {
+  display: none;
+}
+
 .arrows {
+    margin-top: 2rem;
     color: white;
     font-size: 100px;
     text-align: center;
+}
+
+.arrows .arrow{
+ color: red;
+ text-shadow: 0px 0px 20px red; 
+}
+
+.arrows .arrow1{
+  color: orange;
+  text-shadow: 0px 0px 20px orange;
+ }
+
+ .arrows .arrow2{
+  color: yellow;
+  text-shadow: 0px 0px 20px yellow;
+ }
+
+
+ .span {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 /* carousel */
@@ -37,11 +87,13 @@
   }
   
   body {
-    background-image: url(/media/gamepage/1220359.jpg);
+    background-image: url(/media/gamepage/Synthwave.jpg);
+    background-color: black;
     height: 100vh;
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center top;
+    box-sizing: border-box;
   }
     
   .carousel_wrapper {
@@ -152,3 +204,82 @@
       transform: rotateY(0deg);
     }
   } 
+
+  @media (max-width: 850px){
+    .titel-container{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 4rem;
+      width:fit-content;
+  }
+  }
+
+
+  @media (max-width: 999px){
+
+    body {
+      background-image: url(/media/gamepage/Synthwave.jpg);
+      background-color: black;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center top;
+      box-sizing: border-box;
+    }
+
+    .slide {
+      display: none;
+      margin: 0;
+    }
+
+    .arrows{
+      display: none;
+      margin: 0;
+    }
+
+    .titel-container h1{
+      display: none;
+      margin: 0;
+    }
+
+    .titel-container h2 {
+      display:block;
+      z-index: 100;
+      text-align: center;
+      transition: 0.5s;
+      width: auto;
+      border: solid red 2px;
+    }
+
+    h2{
+      margin-left: auto;
+      margin-right: auto;
+      transition: 0.5s;
+      letter-spacing: 3px;
+      width: auto;
+    }
+    
+    .sugessties h3{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3rem;
+      transition: 0.5s;
+      width: auto;
+      border: solid red 2px;
+      
+    }
+
+    h3 {
+      display:flex;
+      font-size: 25px;
+      width: 80vh;
+      font-size:small;
+      letter-spacing: 3px;
+      transition: 0.5s;
+      text-align: center;
+      width: 26rem;
+      color: aliceblue;
+    }
+
+}
+
