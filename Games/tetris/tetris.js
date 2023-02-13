@@ -7,6 +7,10 @@ const ROW = 20;
 const COL = (COLUMN = 10);
 const SQ = (squareSize = 30);
 const VACANT = "#2c2c2c" ; // kleur van de lege blokjes
+var display = 0;
+var div = document.getElementById('game-over')
+let gameOver = false;
+
 
 //teken het blok
 function drawSquare(x, y, color) {
@@ -176,8 +180,10 @@ Piece.prototype.rotate = function () {
 };
 
 // control piece function
-
+function triggerKeys() {
 document.addEventListener("keydown", CONTROL);
+drop();
+}
 
 function CONTROL(event) {
 	if (event.keyCode == 37) {
@@ -208,16 +214,15 @@ Piece.prototype.lock = function () {
 				//stop request animation frame]
 				gameOver = true;
 				r = this.activeTetromino.length
-				break;
+				display=1
+				endScreen()
+				
 			}
 			//lock the piece
 			board[this.y + r][this.x + c] = this.color;
 		}
 	}
-	if (gameOver == true) {
-			alert("test")
-			refreshPage()
-		}
+
 	//remove full rows
 
 
@@ -282,7 +287,6 @@ Piece.prototype.collision = function (x, y, piece) {
 //drop the piece every 1s
 
 let dropStart = Date.now();
-let gameOver = false;
 if (score < 1) {
 	function drop() {
 		let now = Date.now();
@@ -366,6 +370,16 @@ function showGameOver() {
 	context.textAlign = 'center';
 	context.textBaseline = 'middle';
 	context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
+  }
+
+  function endScreen() {
+	if (display == 1) {
+		div.style.display = 'block';
+		display = 0;
+	} else {
+		div.style.display = 'none';
+		display = 1;
+	}
   }
 
 

@@ -1,42 +1,33 @@
 * {
-    font-family: 'Press Start 2P', cursive;
-    background-color: #D7E3F9;
-    margin: 0;
-    padding: 0;
-  }
   
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-#score {
-    display: inline-block;
 }
 
-.boardFlexbox {
-  justify-content: center;
+#game-over {
+  z-index: 110;
+  border: 2px solid rgb(18, 0, 62);
+  width: 300px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(138,32,150,1) 35%, rgba(32,24,62,1) 100%);
+  text-align:center; 
+  vertical-align: middle;
+  position: absolute;
+  display: none;
+  margin-left: 47rem;
+}
+
+.tetrisCanvas {
+  position: relative;
+  z-index: 100;
+  text-align:center; 
+  vertical-align: middle;
+  position: absolute;
+  margin-left: 47rem;
   display: flex;
 }
-.buttonsFlexbox {
-  display: flex;
-  justify-content: center;
+.screen p {
+  font-weight: 700;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 280px;
 }
-.playerScore{
-    padding-top: 3rem;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-
-  canvas {
-    margin-top: 2rem;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  }
-  
-
-
-  
-
-  
