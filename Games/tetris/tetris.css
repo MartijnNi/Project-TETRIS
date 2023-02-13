@@ -23,6 +23,7 @@
   position: absolute;
   margin-left: 47rem;
   display: flex;
+  border: solid red 2px;
 }
 .screen p {
   font-weight: 700;
