@@ -33,23 +33,44 @@
     </div>
 </nav>
 <!------------- Navbar End -------------->
-		<div class="buttonsFlexbox">
-			<button id="startTetris" onclick="triggerKeys()">Start</button>
-			<button id="resetTetris" onclick="refreshPage()">Reset</button>
-		</div>
-		<div class="boardFlexbox">
-            <canvas class="tetrisCanvas" id="tetris" width="300" height="600"></canvas>
-            <div id="game-over" class="screen">
-                <p>Game Over!</p>
+
+    <section class="page1">
+        
+        <div class="boardFlexbox">
+            <canvas class="tetrisCanvas" id="tetris" width="391" height="780">
+                <div class="content">
+                    <button id="startTetris" onclick="triggerKeys()">Start</button>
+                    <p>Lines cleared:</p>
+                    <div id="score">0</div>
+                </div>
+
+            </canvas>
+
+            <div class="containerButtonScore">
+                <div class="content">
+                    <button id="startTetris" onclick="triggerKeys()">Start</button>
+                    <p>Lines cleared:</p>
+                    <div id="score">0</div>
+                </div>
             </div>
-		<div class="playerScore">
-			    <p>Lines cleared:</p> 
-			    <div id="score">0</div>
-		</div>
-	</div>
+            
+            
+            <div id="game-over" class="screen">
+                <p>Try again!</p>
+                <button id="resetTetris" onclick="refreshPage()">Reset</button>
+            </div>
+        </div>
+        
+        
+
+    </section>
+
+
+
 
 
     <!----------- Js ------------>
+        <script src="/Js/navToggle.js"></script>
 		<script src="tetrominoes.js"></script>
 		<script src="tetris.js"></script>
 		<audio id="tetrisAudio"><source src="/tetrisAudio/03. A-Type Music (Korobeiniki).mp3" type="audio/mpeg"></audio> 

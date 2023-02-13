@@ -5,7 +5,7 @@ myaudio = document.getElementById("/tetrisAudio/03. A-Type Music (Korobeiniki).m
 
 const ROW = 20;
 const COL = (COLUMN = 10);
-const SQ = (squareSize = 30);
+const SQ = (squareSize = 39);
 const VACANT = "#2c2c2c" ; // kleur van de lege blokjes
 var display = 0;
 var div = document.getElementById('game-over')
