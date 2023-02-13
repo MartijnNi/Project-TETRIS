@@ -1,16 +1,33 @@
+* {
+  
+}
+
 #game-over {
   z-index: 110;
-  border: 2px solid red;
-  width: 200px;
-  height: 200px;
-  background-color: red;
+  border: 2px solid rgb(18, 0, 62);
+  width: 300px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(138,32,150,1) 35%, rgba(32,24,62,1) 100%);
   text-align:center; 
   vertical-align: middle;
   position: absolute;
-  display: none
+  display: none;
+  margin-left: 47rem;
 }
 
 .tetrisCanvas {
   position: relative;
   z-index: 100;
+  text-align:center; 
+  vertical-align: middle;
+  position: absolute;
+  margin-left: 47rem;
+  display: flex;
+}
+.screen p {
+  font-weight: 700;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 280px;
 }

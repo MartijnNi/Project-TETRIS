@@ -34,14 +34,13 @@
 </nav>
 <!------------- Navbar End -------------->
 		<div class="buttonsFlexbox">
-			<button id="startTetris" onclick="drop()">Start</button>
+			<button id="startTetris" onclick="triggerKeys()">Start</button>
 			<button id="resetTetris" onclick="refreshPage()">Reset</button>
 		</div>
 		<div class="boardFlexbox">
             <canvas class="tetrisCanvas" id="tetris" width="300" height="600"></canvas>
             <div id="game-over" class="screen">
                 <p>Game Over!</p>
-                <button id="btn" class="btn" onclick="refreshPage()">restart</button>
             </div>
 		<div class="playerScore">
 			    <p>Lines cleared:</p> 

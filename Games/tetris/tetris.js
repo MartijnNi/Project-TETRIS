@@ -180,8 +180,10 @@ Piece.prototype.rotate = function () {
 };
 
 // control piece function
-
+function triggerKeys() {
 document.addEventListener("keydown", CONTROL);
+drop();
+}
 
 function CONTROL(event) {
 	if (event.keyCode == 37) {
