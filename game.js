@@ -56,4 +56,6 @@ function endScreen() {
     display = 1
 }
 }
-
+  if (score == 440) {
+    alert(gewonnen)
+  }

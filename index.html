@@ -17,19 +17,20 @@
   }
 }
   </script>
-
-  <!-- <div id="start-screen" class= screen> 
-    <p>begin?</p>
-    <button id="btn" class="button" onclick="game_start()"></button>
-   </div> -->
-
-
+  
+  <div class="playerScore">
+    <p>Food Eaten:</p> 
+    <div class="score" id="score">0</div>
+</div>
   <div id="game-over" class="screen"> 
-   <p>game over</p> 
+   <p>game over {score} </p> 
+   <div class="score" id="score"></div>
    <button id="btn" class="button" onclick="game_restart()">restart</button>
   </div>
 
   <div id="game-board"></div>
+  
+
 
 </body>
 </html>
