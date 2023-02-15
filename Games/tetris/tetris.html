@@ -34,6 +34,14 @@
 </nav>
 <!------------- Navbar End -------------->
 
+    <div class="containerButtonScore">
+        <div class="content">
+            <button id="startTetris" onclick="triggerKeys()">Start</button>
+            <p>Lines cleared:</p>
+            <div class="score" id="score">0</div>
+        </div>
+    </div>
+
 
     <div class="boardFlexbox">
         <canvas class="tetrisCanvas" id="tetris" width="391" height="780">
@@ -42,14 +50,6 @@
 
         </canvas>
 
-        <div class="containerButtonScore">
-            <div class="content">
-                <button id="startTetris" onclick="triggerKeys()">Start</button>
-                <p>Lines cleared:</p>
-                <div id="score">0</div>
-            </div>
-        </div>
-        
         
         <div id="game-over" class="screen">
             <p>Try again!</p>

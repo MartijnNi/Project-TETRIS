@@ -17,17 +17,41 @@ body{
 }
 
 .containerButtonScore {
-  border: solid greenyellow 2px;
+  border: greenyellow 2px;
   height: 100vh;
-  padding-left: 33rem;
-  padding-top: 7.5rem;
+  padding-left: 40rem;
+  padding-top: 8.5rem;
 }
 
 .containerButtonScore .content {
   position:static;
-  border: solid rgb(38, 63, 0) 3px;
+  border:  rgb(38, 63, 0) 3px;
   width: fit-content;
-  margin:auto;
+  font-family: 'Super Legend Boy', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: whitesmoke;
+  height: 10rem;
+  width: 12rem;
+  margin: auto;
+  padding: 4rem;
+}
+
+
+.containerButtonScore button{
+  border-radius: 100rem;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  -webkit-box-shadow: 0px 0px 50px 33px rgba(255,255,255,0.61); 
+  box-shadow: 0px 0px 50px 33px rgba(255,255,255,0.61);
+  font-size: 30px;
+  font-family: 'Super Legend Boy', sans-serif;
+  font-weight: 100;
+  padding: 0.5rem;
+  width: 9rem;
+  margin-left: 0rem;
+  margin-bottom: 3rem;
+  background-color: whitesmoke;
 }
 
 #game-over {
