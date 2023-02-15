@@ -29,6 +29,16 @@ body {
     display: none;
   }
 
+  /* #game-start {
+    z-index: 20;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    text-align:center; 
+    vertical-align: middle;
+    position: absolute;
+  } */
+
   .snake {
     background-color: hsl(200, 100%, 50%);
     border: .25vmin solid black;
