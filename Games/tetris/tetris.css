@@ -18,14 +18,22 @@ body{
 
 .containerButtonScore {
   border: greenyellow 2px;
-  height: 100vh;
-  padding-left: 40rem;
-  padding-top: 8.5rem;
+  padding-left: 50rem;
+  padding-top: 30rem;
+}
+
+@media (max-height: 950px){
+  .containerButtonScore {
+    border: greenyellow 2px;
+    height: 100vh;
+    padding-left: 50rem;
+    padding-top: 20rem;
+  }
 }
 
 .containerButtonScore .content {
   position:static;
-  border:  rgb(38, 63, 0) 3px;
+  border: rgb(38, 63, 0) 3px;
   width: fit-content;
   font-family: 'Super Legend Boy', sans-serif;
   font-size: 18px;
@@ -34,7 +42,8 @@ body{
   height: 10rem;
   width: 12rem;
   margin: auto;
-  padding: 4rem;
+  padding: 5rem;
+  position: flex ;
 }
 
 
@@ -48,7 +57,7 @@ body{
   font-family: 'Super Legend Boy', sans-serif;
   font-weight: 100;
   padding: 0.5rem;
-  width: 9rem;
+  width: 11rem;
   margin-left: 0rem;
   margin-bottom: 3rem;
   background-color: whitesmoke;
@@ -56,7 +65,7 @@ body{
 
 #game-over {
   z-index: 101;
-  border: solid 1px rgba(138,32,150,1);
+  border: solid 1px rgb(150, 32, 32);
   width: 391px;
   height: 700px;
   background: radial-gradient(circle, rgba(138, 32, 150, 0.997) 35%, rgba(32,24,62,1) 100%);
@@ -96,22 +105,42 @@ body{
   text-decoration-line:underline;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 350px;
+  margin-top: 22rem;
 }
 
 
 .screen button {
   display: block;
-  margin-top: 3rem;
+  margin-top:4rem;
   margin-left: auto;
   margin-right: auto;
-  
+
+  border-radius: 1rem;
   background-color: blueviolet;
 
   font-family: 'Super Legend Boy', sans-serif;
   font-size: 2rem;
   text-align: center;
-  width: 9rem;
+  width: 10rem;
   height: 3rem;
 }
 
+/* Hufterproof geen spel bij klein scherm*/
+
+@media (max-width: 1000px){
+
+  .tetrisCanvas {
+    display: none;
+  }
+
+  .containerButtonScore{
+        display: none;
+    }
+  
+    .container{
+      height: 100vh;
+      width: 100%;
+      border: solid red 2px;
+    }
+
+}

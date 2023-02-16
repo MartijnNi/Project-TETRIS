@@ -248,7 +248,7 @@ h3 {
       text-align: center;
       transition: 0.5s;
       width: auto;
-      border: solid red 2px;
+      border: red 2px;
     }
 
     h2{
@@ -264,9 +264,10 @@ h3 {
       margin-right: auto;
       margin-top: 3rem;
       transition: 0.5s;
-      width: auto;
-      border: solid red 2px;
-      
+      justify-content: center;
+      width: fit-content;
+      border: red 2px;
+  
     }
 
     h3 {
