@@ -32,7 +32,7 @@ window.requestAnimationFrame(main)
 function update() {
   updateSnake()
   updateFood()
-  checkDeath()
+  checkDeath()  
 }
 
 function draw() {
