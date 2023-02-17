@@ -3,6 +3,8 @@ import { randomGridPosition } from './grid.js'
 
 let score = 0
 const scoreElement = document.getElementById("score");
+const scoreElement2 = document.getElementById("score2");
+ 
 let food = getRandomFoodPosition()
 const EXPANSION_RATE = 1
 
@@ -11,9 +13,14 @@ export function update() {
     expandSnake(EXPANSION_RATE)
     food = getRandomFoodPosition()
     score+=1
+
+    if(score == 440){
+      alert('zoek een leven')
+    }
   
   }
   scoreElement.innerHTML = score;
+  scoreElement2.innerHTML = score;
   
 }
 
