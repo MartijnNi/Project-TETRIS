@@ -1,6 +1,7 @@
 const cvs = document.getElementById("tetris");
 const ctx = cvs.getContext("2d");
 const scoreElement = document.getElementById("score");
+const scoreElement2 = document.getElementById("score2");
 myaudio = document.getElementById("/tetrisAudio/03. A-Type Music (Korobeiniki).mp3");
 
 const ROW = 20;
@@ -261,6 +262,7 @@ Piece.prototype.lock = function () {
 
 	//update the score
 	scoreElement.innerHTML = score;
+	scoreElement2.innerHTML = score;
 };
 
 //collision detection function
