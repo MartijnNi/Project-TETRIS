@@ -205,8 +205,7 @@ function CONTROL(event) {
 	} else if (event.keyCode == 40) {
 		p.moveDown();
 	} else if (event.keyCode == 32) {
-		p.hardDrop();
-		
+		p.hardDrop();	
 	}
 }
 
@@ -353,6 +352,18 @@ if (score < 1) {
 		}
 		if (score >= 40) {
 			if (delta > 100) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 70) {
+			if (delta > 75) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 100) {
+			if (delta > 20) {
 				p.moveDown();
 				dropStart = Date.now();
 			}
