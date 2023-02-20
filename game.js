@@ -6,7 +6,8 @@ let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById('game-board')
 var display = 0;
-var div = document.getElementById('game-over')
+var game_Over = document.getElementById('game-over')
+var start_game = document.getElementById('start-screen')
 
 function main(currentTime) {
   if (gameOver) {
@@ -32,7 +33,7 @@ window.requestAnimationFrame(main)
 function update() {
   updateSnake()
   updateFood()
-  checkDeath()  
+  checkDeath()
 }
 
 function draw() {
@@ -47,13 +48,19 @@ function checkDeath() {
 
 function endScreen() {
   if(display == 1) {
-    div.style.display = 'block';
+    game_Over.style.display = 'block';
     display = 0;
   }
   else
   {
-    div.style.display = 'none';
+    game_Over.display = 'none';
     display = 1
 }
+}
+
+function game_restart() {
+  document.getElementById(btn); {
+    window.location = '/'
+  }
 }
 
