@@ -24,10 +24,10 @@ function field() {
     if (green) {
         const elapsedTime = Date.now() - startTime;
         const restartButton = document.createElement("button");
-        restartButton.innerHTML = "Restart";
+        restartButton.innerHTML = "Retry";
         restartButton.classList.add("restart-button");
         document.getElementById("field").style.fontSize = "100%";
-        document.getElementById("field").innerHTML = `Je klikte in ${elapsedTime} millisecondes!<br><br>`;
+        document.getElementById("field").innerHTML = `You clicked in ${elapsedTime} milliseconds!<br><br>`;
         document.getElementById("field").appendChild(restartButton);
         restartButton.addEventListener("click", restart);
     }
