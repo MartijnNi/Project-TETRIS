@@ -19,27 +19,44 @@ body {
 }
 
 .field {
+    position: absolute;
     font-family: 'Super Legend Boy', sans-serif;
     border: 10px solid rgb(0, 0, 0);
     width: 50%;
+    min-height: 10%;
     left: 0;
     right: 0;
     margin: auto;
     margin-top: 5rem;
-    background-color: #ff0000;
+    background-color: #0004ff;
     text-align: center; 
     align-items: center;
     padding: 200px 0;  
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     user-select: none;
+    cursor: pointer;
 }
 
-.field:active {
-    background-color: #e60000;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;;
-    transition: 0,1s;
-    -webkit-transform: translateY(5px);
-    transform: translateY(5px);
+.button-54 {
+  font-family: 'Super Legend Boy', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
 }
 
 .reactText h1 {
@@ -49,3 +66,26 @@ body {
     margin-top: 5rem;
     color: rgb(0, 0, 0);
 }
+
+
+.restart-button {
+    font-family: 'Super Legend Boy', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  }
+  
+  .restart-button:active {
+    box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+  }
