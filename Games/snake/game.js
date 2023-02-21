@@ -57,10 +57,3 @@ function endScreen() {
     display = 1
 }
 }
-
-function game_restart() {
-  document.getElementById(btn); {
-    window.location = '/'
-  }
-}
-
