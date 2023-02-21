@@ -127,7 +127,7 @@ body{
 
 /* Hufterproof geen spel bij klein scherm*/
 
-@media (max-width: 1000px){
+@media (max-width: 1100px){
 
   .tetrisCanvas {
     display: none;
