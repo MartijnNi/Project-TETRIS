@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="tetris.css">
-    <link rel="stylesheet" href="/css/navfooter.css">
+    <link rel="stylesheet" href="/navbar/navfooter.css">
     <title>RetroGen</title>
 	</head>
 	<body>
@@ -14,7 +14,7 @@
 		<!------------- Navbar -------------->
 
 <nav class="navbar">
-    <div class="brand-titel"><a href="/HTML/games.html"><h1>RetroGen</h1></a>
+    <div class="brand-titel"><a href="/gamepage/games.html"><h1>RetroGen</h1></a>
     </div>
 
     <a href="#" class="toggle-button">
@@ -25,10 +25,10 @@
 
     <div class="navbar-links">
         <ul>
-            <li><a href="#">Profiel</a></li>
-            <li><a href="/HTML/games.html">Games</a></li>
+            <li><a href="/gamepage/games.html">Games</a></li>
             <li><a href="#">Vrienden</a></li>
-            <li><a href="/HTML/login.html">Inloggen</a></li>
+            <li><a href="#">Profiel</a></li>
+            <li><a href="#" style="color: rgb(200, 0, 0);">Uitloggen</a></li>
         </ul>
     </div>
 </nav>
@@ -52,15 +52,16 @@
 
         
         <div id="game-over" class="screen">
-            <p>Try again!</p>
-            <button id="resetTetris" onclick="refreshPage()">Reset</button>
+            <p>Game Over!<br><br>Score:</p>
+            <div id="score2">0</div>
+            <button id="resetTetris" onclick="refreshPage()">Retry</button>
         </div>
     </div>
 
 
 
     <!----------- Js ------------>
-        <script src="/Js/navToggle.js"></script>
+        <script src="/navbar/navToggle.js"></script>
 		<script src="tetrominoes.js"></script>
 		<script src="tetris.js"></script>
 		<audio id="tetrisAudio"><source src="/tetrisAudio/03. A-Type Music (Korobeiniki).mp3" type="audio/mpeg"></audio> 

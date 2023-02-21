@@ -18,23 +18,32 @@ body{
 
 .containerButtonScore {
   border: greenyellow 2px;
-  height: 100vh;
-  padding-left: 40rem;
-  padding-top: 8.5rem;
+  padding-left: 50rem;
+  padding-top: 30rem;
+}
+
+@media (max-height: 950px){
+  .containerButtonScore {
+    border: greenyellow 2px;
+    height: 100vh;
+    padding-left: 50rem;
+    padding-top: 20rem;
+  }
 }
 
 .containerButtonScore .content {
   position:static;
-  border:  rgb(38, 63, 0) 3px;
+  border: rgb(38, 63, 0) 3px;
   width: fit-content;
   font-family: 'Super Legend Boy', sans-serif;
   font-size: 18px;
   letter-spacing: 2px;
-  color: whitesmoke;
+  color: rgb(255, 255, 255);
   height: 10rem;
   width: 12rem;
   margin: auto;
-  padding: 4rem;
+  padding: 5rem;
+  position: flex ;
 }
 
 
@@ -48,21 +57,36 @@ body{
   font-family: 'Super Legend Boy', sans-serif;
   font-weight: 100;
   padding: 0.5rem;
-  width: 9rem;
+  width: 11rem;
   margin-left: 0rem;
   margin-bottom: 3rem;
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
+}
+.containerButtonScore button:hover{
+  border-radius: 100rem;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  -webkit-box-shadow: 0px 0px 50px 33px rgba(255,255,255,0.61); 
+  box-shadow: 0px 0px 50px 33px rgba(255,255,255,0.61);
+  font-size: 30px;
+  font-family: 'Super Legend Boy', sans-serif;
+  font-weight: 100;
+  padding: 0.5rem;
+  width: 11rem;
+  margin-left: 0rem;
+  margin-bottom: 3rem;
+  background-color: rgb(202, 202, 202);
 }
 
 #game-over {
   z-index: 101;
-  border: solid 1px rgba(138,32,150,1);
+  border: solid 1px rgb(150, 32, 32);
   width: 391px;
   height: 700px;
   background: radial-gradient(circle, rgba(138, 32, 150, 0.997) 35%, rgba(32,24,62,1) 100%);
   text-align:center; 
   position:fixed;
-  top: 10rem;
+  top: 6rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -78,7 +102,7 @@ body{
   display: flex;
   position: absolute;
   height: 700px;
-  top: 10rem;
+  top: 6rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -89,29 +113,69 @@ body{
   -moz-box-shadow: 0px 0px 44px 37px rgba(255,82,227,0.61);
   box-shadow: 0px 0px 44px 37px rgba(255,82,227,0.61);
 }
+
 .screen p {
   font-weight: 50;
   font-size: 35px;
   font-family: 'Super Legend Boy', sans-serif;
-  text-decoration-line:underline;
   display: inline-block;
   vertical-align: middle;
-  margin-top: 350px;
+  margin-top: 18rem;
+}
+#score2 {
+  font-weight: 50;
+  font-size: 35px;
+  font-family: 'Super Legend Boy', sans-serif;
 }
 
 
 .screen button {
   display: block;
-  margin-top: 3rem;
+  margin-top:4rem;
   margin-left: auto;
   margin-right: auto;
-  
+
+  border-radius: 1rem;
   background-color: blueviolet;
 
   font-family: 'Super Legend Boy', sans-serif;
   font-size: 2rem;
   text-align: center;
-  width: 9rem;
+  width: 10rem;
+  height: 3rem;
+}
+.screen button:hover {
+  display: block;
+  margin-top:4rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 1rem;
+  background-color: rgb(116, 37, 189);
+
+  font-family: 'Super Legend Boy', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  width: 10rem;
   height: 3rem;
 }
 
+/* Hufterproof geen spel bij klein scherm*/
+
+@media (max-width: 1100px){
+
+  .tetrisCanvas {
+    display: none;
+  }
+
+  .containerButtonScore{
+        display: none;
+    }
+  
+    .container{
+      height: 100vh;
+      width: 100%;
+      border: solid red 2px;
+    }
+
+}

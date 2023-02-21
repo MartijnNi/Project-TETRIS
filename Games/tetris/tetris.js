@@ -1,6 +1,7 @@
 const cvs = document.getElementById("tetris");
 const ctx = cvs.getContext("2d");
 const scoreElement = document.getElementById("score");
+const scoreElement2 = document.getElementById("score2");
 myaudio = document.getElementById("/tetrisAudio/03. A-Type Music (Korobeiniki).mp3");
 
 const ROW = 20;
@@ -45,6 +46,15 @@ drawBoard();
 //the pieces and their colors
 
 const PIECES = [
+	[I, "#B800FF"],
+	[O, "#ED00FF"],
+	[T, "#FF00B7"],
+	[S, "#FF4C79"],
+	[Z, "#FF964E"],
+	[J, "#FFCD47"],
+	[L, "#F9F871"],
+
+	/*	oude kleuren
 	[I, "#00ffff"],
 	[O, "#ffff00"],
 	[T, "#800080"],
@@ -52,7 +62,7 @@ const PIECES = [
 	[Z, "#ff0000"],
 	[J, "#0000ff"],
 	[L, "#ff7f00"],
-	/*[U, "#ffffff"],*/
+	*/
 ];
 
 //generate random piece
@@ -195,8 +205,7 @@ function CONTROL(event) {
 	} else if (event.keyCode == 40) {
 		p.moveDown();
 	} else if (event.keyCode == 32) {
-		p.hardDrop();
-		
+		p.hardDrop();	
 	}
 }
 
@@ -252,6 +261,7 @@ Piece.prototype.lock = function () {
 
 	//update the score
 	scoreElement.innerHTML = score;
+	scoreElement2.innerHTML = score;
 };
 
 //collision detection function
@@ -342,6 +352,18 @@ if (score < 1) {
 		}
 		if (score >= 40) {
 			if (delta > 100) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 70) {
+			if (delta > 75) {
+				p.moveDown();
+				dropStart = Date.now();
+			}
+		}
+		if (score >= 100) {
+			if (delta > 20) {
 				p.moveDown();
 				dropStart = Date.now();
 			}
