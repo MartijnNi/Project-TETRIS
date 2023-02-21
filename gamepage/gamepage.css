@@ -12,7 +12,7 @@
 .titel-container{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4rem;
+    margin-top: 6rem;
     width:fit-content;
 }
 
@@ -22,10 +22,13 @@
     font-size: 90px;
     font-family: 'Super Legend Boy', sans-serif;
     font-weight: 100;
+    text-shadow: rgba(209, 209, 209, 0.7) 6px 0px 0px;
+
 }
 
 h2 {
   color: whitesmoke;
+  text-shadow: rgba(209, 209, 209, 0.7) 2px 0px 0px;
   text-align: center;
   display: none;
 }
@@ -33,29 +36,6 @@ h2 {
 h3 {
   display: none;
 }
-
-.arrows {
-    margin-top: 2rem;
-    color: white;
-    font-size: 100px;
-    text-align: center;
-}
-
-.arrows .arrow{
- color: red;
- text-shadow: 0px 0px 20px red; 
-}
-
-.arrows .arrow1{
-  color: orange;
-  text-shadow: 0px 0px 20px orange;
- }
-
- .arrows .arrow2{
-  color: yellow;
-  text-shadow: 0px 0px 20px yellow;
- }
-
 
  .span {
   position: relative;
@@ -101,7 +81,7 @@ h3 {
     width: 320px;
     margin-left:auto;
     margin-right: auto;
-    margin-top: 1rem;
+    margin-top: 7rem;
     perspective: 1000px;
   }
   
