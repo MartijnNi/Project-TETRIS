@@ -78,12 +78,11 @@ body {
     background: url("snakehoofd-removebg-preview.png");
     background-size: cover;
     transition: 1s;
-    /*transform: rotate(90deg);*/
 }
 
-.snakeBody{
+segment{
   transition: 1s;
-  background-color: black;
+  background-image: url("circle.png");
   z-index: 2;
 }
 
