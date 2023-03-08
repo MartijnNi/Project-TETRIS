@@ -7,7 +7,6 @@ let gameOver = false
 const gameBoard = document.getElementById('game-board')
 var display = 0;
 var game_Over = document.getElementById('game-over')
-var start_game = document.getElementById('start-screen')
 
 function main(currentTime) {
   if (gameOver) {
