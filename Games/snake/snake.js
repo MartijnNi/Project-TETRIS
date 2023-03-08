@@ -64,12 +64,12 @@ function rotate(segment, index) {
   const snakePos = getInputDirection();
   const snakeElement = document.getElementById(`snake-${index}`);
   if (snakePos.x === 0 && snakePos.y === -1) {
-    snakeElement.style.transform = 'rotate(180deg)';
+    snakeElement.style.transform = 'rotate(0deg)';
   } else if (snakePos.x === 0 && snakePos.y === 1) {
     snakeElement.style.transform = 'rotate(0deg)';
   } else if (snakePos.x === -1 && snakePos.y === 0) {
-    snakeElement.style.transform = 'rotate(90deg)';
+    snakeElement.style.transform = 'rotate(0deg)';
   } else if (snakePos.x === 1 && snakePos.y === 0) {
-    snakeElement.style.transform = 'rotate(270deg)';
+    snakeElement.style.transform = 'rotate(0deg)';
   }
 }

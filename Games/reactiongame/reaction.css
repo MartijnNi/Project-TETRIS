@@ -1,10 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/super-legend-boy?styles=62384');
 
 
-* {
-    
-}
-
 body {
     background-image: url(/Games/reactiongame/reactBackground.jpg);
     z-index: 99;
@@ -28,7 +24,7 @@ body {
     right: 0;
     margin: auto;
     margin-top: 5rem;
-    background-color: #5e60bd;
+    background-color: #0004ff;
     text-align: center; 
     align-items: center;
     padding: 200px 0;  
