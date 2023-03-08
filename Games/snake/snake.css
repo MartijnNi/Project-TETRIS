@@ -11,7 +11,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	background-color: black;
-	background-image: url(/Games/snake/snakebackground.jpg);
+	background-image: url(/Games/snake/pandabackground.png);
 	background-size: cover;
 	background-position: center;
 }
@@ -30,19 +30,20 @@ body {
 }
 
 .playerScore p {
-	color: white;
+	color: rgb(255, 255, 255);
 	font-size: 35px;
 }
 
 .score {
 	text-align: center;
-	color: aqua;
+	color: rgb(0, 255, 51);
 	font-size: 35px;
 }
 
 #game-board {
-	background-color: #033c25fb;
+	background-color: #002f1cfb;
 	box-shadow: 0px 0px 100px 23px #067649f7;
+  opacity: 75%;
 	width: 70vmin;
 	height: 70vmin;
 	top: 0rem;
@@ -62,17 +63,61 @@ body {
 	z-index: 101;
 	width: 300px;
 	height: 300px;
-	top: 5rem;
+	top: 8rem;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	background-color: rgb(208, 160, 160);
+	background: url("/Games/snake/gameoversnake.png");
 	text-align: center;
 	vertical-align: middle;
 	position: absolute;
 	display: none;
+  box-shadow: rgb(2, 124, 0) 0px 22px 70px 4px;
+  border-radius: 5%;
 }
+
+.screen p {
+  padding-top: 1rem;
+	font-family: "Super Legend Boy", sans-serif;
+  color: white;
+}
+.screen h1 {
+  padding-top: 9rem;
+	font-family: "Super Legend Boy", sans-serif;
+  color: white;
+}
+.score2 {
+	font-family: "Super Legend Boy", sans-serif;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+ .restartButton {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  padding: 7px 16px;
+  min-height: 36px;
+  min-width: 36px;
+  color: #ffffff;
+  background: #008060;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+ }
+ .restartButton:hover {
+     background: #006e52;
+ }
+
+ .diffFlexbox {
+  display: flex;
+ }
+ .diffFlexbox slow normal fast {
+
+ }
 
 .snake {
 	background: url("HOMOPANDA.png");

@@ -39,18 +39,19 @@
 <div id="img" src="snakehoofd-removebg-preview.png"></div>
 
 <div class="playerScore">
-  <p>Food Eaten:</p> 
+  <p>Bamboo Eaten:</p> 
   <div id="score" class="score"> 0 </div>
 </div>
 
 <div class="game-board-canvas" id="game-board"></div>
-
   <div id="game-over" class="screen"> 
-    <p> points earned </p>
+    <h1>Game Over!</h1>
+    <p>Points earned: </p>
     
-  <div id="score2" class="score2"> 0 </div> 
-  <button id="btn" class="button" onclick="game_restart()">restart</button>
+  <div id="score2" class="score2"> 0 <br></div> 
+  <button id="btn" class="restartButton" onclick="game_restart()">Restart</button>
   </div>
+
 
 
 <!----------- Js ------------>
@@ -59,6 +60,7 @@
     window.location.reload();
   }
 </script>
+
 
 
 <script src="/navbar/navToggle.js"></script>
