@@ -75,9 +75,9 @@ body {
 }
 
 .snake {
-    background: url("snakehoofd-removebg-preview.png");
+    background: url("panda-removebg-preview.png");
     background-size: cover;
-    transition: 1s;
+    transition: 0s;
     /*transform: rotate(90deg);*/
 }
 

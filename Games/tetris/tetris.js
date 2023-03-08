@@ -53,6 +53,7 @@ const PIECES = [
 	[Z, "#FF964E"],
 	[J, "#FFCD47"],
 	[L, "#F9F871"],
+	[B, "#ffffff"]
 
 	/*	oude kleuren
 	[I, "#00ffff"],
