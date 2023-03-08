@@ -7,11 +7,10 @@ myaudio = document.getElementById("/tetrisAudio/03. A-Type Music (Korobeiniki).m
 const ROW = 20;
 const COL = (COLUMN = 10);
 const SQ = (squareSize = 39);
-const VACANT = "#2c2c2c" ; // kleur van de lege blokjes
+const VACANT = "#2c2c2c"; // kleur van de lege blokjes
 var display = 0;
-var div = document.getElementById('game-over')
+var div = document.getElementById("game-over");
 let gameOver = false;
-
 
 //teken het blok
 function drawSquare(x, y, color) {
@@ -53,7 +52,6 @@ const PIECES = [
 	[Z, "#FF964E"],
 	[J, "#FFCD47"],
 	[L, "#F9F871"],
-	[B, "#ffffff"]
 
 	/*	oude kleuren
 	[I, "#00ffff"],
@@ -70,7 +68,6 @@ const PIECES = [
 function randomPiece() {
 	let r = (randomN = Math.floor(Math.random() * PIECES.length)); // 0-6
 	return new Piece(PIECES[r][0], PIECES[r][1]);
-	
 }
 let p = randomPiece();
 //the objext piece
@@ -111,14 +108,12 @@ Piece.prototype.unDraw = function () {
 	this.fill(VACANT);
 };
 
-
-
 Piece.prototype.hardDrop = function () {
 	if (!this.collision(0, 1, this.activeTetromino)) {
 		this.unDraw();
 		do {
-		this.y++;
-		} while (!this.collision(0, 1, this.activeTetromino))
+			this.y++;
+		} while (!this.collision(0, 1, this.activeTetromino));
 		this.draw();
 		this.lock();
 		p = randomPiece();
@@ -126,10 +121,6 @@ Piece.prototype.hardDrop = function () {
 		this.y++;
 	}
 };
-
-
-
-
 
 //move down the piece
 
@@ -192,8 +183,8 @@ Piece.prototype.rotate = function () {
 
 // control piece function
 function triggerKeys() {
-document.addEventListener("keydown", CONTROL);
-drop();
+	document.addEventListener("keydown", CONTROL);
+	drop();
 }
 
 function CONTROL(event) {
@@ -206,7 +197,7 @@ function CONTROL(event) {
 	} else if (event.keyCode == 40) {
 		p.moveDown();
 	} else if (event.keyCode == 32) {
-		p.hardDrop();	
+		p.hardDrop();
 	}
 }
 
@@ -223,10 +214,9 @@ Piece.prototype.lock = function () {
 			if (this.y + r < 0) {
 				//stop request animation frame]
 				gameOver = true;
-				r = this.activeTetromino.length
-				display=1
-				endScreen()
-				
+				r = this.activeTetromino.length;
+				display = 1;
+				endScreen();
 			}
 			//lock the piece
 			board[this.y + r][this.x + c] = this.color;
@@ -235,16 +225,17 @@ Piece.prototype.lock = function () {
 
 	//remove full rows
 
-
-	for (r = 0; r < ROW; r++) { //forloop to loop over all the rows of the board
+	for (r = 0; r < ROW; r++) {
+		//forloop to loop over all the rows of the board
 		let isRowFull = true; //new variable to true
-		for (c = 0; c < COL; c++) { // full loop to loop over the columns
+		for (c = 0; c < COL; c++) {
+			// full loop to loop over the columns
 			isRowFull = isRowFull && board[r][c] != VACANT; //
 		}
 		if (isRowFull) {
 			//if the row is full
 			//we move all the rows above it down
-			for (y = r; y > 1; y--) { 
+			for (y = r; y > 1; y--) {
 				for (c = 0; c < COL; c++) {
 					board[y][c] = board[y - 1][c];
 				}
@@ -256,7 +247,7 @@ Piece.prototype.lock = function () {
 			score += 1;
 		}
 	}
-	
+
 	//update the board
 	drawBoard();
 
@@ -302,7 +293,7 @@ if (score < 1) {
 	function drop() {
 		let now = Date.now();
 		let delta = now - dropStart;
-		document.getElementById("tetrisAudio").play()
+		document.getElementById("tetrisAudio").play();
 		if (score >= 0) {
 			if (delta > 1000) {
 				p.moveDown();
@@ -375,34 +366,32 @@ if (score < 1) {
 	}
 }
 
-function refreshPage(){
-    window.location.reload();
+function refreshPage() {
+	window.location.reload();
 }
 
 function showGameOver() {
 	cancelAnimationFrame(rAF);
 	gameOver = true;
-  
-	context.fillStyle = 'black';
+
+	context.fillStyle = "black";
 	context.globalAlpha = 0.75;
 	context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
-  
-	context.globalAlpha = 1;
-	context.fillStyle = 'white';
-	context.font = '36px monospace';
-	context.textAlign = 'center';
-	context.textBaseline = 'middle';
-	context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
-  }
 
-  function endScreen() {
+	context.globalAlpha = 1;
+	context.fillStyle = "white";
+	context.font = "36px monospace";
+	context.textAlign = "center";
+	context.textBaseline = "middle";
+	context.fillText("GAME OVER!", canvas.width / 2, canvas.height / 2);
+}
+
+function endScreen() {
 	if (display == 1) {
-		div.style.display = 'block';
+		div.style.display = "block";
 		display = 0;
 	} else {
-		div.style.display = 'none';
+		div.style.display = "none";
 		display = 1;
 	}
-  }
-
-
+}
