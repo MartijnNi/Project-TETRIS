@@ -1,4 +1,4 @@
-import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection} from './snake.js'
+import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection, setSnakeSpeed} from './snake.js'
 import { update as updateFood, draw as drawFood } from './food.js'
 import { outsideGrid } from './grid.js'
 
@@ -8,6 +8,11 @@ const gameBoard = document.getElementById('game-board')
 var display = 0;
 var game_Over = document.getElementById('game-over')
 var start_game = document.getElementById('start-screen')
+//setSnakeSpeed()
+
+
+const element = document.getElementById("myBtn");
+element.addEventListener("click", setSnakeSpeed);
 
 function main(currentTime) {
   if (gameOver) {

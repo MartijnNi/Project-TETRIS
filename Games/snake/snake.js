@@ -1,7 +1,7 @@
 import { getInputDirection, snakePos} from "./input.js"
 const snake = document.getElementById("snake");
 
-export const SNAKE_SPEED = 8
+export let SNAKE_SPEED = 8
 const snakeBody = [{ x: 11, y: 11 }]
 let newSegments = 0
 let inputDirection = { x: 0, y: 0 }
@@ -42,6 +42,11 @@ export function onSnake(position, { ignoreHead = false } = {}) {
 
 export function getSnakeHead() {
   return snakeBody[0]
+}
+
+
+export function setSnakeSpeed(){
+  SNAKE_SPEED = 80
 }
 
 export function snakeIntersection() {            //if the snake touches him self he dies
