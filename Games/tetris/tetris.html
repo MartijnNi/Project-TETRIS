@@ -1,69 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="tetris.css">
-    <link rel="stylesheet" href="/navbar/navfooter.css">
-    <title>RetroGen</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+		<link rel="stylesheet" href="tetris.css" />
+		<link rel="stylesheet" href="/navbar/navfooter.css" />
+		<title>RetroGen</title>
 	</head>
 	<body>
-
 		<!------------- Navbar -------------->
 
-<nav class="navbar">
-    <div class="brand-titel"><a href="/gamepage/games.html"><h1>RetroGen</h1></a>
-    </div>
+		<nav class="navbar">
+			<div class="brand-titel">
+				<a href="/gamepage/games.html"><h1>RetroGen</h1></a>
+			</div>
 
-    <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </a>
+			<a href="#" class="toggle-button">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</a>
 
-    <div class="navbar-links">
-        <ul>
-            <li><a href="/gamepage/games.html">Games</a></li>
-            <li><a href="#">Vrienden</a></li>
-            <li><a href="#">Profiel</a></li>
-            <li><a href="#" style="color: rgb(200, 0, 0);">Uitloggen</a></li>
-        </ul>
-    </div>
-</nav>
-<!------------- Navbar End -------------->
+			<div class="navbar-links">
+				<ul>
+					<li><a href="/gamepage/games.html">Games</a></li>
+					<li><a href="#">Vrienden</a></li>
+					<li><a href="#">Profiel</a></li>
+					<li><a href="#" style="color: rgb(200, 0, 0)">Uitloggen</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!------------- Navbar End -------------->
 
-    <div class="containerButtonScore">
-        <div class="content">
-            <button id="startTetris" onclick="triggerKeys()">Start</button>
-            <p>Lines cleared:</p>
-            <div class="score" id="score">0</div>
-        </div>
-    </div>
+		<div class="containerButtonScore">
+			<div class="content">
+				<button id="startTetris" onclick="triggerKeys()">Start</button>
+				<p>Lines cleared:</p>
+				<div class="score" id="score">0</div>
+			</div>
+		</div>
 
+		<div class="boardFlexbox">
+			<canvas class="blockDisplay" id="nextBlockDisplay" width="196" height="118"></canvas>
+			<canvas class="tetrisCanvas" id="tetris" width="391" height="780">
+				<div class="content"></div>
+			</canvas>
 
-    <div class="boardFlexbox">
-        <canvas class="tetrisCanvas" id="tetris" width="391" height="780">
-            <div class="content">
-            </div>
+			<div id="game-over" class="screen">
+				<p>Game Over!<br /><br />Score:</p>
+				<div id="score2">0</div>
+				<button id="resetTetris" onclick="refreshPage()">Retry</button>
+			</div>
+		</div>
 
-        </canvas>
-
-        
-        <div id="game-over" class="screen">
-            <p>Game Over!<br><br>Score:</p>
-            <div id="score2">0</div>
-            <button id="resetTetris" onclick="refreshPage()">Retry</button>
-        </div>
-    </div>
-
-
-
-    <!----------- Js ------------>
-        <script src="/navbar/navToggle.js"></script>
+		<!----------- Js ------------>
+		<script src="/navbar/navToggle.js"></script>
 		<script src="tetrominoes.js"></script>
 		<script src="tetris.js"></script>
-		<audio id="tetrisAudio"><source src="/tetrisAudio/03. A-Type Music (Korobeiniki).mp3" type="audio/mpeg"></audio> 
+		<audio id="tetrisAudio"><source src="/tetrisAudio/03. A-Type Music (Korobeiniki).mp3" type="audio/mpeg" /></audio>
 	</body>
 </html>

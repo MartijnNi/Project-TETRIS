@@ -1,16 +1,22 @@
 const cvs = document.getElementById("tetris");
 const ctx = cvs.getContext("2d");
+const cvs2 = document.getElementById("nextBlockDisplay");
+const ctx2 = cvs2.getContext("2d");
 const scoreElement = document.getElementById("score");
 const scoreElement2 = document.getElementById("score2");
 myaudio = document.getElementById("/tetrisAudio/03. A-Type Music (Korobeiniki).mp3");
 
+const displayRows = 6;
+const displayCols = 10;
 const ROW = 20;
 const COL = (COLUMN = 10);
 const SQ = (squareSize = 39);
+const SQDisplay = 20;
 const VACANT = "#2c2c2c"; // kleur van de lege blokjes
 var display = 0;
 var div = document.getElementById("game-over");
 let gameOver = false;
+let gameStarted = false;
 
 //teken het blok
 function drawSquare(x, y, color) {
@@ -20,6 +26,42 @@ function drawSquare(x, y, color) {
 	ctx.strokeStyle = "BLACK";
 	ctx.strokeRect(x * SQ, y * SQ, SQ, SQ);
 }
+
+function drawDisplaySquare(x, y, color) {
+	ctx2.fillStyle = color;
+	ctx2.fillRect(x * SQDisplay, y * SQDisplay, SQ, SQ);
+	//ctx2.fillRect(x * SQDisplay + SQDisplay, y * SQDisplay, SQDisplay, SQDisplay);
+	//ctx2.fillRect(x * SQDisplay, y * SQDisplay + SQDisplay, SQDisplay, SQDisplay);
+	//ctx2.fillRect(x * SQDisplay + SQDisplay, y * SQDisplay + SQDisplay, SQDisplay, SQDisplay);
+
+	//ctx2.strokeStyle = "BLACK";
+	//ctx2.strokeRect(x * SQ, y * SQ, SQ, SQ);
+}
+
+//display bord maken
+let displayBoard = [];
+for (r = 0; r < displayRows; r++) {
+	displayBoard[r] = [];
+	for (c = 0; c < displayCols; c++) {
+		displayBoard[r][c] = VACANT;
+	}
+}
+/**displayBoard = [
+	[VACANT, VACANT, VACANT, VACANT],
+	[VACANT, VACANT, VACANT, VACANT],
+	[VACANT, VACANT, VACANT, VACANT],
+	[VACANT, VACANT, VACANT, VACANT]
+]**/
+
+//display bord tekenen
+function drawDisplayBoard() {
+	for (r = 0; r < displayRows; r++) {
+		for (c = 0; c < displayCols; c++) {
+			drawDisplaySquare(c, r, displayBoard[r][c]);
+		}
+	}
+}
+drawDisplayBoard();
 
 //het bord maken
 
@@ -39,7 +81,6 @@ function drawBoard() {
 		}
 	}
 }
-
 drawBoard();
 
 //the pieces and their colors
@@ -69,7 +110,15 @@ function randomPiece() {
 	let r = (randomN = Math.floor(Math.random() * PIECES.length)); // 0-6
 	return new Piece(PIECES[r][0], PIECES[r][1]);
 }
-let p = randomPiece();
+
+function giveNextPiece() {
+	let newP = nextP;
+	nextP.unDrawDisplay();
+	nextP = randomPiece();
+	nextP.drawDisplay();
+	return newP;
+}
+
 //the objext piece
 
 function Piece(tetromino, color) {
@@ -96,6 +145,27 @@ Piece.prototype.fill = function (color) {
 	}
 };
 
+//fill display function
+Piece.prototype.fillDisplay = function (color) {
+	for (r = 0; r < this.activeTetromino.length; r++) {
+		for (c = 0; c < this.activeTetromino.length; c++) {
+			//we draw only occupied squares
+			if (this.activeTetromino[r][c]) {
+				let offsetX = 0;
+				let offsetY = 0;
+				if (this.color == PIECES[0][1]) {
+					offsetX = 1;
+					offsetY = 1;
+				}
+				if (this.color == PIECES[1][1]) {
+					offsetX = -1;
+				}
+				drawDisplaySquare(2 - offsetX + c * 2, 1 - offsetY + r * 2, color);
+			}
+		}
+	}
+};
+
 //draw a piece to the board
 
 Piece.prototype.draw = function () {
@@ -108,6 +178,16 @@ Piece.prototype.unDraw = function () {
 	this.fill(VACANT);
 };
 
+Piece.prototype.drawDisplay = function () {
+	if (gameStarted) this.fillDisplay(this.color);
+};
+
+//undraw piece
+
+Piece.prototype.unDrawDisplay = function () {
+	this.fillDisplay(VACANT);
+};
+
 Piece.prototype.hardDrop = function () {
 	if (!this.collision(0, 1, this.activeTetromino)) {
 		this.unDraw();
@@ -116,7 +196,7 @@ Piece.prototype.hardDrop = function () {
 		} while (!this.collision(0, 1, this.activeTetromino));
 		this.draw();
 		this.lock();
-		p = randomPiece();
+		p = giveNextPiece();
 		this.y++;
 		this.y++;
 	}
@@ -132,7 +212,7 @@ Piece.prototype.moveDown = function () {
 	} else {
 		//lock in the piece and generate a new piece
 		this.lock();
-		p = randomPiece();
+		p = giveNextPiece();
 	}
 };
 
@@ -185,6 +265,8 @@ Piece.prototype.rotate = function () {
 function triggerKeys() {
 	document.addEventListener("keydown", CONTROL);
 	drop();
+	gameStarted = true;
+	nextP.drawDisplay();
 }
 
 function CONTROL(event) {
@@ -390,8 +472,15 @@ function endScreen() {
 	if (display == 1) {
 		div.style.display = "block";
 		display = 0;
+
+		gameStarted = false;
+		nextP.unDrawDisplay();
 	} else {
 		div.style.display = "none";
 		display = 1;
 	}
 }
+
+//let p = randomPiece();
+let nextP = randomPiece();
+let p = giveNextPiece();
