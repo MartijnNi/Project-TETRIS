@@ -213,3 +213,22 @@ body {
 		display: none;
 	}
 }
+
+@media (min-height: 1200px) {
+	.tetrisCanvas {
+		margin-top: 15rem;
+		transform: scale(1.2);
+	}
+
+	#game-over {
+		margin-top: 15rem;
+		transform: scale(1.2);
+	}
+	.blockDisplay {
+		transform: scale(2);
+	}
+	.upRowFlexbox p {
+		padding-bottom: 2.55rem;
+	}
+	
+}
