@@ -34,26 +34,48 @@
 		</nav>
 		<!------------- Navbar End -------------->
 
-		<div class="containerButtonScore">
-			<div class="content">
-				<button id="startTetris" onclick="triggerKeys()">Start</button>
-				<p>Lines cleared:</p>
-				<div class="score" id="score">0</div>
-			</div>
-		</div>
+		<div class="containerTetris">
+			<div class="leftFlexbox"></div>
+			
+			
+			
+			<div class="middleFlexbox">
+				
+				<canvas class="tetrisCanvas" id="tetris" width="391" height="780">
+					<div class="content"></div>
+				</canvas>
 
-		<div class="boardFlexbox">
-			<canvas class="blockDisplay" id="nextBlockDisplay" width="196" height="118"></canvas>
-			<canvas class="tetrisCanvas" id="tetris" width="391" height="780">
-				<div class="content"></div>
-			</canvas>
-
-			<div id="game-over" class="screen">
-				<p>Game Over!<br /><br />Score:</p>
-				<div id="score2">0</div>
-				<button id="resetTetris" onclick="refreshPage()">Retry</button>
+				<div id="game-over" class="screen">
+					<p>Game Over!<br /><br />Score:</p>
+					<div id="score2">0</div>
+					<button id="resetTetris" onclick="refreshPage()">Retry</button>
+				</div>
 			</div>
-		</div>
+
+
+
+			<div class="rightFlexbox">
+				<div class="rightFlexboxContainer">
+					<div class="upRowFlexbox">
+						<p>Next Block:</p>
+						<canvas class="blockDisplay" id="nextBlockDisplay" width="196" height="118"></canvas>
+					</div>
+					<div class="middleRowFlexbox">
+
+						<div class="content">
+							<p>Lines cleared:</p>
+							<p><br></p>
+							<div class="score" id="score">0</div>
+						</div>
+			
+
+					</div>
+					<div class="downRowFlexbox">
+						<button id="startTetris" onclick="triggerKeys()">Start</button>
+					</div>
+				</div>
+			</div>
+			</div>
 
 		<!----------- Js ------------>
 		<script src="/navbar/navToggle.js"></script>
