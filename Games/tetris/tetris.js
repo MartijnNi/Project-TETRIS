@@ -283,6 +283,20 @@ function CONTROL(event) {
 	}
 }
 
+function disableKeys(event) {
+	if (event.keyCode == 37) {
+		
+	} else if (event.keyCode == 38) {
+		
+	} else if (event.keyCode == 39) {
+		
+	} else if (event.keyCode == 40) {
+		
+	} else if (event.keyCode == 32) {
+		
+	}
+}
+
 let score = 0;
 //lock function
 Piece.prototype.lock = function () {
@@ -450,6 +464,7 @@ if (score < 1) {
 
 function refreshPage() {
 	window.location.reload();
+	drop();
 }
 
 function showGameOver() {
@@ -475,6 +490,8 @@ function endScreen() {
 
 		gameStarted = false;
 		nextP.unDrawDisplay();
+		p.unDraw();
+		disableKeys();
 	} else {
 		div.style.display = "none";
 		display = 1;
