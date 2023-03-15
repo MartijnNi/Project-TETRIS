@@ -69,34 +69,69 @@ body {
 
 	display: none;
 	transform: scale(0.701);
-	background: radial-gradient(circle, rgba(138, 32, 150, 0.997) 35%, rgba(32, 24, 62, 1) 100%);
+	background: radial-gradient(circle, rgba(138, 32, 150, 0.7) 35%, rgba(32, 24, 62, 0.7) 100%);
 }
 
 .screen p {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
 	font-weight: 50;
 	font-size: 35px;
 	text-align: center;
 	font-family: "Super Legend Boy", sans-serif;
 	vertical-align: middle;
-	margin-top: 18rem;
+	margin-top: 10rem;
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
 }
 #score2 {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
 	font-weight: 50;
 	font-size: 35px;
-
+	padding-top: 1rem;
 	text-align: center;
 
 	font-family: "Super Legend Boy", sans-serif;
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
 }
-.screen button {
+.screen h1 {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	cursor: pointer;
 	display: block;
 	margin-top: 4rem;
 	margin-left: auto;
 	margin-right: auto;
-
-	border-radius: 1rem;
-	background-color: blueviolet;
-	text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(170, 0, 255), 0 0 0.2em rgb(86, 39, 109);
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
+	transition: 0.5s;
+	font-family: "Super Legend Boy", sans-serif;
+	font-size: 2rem;
+	text-align: center;
+	width: 10rem;
+	height: 3rem;
+}
+.screen h1:hover {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	cursor: pointer;
+	display: block;
+	margin-top: 4rem;
+	margin-left: auto;
+	margin-right: auto;
+	color: rgb(255, 0, 200);
+	text-shadow: 1px 1px 2px rgb(255, 0, 225), 0 0 1em rgb(255, 0, 200), 0 0 0.2em rgb(255, 0, 200);
+	transition: 0.5s;
 	font-family: "Super Legend Boy", sans-serif;
 	font-size: 2rem;
 	text-align: center;
