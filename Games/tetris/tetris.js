@@ -6,6 +6,9 @@ const scoreElement = document.getElementById("score");
 const scoreElement2 = document.getElementById("score2");
 myaudio = document.getElementById("/tetrisAudio/03. A-Type Music (Korobeiniki).mp3");
 
+
+const holdRows = 6;
+const holdCols = 10;
 const displayRows = 6;
 const displayCols = 10;
 const ROW = 20;
@@ -38,6 +41,11 @@ function drawDisplaySquare(x, y, color) {
 	//ctx2.strokeRect(x * SQ, y * SQ, SQ, SQ);
 }
 
+function drawDisplaySquare(x, y, color) {
+	ctx2.fillStyle = color;
+	ctx2.fillRect(x * SQDisplay, y * SQDisplay, SQ, SQ);
+}
+
 //display bord maken
 let displayBoard = [];
 for (r = 0; r < displayRows; r++) {
@@ -46,12 +54,29 @@ for (r = 0; r < displayRows; r++) {
 		displayBoard[r][c] = VACANT;
 	}
 }
+
+let holdBoard = [];
+for (r = 0; r < holdRows; r++) {
+	holdBoard[r] = [];
+	for (c = 0; c < holdCols; c++) {
+		holdBoard[r][c] = VACANT;
+	}
+}
 /**displayBoard = [
 	[VACANT, VACANT, VACANT, VACANT],
 	[VACANT, VACANT, VACANT, VACANT],
 	[VACANT, VACANT, VACANT, VACANT],
 	[VACANT, VACANT, VACANT, VACANT]
 ]**/
+//hold board tekenen
+function drawHoldBoard() {
+	for (r = 0; r < displayRows; r++) {
+		for (c = 0; c < displayCols; c++) {
+			drawDisplaySquare(c, r, displayBoard[r][c]);
+		}
+	}
+}
+drawHoldBoard();
 
 //display bord tekenen
 function drawDisplayBoard() {
@@ -111,6 +136,14 @@ function randomPiece() {
 	return new Piece(PIECES[r][0], PIECES[r][1]);
 }
 
+function holdPiece() {
+	let newP = holdP;
+	holdP.unDrawHold();
+	randomPiece();
+	holdP.drawHold();
+	return newP;
+}
+
 function giveNextPiece() {
 	let newP = nextP;
 	nextP.unDrawDisplay();
@@ -118,6 +151,7 @@ function giveNextPiece() {
 	nextP.drawDisplay();
 	return newP;
 }
+
 
 //the objext piece
 
@@ -166,6 +200,26 @@ Piece.prototype.fillDisplay = function (color) {
 	}
 };
 
+Piece.prototype.fillHold = function (color) {
+	for (r = 0; r < this.activeTetromino.length; r++) {
+		for (c = 0; c < this.activeTetromino.length; c++) {
+			//we draw only occupied squares
+			if (this.activeTetromino[r][c]) {
+				let offsetX = 0;
+				let offsetY = 0;
+				if (this.color == PIECES[0][1]) {
+					offsetX = 1;
+					offsetY = 1;
+				}
+				if (this.color == PIECES[1][1]) {
+					offsetX = -1;
+				}
+				drawHoldSquare(2 - offsetX + c * 2, 1 - offsetY + r * 2, color);
+			}
+		}
+	}
+};
+
 //draw a piece to the board
 
 Piece.prototype.draw = function () {
@@ -178,6 +232,8 @@ Piece.prototype.unDraw = function () {
 	this.fill(VACANT);
 };
 
+
+
 Piece.prototype.drawDisplay = function () {
 	if (gameStarted) this.fillDisplay(this.color);
 };
@@ -186,6 +242,16 @@ Piece.prototype.drawDisplay = function () {
 
 Piece.prototype.unDrawDisplay = function () {
 	this.fillDisplay(VACANT);
+};
+
+Piece.prototype.drawHold = function () {
+	if (gameStarted) this.fillHold(this.color);
+};
+
+//undraw piece
+
+Piece.prototype.unDrawHold = function () {
+	this.fillHold(VACANT);
 };
 
 Piece.prototype.hardDrop = function () {
@@ -267,6 +333,7 @@ function triggerKeys() {
 	drop();
 	gameStarted = true;
 	nextP.drawDisplay();
+	nextP.drawHold();
 }
 
 function CONTROL(event) {
@@ -280,6 +347,8 @@ function CONTROL(event) {
 		p.moveDown();
 	} else if (event.keyCode == 32) {
 		p.hardDrop();
+	} else if (event.keyCode == 67) {
+		holdPiece();
 	}
 }
 
