@@ -25,7 +25,7 @@ var words = [
     "loudspeaker",
     "touchscreen",
     "soundtrack",
-    "nitendo",
+    "nintendo",
     "luigi",
     "pokemon",
     "pikachu",
@@ -60,7 +60,7 @@ function generateButtons() {
   let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
     `
       <button
-        class="btn btn-lg btn-primary m-2"
+        class="btn btn-lg btn-"
         id='` + letter + `'
         onClick="handleGuess('` + letter + `')"
       >

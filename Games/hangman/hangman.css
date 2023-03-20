@@ -1,15 +1,21 @@
+@import url("https://fonts.cdnfonts.com/css/super-legend-boy?styles=62384");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Super Legend Boy", sans-serif;
+
+    
   }
   body {
-    background-color: #8c52ff;
+    background-image: url(/Games/hangman/1719697.webp);
+    background-color: #4f12ca;
   }
   .container {
     font-size: 16px;
-    background-color: #ffffff;
+    background: rgb(195,34,178);
+    background: linear-gradient(0deg, rgba(255, 0, 230, 0.864) 0%, #1500ffd9 100%);
     width: 90vw;
     max-width: 34em;
     position: absolute;
@@ -20,6 +26,11 @@
     border-radius: 0.6em;
     box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
   }
+  .text-center {
+    color: rgb(255, 255, 255);
+	    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
+  }
+  
   #options-container {
     text-align: center;
   }
@@ -31,7 +42,7 @@
   }
   #options-container button {
     padding: 0.6em 1.2em;
-    border: 3px solid #000000;
+    border: 3px solid #ffffff;
     background-color: #ffffff;
     color: #000000;
     border-radius: 0.3em;
@@ -85,7 +96,7 @@
   canvas {
     display: block;
     margin: auto;
-    border: 10px solid #8c52ff;
+    border: 10px solid #5500ff;
     border-radius: 10px;
   }
   .hide {
@@ -117,3 +128,4 @@
   .lose-msg {
     color: #fe5152;
   }
+  
