@@ -137,11 +137,7 @@ function randomPiece() {
 }
 
 function holdPiece() {
-	let newP = holdP;
-	holdP.unDrawHold();
-	randomPiece();
-	holdP.drawHold();
-	return newP;
+	alert("dikke tieten")
 }
 
 function giveNextPiece() {
