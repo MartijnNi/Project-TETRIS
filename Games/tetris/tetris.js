@@ -4,9 +4,8 @@ const cvs2 = document.getElementById("nextBlockDisplay");
 const ctx2 = cvs2.getContext("2d");
 const scoreElement = document.getElementById("score");
 const scoreElement2 = document.getElementById("score2");
-myaudio = document.getElementById("/tetrisAudio/03. A-Type Music (Korobeiniki).mp3");
-
-
+let playSound = new Audio("/Games/tetris/03. A-Type Music (Korobeiniki).mp3");
+let gameoverSound = new Audio("/games/tetris/game-over.mp3");
 const holdRows = 6;
 const holdCols = 10;
 const displayRows = 6;
@@ -137,7 +136,7 @@ function randomPiece() {
 }
 
 function holdPiece() {
-	alert("dikke tieten")
+	alert("dikke tieten");
 }
 
 function giveNextPiece() {
@@ -147,7 +146,6 @@ function giveNextPiece() {
 	nextP.drawDisplay();
 	return newP;
 }
-
 
 //the objext piece
 
@@ -227,8 +225,6 @@ Piece.prototype.draw = function () {
 Piece.prototype.unDraw = function () {
 	this.fill(VACANT);
 };
-
-
 
 Piece.prototype.drawDisplay = function () {
 	if (gameStarted) this.fillDisplay(this.color);
@@ -350,15 +346,10 @@ function CONTROL(event) {
 
 function disableKeys(event) {
 	if (event.keyCode == 37) {
-		
 	} else if (event.keyCode == 38) {
-		
 	} else if (event.keyCode == 39) {
-		
 	} else if (event.keyCode == 40) {
-		
 	} else if (event.keyCode == 32) {
-		
 	}
 }
 
@@ -452,9 +443,9 @@ Piece.prototype.collision = function (x, y, piece) {
 let dropStart = Date.now();
 if (score < 1) {
 	function drop() {
+		playSound.play();
 		let now = Date.now();
 		let delta = now - dropStart;
-		document.getElementById("tetrisAudio").play();
 		if (score >= 0) {
 			if (delta > 1000) {
 				p.moveDown();
@@ -529,7 +520,6 @@ if (score < 1) {
 
 function refreshPage() {
 	window.location.reload();
-	drop();
 }
 
 function showGameOver() {
@@ -552,6 +542,9 @@ function endScreen() {
 	if (display == 1) {
 		div.style.display = "block";
 		display = 0;
+		playSound.pause();
+		playSound.currentTime = 0;
+		gameoverSound.play();
 
 		gameStarted = false;
 		nextP.unDrawDisplay();
