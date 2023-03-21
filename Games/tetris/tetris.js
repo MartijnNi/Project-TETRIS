@@ -6,6 +6,7 @@ const scoreElement = document.getElementById("score");
 const scoreElement2 = document.getElementById("score2");
 let playSound = new Audio("/Games/tetris/03. A-Type Music (Korobeiniki).mp3");
 let gameoverSound = new Audio("/games/tetris/game-over.mp3");
+let moveSound = new Audio("/Games/tetris/dry-fart.mp3");
 const holdRows = 6;
 const holdCols = 10;
 const displayRows = 6;
@@ -338,6 +339,7 @@ function CONTROL(event) {
 	} else if (event.keyCode == 40) {
 		p.moveDown();
 	} else if (event.keyCode == 32) {
+		moveSound.play();
 		p.hardDrop();
 	} else if (event.keyCode == 67) {
 		holdPiece();
