@@ -86,7 +86,7 @@ i {
 }
 
 .title {
-	font-family: "Super Legend Boy", sans-serif;
+	font-family: "MinecraftiaRegular";
 	text-align: center;
 	font-weight: 100;
 	font-size: 1.5rem;
@@ -94,7 +94,7 @@ i {
 	margin-bottom: 1rem;
 }
 .flipbutton {
-	font-family: "Super Legend Boy", sans-serif;
+	font-family: "Minecraft", sans-serif;
 	font-weight: 100;
 	font-size: 0.8rem;
 	color: #4096ee;
