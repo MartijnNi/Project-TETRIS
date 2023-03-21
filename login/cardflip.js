@@ -62,7 +62,8 @@ var words = [
   'Pig',
   'Download if it is free',
   'NSFW',
-  'Bored ape'
+  'Bored ape',
+  'you have 4,5% that you read this'
 ];
 
 function displayRandomWord() {
