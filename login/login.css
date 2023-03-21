@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/super-legend-boy?styles=62384');
-
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
 
 *{
     padding: 0;
@@ -103,7 +103,6 @@ i {
     text-align:left !important;
 }
 
-
 /*----------------flip card end code----------------*/
 
 
@@ -195,9 +194,40 @@ i {
         text-align:left !important;
     }
 
+}
 /*----------------Flip card code end----------------*/
 
+.splash-screen{
+    margin-top: 0.8em;
+    text-align: center;
+    font-family: 'Minecraft', sans-serif;
+    font-size: 40px;    
+    rotate: -5deg;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px -2px 0px rgba(168, 33, 235, 0.99);
+    animation: splash-screen 3s ease infinite;
 }
 
+@keyframes splash-screen {
+    0% {
+      transform: scale(1, 1);
+      rotate: -5deg;
+    }
+    50% {
+      transform: scale(1.1, 1.1);
+      rotate: 5deg;
+    }
+    100% {
+      transform: scale(1, 1);
+      rotate: -5deg;
+    }
+  }
 
+
+  @media (max-width: 750px){
+    .splash-screen{
+        margin-top: 3rem;
+        font-size: 17px;
+    }
+  }
 

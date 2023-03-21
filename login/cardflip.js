@@ -36,3 +36,39 @@ const togglePassword2 = document.querySelector('#togglePassword2');
     this.classList.toggle('fa-eye-slash');
 });
 
+
+//splashscreen arrays
+
+var words = [
+  'Do.. u wanna dance, baby?',
+  'Is water wet?',
+  'What do u like to do at a lake, play some snake?',
+  'U again? Go get some bitches',
+  'Did u find the milk?',
+  'Life, laugh, love',
+  'Life, cry, drink',
+  'Does this make u happy?',
+  'Do u know imagne dragons',
+  'Imagne dragon these balls on ur face',
+  'Do u know Candice', 
+  'Best tetris player EUW here!!',
+  'Skyblock',
+  '242,5 bench baby',
+  'Martin garix to be',
+  'Hardstuck diamond btw',
+  'Katankoe',
+  'What is my purpose?',
+  'Bowser or Browser..',
+  'Pig',
+  'Download if it is free',
+  'NSFW',
+  'Bored ape'
+];
+
+function displayRandomWord() {
+  var randomIndex = Math.floor(Math.random() * words.length);
+  var word = words[randomIndex];
+  document.getElementById("splash-screen").innerHTML = word;
+}
+
+displayRandomWord()
