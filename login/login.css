@@ -20,7 +20,7 @@ body {
 	z-index: 99;
 	width: auto;
 	height: 150vh;
-	background-image: url(/media/gamepage/bg-spcae.png);
+	background-image: url(/project-TETRIS/media/gamepage/bg-spcae.png);
 	background-size: cover;
 	background-position: center top;
 	display: flex;
@@ -125,7 +125,7 @@ i {
 		z-index: 99;
 		width: auto;
 		height: 125vh;
-		background-image: url(/media/gamepage/bg-spcae.png);
+		background-image: url(/project-TETRIS/media/gamepage/bg-spcae.png);
 		background-size: cover;
 		background-position: center top;
 		display: flex;
