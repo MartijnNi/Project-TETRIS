@@ -22,12 +22,4 @@ $insert->execute();
 header('Location: login.html');
 }
 
-$id = $_GET;["id"];
-$query = "SELECT * FROM users WHERE id = ?";
-
-$users = $database->prepare($query);
-$data = array($id);
-$users->execute($data);
-$row = $users->fetch();
-
 ?>

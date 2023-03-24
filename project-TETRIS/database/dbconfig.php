@@ -1,9 +1,9 @@
 <?php
 
-$dbhost = "localhost";
+$dbhost = "127.0.0.1";
 $dbname = "retrogen";
 $user = "root";
-$pass = "";
+$pass = "a3b6c9";
 
 try {
     $database = new PDO("mysql:host=$dbhost;dbname=$dbname",$user,$pass);
