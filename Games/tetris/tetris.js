@@ -137,7 +137,7 @@ function randomPiece() {
 }
 
 function holdPiece() {
-	alert("jeroen zn kleine piemel");
+alert("jeroen zn kleine piemeltje!");
 }
 
 function giveNextPiece() {

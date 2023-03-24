@@ -67,7 +67,7 @@ h3 {
   }
   
   body {
-    background-image: url(/media/gamepage/Synthwave.jpg);
+    background-image: url(/Project-TETRIS/media/gamepage/Synthwave.jpg);
     background-color: black;
     height: 100vh;
     background-repeat: no-repeat;
@@ -198,7 +198,7 @@ h3 {
   @media (max-width: 999px){
 
     body {
-      background-image: url(/media/gamepage/Synthwave.jpg);
+      background-image: url(/Project-TETRIS/media/gamepage/Synthwave.jpg);
       background-color: black;
       height: 100vh;
       background-repeat: no-repeat;

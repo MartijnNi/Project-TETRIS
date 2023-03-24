@@ -8,12 +8,12 @@
 
 body {
   margin: 0;
-  overflow: hidden; }
+  overflow: hidden; 
+}
 
 .overflow-mask {
-  background-image:url(/Games/pac-man/app/style/graphics/Pacman_bg.jpg);
+  background-image: url("../app/style/graphics/Pacman_bg.jpg");
   background-position: center;
-  background-color: #9b0202;
   color: #fff;
   display: flex;
   height: 100vh;

@@ -2,7 +2,7 @@
 
 
 body {
-    background-image: url(/Games/reactiongame/reactBackground.jpg);
+    background-image: url("/Project-TETRIS/Games/reactiongame/reactBackground.jpg");
     z-index: 99;
     width: 100%;
     height: 100vh;
