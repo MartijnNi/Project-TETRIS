@@ -11,7 +11,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	background-color: black;
-	background-image: url(/Games/snake/pandabackground.png);
+	background-image: url(/Project-TETRIS/Games/snake/pandabackground.png);
 	background-size: cover;
 	background-position: center;
 }
@@ -68,7 +68,7 @@ body {
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	background: url("/Games/snake/gameoversnake.png");
+	background: url("/Project-TETRIS/Games/snake/gameoversnake.png");
 	text-align: center;
 	vertical-align: middle;
 	position: absolute;
@@ -115,12 +115,10 @@ body {
  .diffFlexbox {
   display: flex;
  }
- .diffFlexbox slow normal fast {
-
- }
+ 
 
 .snake {
-	background: url("HOMOPANDA.png");
+	background: url("/Project-TETRIS/Games/snake/HOMOPANDA.png");
 	background-size: cover;
 	transition: 0s;
 	/*transform: rotate(90deg);*/
@@ -133,6 +131,6 @@ body {
 }
 
 .food {
-	background: url("bamboo.png");
+	background: url("/Project-TETRIS/Games/snake/bamboo.png");
 	background-size: cover;
 }
