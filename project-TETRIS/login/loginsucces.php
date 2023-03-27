@@ -26,7 +26,7 @@
 			<div class="navbar-links">
 				<ul>
 					<li><a href="#">Profiel</a></li>
-					<li><a href="/project-tetris/gamepage/games.html">Games</a></li>
+					<li><a href="/project-tetris/gamepage/games.php">Games</a></li>
 					<li><a href="#">Vrienden</a></li>
 					<li><a href="#">Inloggen</a></li>
 				</ul>
@@ -42,7 +42,7 @@
 						<h1 class="title">Account Created!</h1>
 						<h2>Your account has succesfully been created</h2>
 						<p>Have Fun!</p>
-						<input type="button" onclick="location.href='/project-TETRIS/login/login.html'" class="minecraft-btn" name="loginButton" value="Take me back to login!" />
+						<input type="button" onclick="location.href='/project-TETRIS/login/login.php'" class="minecraft-btn" name="loginButton" value="Take me back to login!" />
 						<div class="splash-screen" id="splash-screen"></div>
 					</div>
 				</div>
