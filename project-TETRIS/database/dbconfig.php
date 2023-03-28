@@ -13,5 +13,17 @@ catch(PDOException $e) {
     echo $e->getMessage();
 }
 
+function checkInLog() {
+    session_start();
+    if($_SESSION["inlog"] != 'true'){
+        header("Location: /project-tetris/login/login.html");
+    }
+}
+
+function showUserInlog() {
+    "Welkom " . $_SESSION['username'] . "";
+}
+//session_start();
+//echo "inlog:" . $_SESSION["inlog"];
 
 ?>

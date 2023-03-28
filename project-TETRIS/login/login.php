@@ -24,12 +24,7 @@
 			</a>
 
 			<div class="navbar-links">
-				<ul>
-					<li><a href="#">Profiel</a></li>
-					<li><a href="/project-tetris/gamepage/games.html">Games</a></li>
-					<li><a href="#">Vrienden</a></li>
-					<li><a href="#">Inloggen</a></li>
-				</ul>
+				
 			</div>
 		</nav>
 
@@ -40,11 +35,11 @@
 				<div class="flipper" id="flipper">
 					<div class="front">
 						<h1 class="title">Inloggen</h1>
-						<form method="post" name="loginCard" action="registerenCard.php">
-							<input type="text" name="gebruikersnaamInlog" placeholder="Gebruikersnaam" />
-							<input type="password" name="wachtwoordInlog" id="id_password" placeholder="Password" />
+						<form method="post" name="loginCard" action="/project-TETRIS/database/login.php">
+							<input type="text" name="username" placeholder="Gebruikersnaam" />
+							<input type="password" name="userpassword" id="id_password" placeholder="Password" />
 							<i class="far fa-eye" id="togglePassword">Show password</i>
-							<input type="button" class="minecraft-btn" name="loginButton" value="Login" />
+							<input type="submit" class="minecraft-btn" name="submit" value="Login" />
 						</form>
 						<a class="flipbutton" id="loginButton" href="#">Create my account →</a>
 						<div class="splash-screen" id="splash-screen"></div>

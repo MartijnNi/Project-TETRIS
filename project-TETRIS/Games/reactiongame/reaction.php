@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="brand-titel"><a href="/project-TETRIS/gamepage/games.html"><h1>RetroGen</h1></a>
+        <div class="brand-titel"><a href="/project-TETRIS/gamepage/games.php"><h1>RetroGen</h1></a>
         </div>
     
         <a href="#" class="toggle-button">
@@ -22,7 +22,7 @@
     
         <div class="navbar-links">
             <ul>
-                <li><a href="/project-TETRIS/gamepage/games.html">Games</a></li>
+                <li><a href="/project-TETRIS/gamepage/games.php">Games</a></li>
                 <li><a href="#">Vrienden</a></li>
                 <li><a href="#">Profiel</a></li>
                 <li><a href="#" style="color: rgb(200, 0, 0);">Uitloggen</a></li>

@@ -1,3 +1,8 @@
+<?php
+include "../database/dbconfig.php";
+checkInLog();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +19,7 @@
 <!------------- Navbar -------------->
 
 <nav class="navbar">
-    <div class="brand-titel"><a href="/Project-TETRIS/gamepage/games.html"><h1>RetroGen</h1></a>
+    <div class="brand-titel"><a href="/Project-TETRIS/gamepage/games.php"><h1>RetroGen</h1></a>
     </div>
 
     <a href="#" class="toggle-button">
@@ -25,10 +30,10 @@
 
     <div class="navbar-links">
         <ul>
-          <li><a href="/Project-TETRIS/gamepage/games.html">Games</a></li>
+          <li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
           <li><a href="#">Vrienden</a></li>
           <li><a href="#">Profiel</a></li>
-          <li><a href="/Project-TETRIS/login/login.html" style="color: rgb(200, 0, 0);">Uitloggen</a></li>
+          <li><a href="/Project-TETRIS/login/login.php" style="color: rgb(200, 0, 0);">Uitloggen</a></li>
         </ul>
     </div>
 </nav>
@@ -50,13 +55,13 @@
 <div class="carousel_wrapper">
     <div class="carousel">
       <div class="slide one">
-        <a href="/Project-TETRIS/Games/tetris/tetris.html"><img src="/Project-TETRIS/media/gamepage/Tetris-Logo-1200x1200.jpg" /></a>
+        <a href="/Project-TETRIS/Games/tetris/tetris.php"><img src="/Project-TETRIS/media/gamepage/Tetris-Logo-1200x1200.jpg" /></a>
       </div>
       <div class="slide two">
-        <a href="/Project-TETRIS/Games/reactiongame/reaction.html"><img src="/Project-TETRIS/media/gamepage/reactinogame_thumbnail.png" /></a>
+        <a href="/Project-TETRIS/Games/reactiongame/reaction.php"><img src="/Project-TETRIS/media/gamepage/reactinogame_thumbnail.png" /></a>
       </div>
       <div class="slide three">
-        <a href="/Project-TETRIS/Games/pac-man/pacman.html"><img src="/Project-TETRIS/media/gamepage/pac-man-peach-retro-games-hd-wallpaper-thumb.jpg" /></a>
+        <a href="/Project-TETRIS/Games/pac-man/pacman.php"><img src="/Project-TETRIS/media/gamepage/pac-man-peach-retro-games-hd-wallpaper-thumb.jpg" /></a>
       </div>
       <div class="slide four">
         <img src="/Project-TETRIS/media/gamepage/Content not available.png" />
@@ -74,7 +79,7 @@
       <img src="/Project-TETRIS/media/gamepage/Content not available.png" />
     </div>
     <div class="slide nine">
-      <a href="/Project-TETRIS/Games/snake/snake.html"><img src="/Project-TETRIS/media/gamepage/snakethumbnail.jpg" /></a>
+      <a href="/Project-TETRIS/Games/snake/snake.php"><img src="/Project-TETRIS/media/gamepage/snakethumbnail.jpg" /></a>
     </div>
   </div>
 </div>

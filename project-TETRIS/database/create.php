@@ -19,7 +19,9 @@ $insert->bindParam(':userpassword', $hash);
 $insert->bindParam(':email', $email);
 $insert->execute();
 
-header('Location: /project-tetris/login/login.html');
+
+
+header('Location: /project-tetris/login/loginsucces.html');
 }
 
 ?>
