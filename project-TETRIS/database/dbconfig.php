@@ -16,7 +16,7 @@ catch(PDOException $e) {
 function checkInLog() {
     session_start();
     if($_SESSION["inlog"] != 'true'){
-        header("Location: /project-tetris/login/login.html");
+        header("Location: /project-tetris/login/login.php");
     }
 }
 
