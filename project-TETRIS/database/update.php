@@ -1,6 +1,6 @@
 <?php
 include "dbconfig.php";
-if(isset(S_POST['submit'])){
+if(isset($S_POST['submit'])){
     $id = $_POST["id"];
     //$id = $_POST["userId"];
     $username = $_POST["username"];
@@ -17,7 +17,6 @@ if(isset(S_POST['submit'])){
     $insert->bindParam(':userId', $id);
     $insert->execute();
     header('Location: login.php');
-
 
 }
 
