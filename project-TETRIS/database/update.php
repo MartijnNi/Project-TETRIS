@@ -16,7 +16,7 @@ if(isset(S_POST['submit'])){
     $insert->bindParam(':email', $email);
     $insert->bindParam(':userId', $id);
     $insert->execute();
-    header('Location: login.html');
+    header('Location: login.php');
 
 
 }

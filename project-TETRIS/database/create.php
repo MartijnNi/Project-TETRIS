@@ -21,7 +21,7 @@ $insert->execute();
 
 
 
-header('Location: /project-tetris/login/loginsucces.html');
+header('Location: /project-tetris/login/loginsucces.php');
 }
 
 ?>

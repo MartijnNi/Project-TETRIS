@@ -17,10 +17,10 @@ if(isset($_POST['submit'])){
             $_SESSION["username"] = $account->username;
             header('Location: /project-tetris/gamepage/games.php');
         } else {
-            header("Location: /project-tetris/login/login.html");
+            header("Location: /project-tetris/login/login.php");
         }
     } else {
-        header("Location: /project-tetris/login/login.html");
+        header("Location: /project-tetris/login/login.php");
     }
 }
 
