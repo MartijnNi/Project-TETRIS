@@ -31,9 +31,8 @@ checkInLog();
     <div class="navbar-links">
         <ul>
           <li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
-          <li><a href="#">Vrienden</a></li>
-          <li><a href="#">Profiel</a></li>
-          <li><a href="/Project-TETRIS/login/login.php" style="color: rgb(200, 0, 0);">Uitloggen</a></li>
+          <li><a href="/project-tetris/login/login.php"><?php echo $_SESSION['username']; ?></a></li>
+          <li><a href="#">*profielfoto</a></li>
         </ul>
     </div>
 </nav>

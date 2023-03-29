@@ -1,6 +1,6 @@
 <?php
 include "dbconfig.php";
-if(isset(S_POST['submit'])){
+if(isset($_POST['submit'])){
     $id = $_POST["id"];
     //$id = $_POST["userId"];
     $username = $_POST["username"];

@@ -1,3 +1,9 @@
+<?php
+include "../database/dbconfig.php";
+checkInLog();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
