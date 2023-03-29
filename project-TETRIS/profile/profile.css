@@ -1,0 +1,220 @@
+@import url("https://fonts.cdnfonts.com/css/super-legend-boy?styles=62384");
+
+* {
+	padding: 0;
+	margin: 0;
+	z-index: 99;
+}
+
+body {
+	z-index: 100;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #0a2330;
+    font-family: "Super Legend Boy", sans-serif;
+    color: white;
+
+}
+
+/*Section login container - page 1*/
+
+.login-container {
+	z-index: 99;
+	width: auto;
+	height: 100vh;
+	background-image: url(/Project-TETRIS/profile/profilebackground.jpg);
+	background-size: cover;
+	background-position: center top;
+	display: flex;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	justify-content: center;
+}
+
+/*----------------flip card code----------------*/
+
+.flip-container {
+	/*border: 2px solid red;*/
+	height: 80%;
+	width: 95%;
+	display: flex;
+	justify-content: center;
+	top: 50%;
+}
+.flipper {
+	justify-content: center;
+	padding: 30px;
+	width: 80rem;
+	height: 45rem;
+	position: relative;
+	background: #142347d2;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	-ms-transform: translateY(5%);
+	transform: translateY(5%);
+}
+
+/* CONTAINERS */
+
+/* ALGEMENE CONTAINER*/
+.profileContainer {
+	display: flex;
+	align-items: stretch;
+	height: 45rem;
+}
+
+/* LINKS EN RECHTS CONTAINER */
+.profileContainerLeft {
+	display: flex;
+	border: 2px solid green;
+	width: 50%;
+	flex-direction: column;
+}
+.profileContainerRight {
+	display: flex;
+	border: 2px solid red;
+	width: 50%;
+}
+
+/* CONTAINERS IN LINKS*/
+.profilePictureContainer {
+    padding-top: 1rem;
+    justify-content: center;
+	display: flex;
+	border: 2px solid aqua;
+	height: 50%;
+	flex-direction: stretch;
+    gap: 5rem;
+}
+.profileEditContainer {
+	display: flex;
+	border: 2px solid lime;
+	height: 50%;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profileEditContainer input[type="text"], [type="email"], [type="password"] {
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.753);
+    border-radius: 10px;
+    font-family: "Super Legend Boy", sans-serif;
+    text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+.profileEditContainer input {
+    width: 20rem;
+    height: 2rem;
+}
+.profileEditContainer button {
+    height: 2.5rem;
+    width: 10rem;
+    margin-left: 4rem;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.753);
+    border-radius: 10px;
+    font-family: "Super Legend Boy", sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+    border: none;
+}
+
+.profileEditContainer input:hover {
+    width: 20rem;
+    height: 2rem;
+    background-color: rgba(218, 218, 218, 0.753);
+}
+.profileEditContainer label {
+    margin-left: 0.5rem;
+    text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+
+}
+.profileEditContainer button:hover {
+    transform: scale(1.05);
+    transition: 0.1s;
+    background-color: rgba(218, 218, 218, 0.753);
+    height: 2.5rem;
+    width: 10rem;
+    margin-left: 4rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-family: "Super Legend Boy", sans-serif;
+}
+/* ITEMS IN LINKS BOVEN */
+.profileName {
+	text-align: center;
+	border: 2px solid grey;
+	height: 2rem;
+	width: 100%;
+	color: rgb(255, 255, 255);
+	font-family: "Super Legend Boy", sans-serif;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+.profilePicture {
+    -webkit-box-shadow: 0px 0px 50px -8px #000000; 
+    box-shadow: 0px 0px 50px -8px #000000;
+    border-radius: 100%;
+    margin-left: 1rem;
+	width: 250px;
+	height: 250px;
+	background-image: url(../profile/ezgif.com-resize.jpg);
+	object-fit: contain;
+    transition: 0.3s;
+}
+
+.profilePicture:hover {
+    -webkit-box-shadow: 0px 0px 50px -8px #ffffff; 
+    box-shadow: 0px 0px 50px -8px #ffffff;
+    transform: scale(1.02);
+    transition: 0.5s;
+    border-radius: 100%;
+    margin-left: 1rem;
+	width: 250px;
+	height: 250px;
+	background-image: url(../profile/ezgif.com-resize.jpg);
+	object-fit: contain;
+}
+.pictureEditButton {
+    margin-top: 1rem;
+    margin-left: 2.3rem;
+    justify-content: center;    
+    width: 13rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.753);
+    border-radius: 10px;
+    font-family: "Super Legend Boy", sans-serif;
+    text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+.pictureEditButton:hover {
+    margin-top: 1rem;
+    margin-left: 2.3rem;
+    justify-content: center;    
+    width: 13rem;
+    height: 3rem;
+    transform: scale(1.05);
+    transition: 0.1s;
+    background-color: rgba(218, 218, 218, 0.753);
+    border-radius: 10px;
+    font-family: "Super Legend Boy", sans-serif;
+    text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+.status {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.status textarea {
+    margin-top: 0.5rem;
+    border-radius: 5%;
+    padding: 0.5rem;
+    max-width: 15rem;
+    resize: vertical;
+    font-family: "Super Legend Boy", sans-serif;
+    width: 15rem;
+    height: 5rem;
+}
+.favoriteGame {
+    text-align: center;
+}

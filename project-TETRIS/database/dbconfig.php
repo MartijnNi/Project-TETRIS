@@ -1,6 +1,6 @@
 <?php
 
-$dbhost = "172.17.0.2";
+$dbhost = "host.docker.internal";
 $dbname = "retrogen";
 $user = "root";
 $pass = "a3b6c9";
