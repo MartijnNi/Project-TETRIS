@@ -46,7 +46,7 @@ checkInLog();
 					<div class="front">
                         <div class="profileContainer">
                             <div class="profileContainerLeft">
-                                <h1 class="profileName">Welkom op je profiel, <?php echo $_SESSION['username']; ?>.</h1>
+                                <h1 class="profileName">Welcome, <?php echo $_SESSION['username']; ?>.</h1>
                                 <div class="profilePictureContainer">
                                     <div class="profilePictureContainerLeft">
                                <div class="profilePicture"></div> 

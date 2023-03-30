@@ -23,7 +23,7 @@ $insert->execute();
 
 header('Location: /project-tetris/login/loginsucces.php');
 } else {
-    echo "Username already exists."
+    echo "Username already exists.";
 }
 
 ?>
