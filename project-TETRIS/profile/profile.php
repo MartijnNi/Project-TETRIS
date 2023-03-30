@@ -46,11 +46,15 @@ checkInLog();
 					<div class="front">
                         <div class="profileContainer">
                             <div class="profileContainerLeft">
-                                <h1 class="profileName">Welcome, <?php echo $_SESSION['username']; ?>.</h1>
+                                <h1 class="profileName">Welcome, <?php echo $_SESSION['username']; ?>!</h1>
                                 <div class="profilePictureContainer">
                                     <div class="profilePictureContainerLeft">
+                                        <div class="container">
                                <div class="profilePicture"></div> 
-                               <button class="pictureEditButton">Change Profile Picture</button>
+                               <div class="middle">
+                                    <div class="text">Change Picture</div>
+                                </div>
+                                </div>
                                </div>
                                <div class="profilePictureContainerRight">
                                <div class="status">
@@ -59,6 +63,15 @@ checkInLog();
                             </div>
                             <div class="favoriteGame">
                             <h1>Favorite Game</h1>
+                            <select id="games">
+                                <option>Tetris</option>
+                                <option>Pac-Man</option>
+                                <option>Snake</option>
+                                <option>React</option>
+                                <option>Memory</option>
+                                <option>Fighting</option>
+                                <option>Hangman</option>
+                            </select>  
                             </div>
                             </div>
                          </div>
@@ -69,16 +82,16 @@ checkInLog();
                                 <h1>Account Information:</h1>
                                 <div class="inputFields">
                                 <label for="username">Username</label><br>
-                                <input type="text" id="username" name="username" placeholder="Username" />
+                                <input type="text" id="username" name="username" placeholder="<?php echo $_SESSION['username']; ?>" />
                                 <button>Change</button><br>
                                 <label for="username">First Name</label><br>
-                                <input type="text" id="fullname" name="fullname" placeholder="Name" />
+                                <input type="text" id="fullname" name="firstname" placeholder="<?php echo $_SESSION['firstname']; ?>" />
                                 <button>Change</button><br>
                                 <label for="username">E-Mail</label><br>
-                                <input type="email" id="email" name="email" placeholder="E-Mail" />
+                                <input type="email" id="email" name="email" placeholder="<?php echo $_SESSION['email']; ?>" />
                                 <button>Change</button><br>
                                 <label for="username">Password</label><br>
-                                <input type="password" id="userpassword" name="userpassword" placeholder="Password" />
+                                <input type="password" id="userpassword" name="userpassword" placeholder="*********" />
                                 <button>Change</button><br>
                                 </div>
                             </form>

@@ -15,8 +15,9 @@ catch(PDOException $e) {
 
 function checkInLog() {
     session_start();
-    if($_SESSION["inlog"] != 'true'){
-        header("Location: /project-tetris/login/login.php");
+    if(!isset($_SESSION["inlog"]) || $_SESSION["inlog"] != 'true'){
+        echo"<script>location.href='/project-TETRIS/login/login.php'</script>";
+        die;
     }
 }
 
