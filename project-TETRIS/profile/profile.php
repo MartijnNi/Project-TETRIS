@@ -33,7 +33,7 @@ checkInLog();
 			<ul>
 					<li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
 					<li><a href="/project-tetris/profile/profile.php"><?php echo $_SESSION['username']; ?></a></li>
-					<li><a href="#">*profielfoto</a></li>
+					<img alt="profileP" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
 				</ul>
 			</div>
 		</nav>
@@ -51,8 +51,9 @@ checkInLog();
                                     <div class="profilePictureContainerLeft">
                                         <div class="container">
                                <div class="profilePicture"></div> 
+                               <input type="file" id="myFileInput" />
                                <div class="middle">
-                                    <div class="text">Change Picture</div>
+                                    <div class="text" onclick="document.getElementById('myFileInput').click()" value="select a file">Change Picture</div>
                                 </div>
                                 </div>
                                </div>
@@ -83,16 +84,16 @@ checkInLog();
                                 <div class="inputFields">
                                 <label for="username">Username</label><br>
                                 <input type="text" id="username" name="username" placeholder="<?php echo $_SESSION['username']; ?>" />
-                                <button>Change</button><br>
+                                <button type="submit" name="submit">Change</button><br>
                                 <label for="username">First Name</label><br>
                                 <input type="text" id="fullname" name="firstname" placeholder="<?php echo $_SESSION['firstname']; ?>" />
-                                <button>Change</button><br>
+                                <button type="submit" name="submit">Change</button><br>
                                 <label for="username">E-Mail</label><br>
                                 <input type="email" id="email" name="email" placeholder="<?php echo $_SESSION['email']; ?>" />
-                                <button>Change</button><br>
+                                <button type="submit" name="submit">Change</button><br>
                                 <label for="username">Password</label><br>
                                 <input type="password" id="userpassword" name="userpassword" placeholder="*********" />
-                                <button>Change</button><br>
+                                <button type="submit" name="submit">Change</button><br>
                                 </div>
                             </form>
                             </div>
@@ -100,8 +101,24 @@ checkInLog();
 
                         </div>
                         <div class="profileContainerRight">
-                            <div class="highScoresContainer"></div>
-                            <div class="gamesContainer"></div>
+                            <div class="highScoresContainer">
+                                <p>Total Playtime:<p>
+                                <p>Total Playcount:<p>
+                                <p>Highscores:<p>
+                            </div>
+                            <div class="gamesContainer">
+                                <p>Game Information</p>
+                                <div class="gameButtons">
+                                    <button>Tetris</button>
+                                    <button>Pac-Man</button>
+                                    <button>Snake</button>
+                                    <button>Hangman</button>
+                                    <button>Reaction Game</button>
+                                    <button>Shooter</button>
+                                    <button>???</button>
+                                    <button>???</button>
+                                </div>
+                            </div>
                         </div>
                         </div>
 					</div>

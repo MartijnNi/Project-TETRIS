@@ -12,7 +12,7 @@ startButton.addEventListener("click", () => {
     const delay = Math.floor(Math.random() * 6) + 2;
     setTimeout(() => {
         document.getElementById("field").style.background = "#00ff00";
-        document.getElementById("field").innerHTML = "NU!!";
+        document.getElementById("field").innerHTML = "NOW!!";
         document.getElementById("field").style.fontSize = "500%";
         green = true;
         startTime = Date.now();
@@ -23,10 +23,10 @@ function field() {
     if (green) {
         const elapsedTime = Date.now() - startTime;
         const restartButton = document.createElement("button");
-        restartButton.innerHTML = "Opnieuw";
+        restartButton.innerHTML = "Restart";
         restartButton.classList.add("restart-button");
         document.getElementById("field").style.fontSize = "100%";
-        document.getElementById("field").innerHTML = `Geklikt binnen ${elapsedTime} milliseconden!<br><br>`;
+        document.getElementById("field").innerHTML = `You clicked in ${elapsedTime} milliseconds!<br><br>`;
         document.getElementById("field").appendChild(restartButton);
         restartButton.addEventListener("click", restart);
     }
