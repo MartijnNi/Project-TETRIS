@@ -8,7 +8,6 @@ if(isset($_POST['submit'])){
     $email = $_POST["email"];
 
 
-
     $query = "UPDATE users SET voornaam=:voornaam, achternaam=:achternaam, email:=email WHERE id=id";
     $insert = $database->prepare($query);
     $insert->bindParam(':gebruikersnaam', $username);
