@@ -127,6 +127,7 @@ body {
 	color: white;
 	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
 	border: none;
+	
 }
 
 .profileEditContainer input:hover {
@@ -279,6 +280,29 @@ select {
 	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
 }
 
+#highScoresGamesContainerShow {
+	padding-left: 4rem;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	height: 50%;
+	gap: 1rem;
+	font-size: 30px;
+	font-family: "Super Legend Boy", sans-serif;
+	color: white;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+
+#infoTetris{
+	display: none;
+}
+
+#highScoresGamesContainerShow{
+	display: none;
+}
+
+
+
 .gamesContainer {
 	height: 50%;
 	display: flex;
@@ -385,6 +409,7 @@ select {
 	}
 	.inputFields {
 		display: none;
+		z-index: 90;
 	}
 	.profileContainerLeft {
 		width: 100%;
@@ -396,6 +421,9 @@ select {
 	}
 	.profileEditContainer h1 {
 		display: flex;
+	}
+	.profileEditContainer {
+		z-index: 100;
 	}
 	*:hover {
 		pointer-events: none;
@@ -417,7 +445,7 @@ select {
 .dropdown {
 	position: relative;
 	display: inline-block;
-	z-index: 101;
+	z-index: 105;
 }
 
 .dropdown-content {
@@ -428,7 +456,7 @@ select {
 	max-width: 158px;
 	box-shadow: 0px 8px 16px 
 		0px rgba(0, 0, 0, 0.2);
-	z-index: 101;
+	z-index: 110;
 }
 
 .dropdown-content a {
@@ -436,7 +464,7 @@ select {
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
-	z-index: 101;
+	z-index: 105;
 }
 
 .dropdown-content a:hover {

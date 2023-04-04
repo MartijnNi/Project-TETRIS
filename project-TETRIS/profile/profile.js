@@ -8,3 +8,23 @@ document.getElementById("my-file").onchange = function() {
       reader.readAsDataURL(this.files[0]);
     }
   }
+
+// Game information show and hide
+
+function toggleInfo() {
+  var highScoresContainerShow = document.getElementById('highScoresContainerShow');
+  if (highScoresContainerShow.style.display === '') {
+    highScoresContainerShow.style.display = 'none';
+    highScoresGamesContainerShow.style.display = '';
+    console.log("aan");
+  } else {  
+    highScoresGamesContainerShow.style.display = 'none';
+    highScoresContainerShow.style.display = '';
+    console.log("uit");
+  }
+}
+
+
+
+
+
