@@ -63,15 +63,37 @@ checkInLog();
                               <textarea placeholder="What's going on?!" id="msg" name="msg" rows="5" cols="100"></textarea>
                             </div>
                             <div class="favoriteGame">
-                            <h1>Favorite Game</h1>
-                            <select id="games">
-                                <option>Tetris</option>
-                                <option>Pac-Man</option>
-                                <option>Snake</option>
-                                <option>React</option>
-                                <option>Memory</option>
-                                <option>Fighting</option>
-                                <option>Hangman</option>
+                                <h1>Favorite Game<h1><br>
+                            <div class="dropdown">
+            <button class="dropbtn">
+                <h1>Favorite Game<h1>
+            </button>
+              
+            <div class="dropdown-content">
+                <a href="#">
+                    <img url="/project-TETRIS/media/gamepage/reactinogame_thumbnail.png" 
+                    width="20" height="15"> Tetris</a>
+  
+                <a href="#">
+                    <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20200630132504/uflag.jpg"
+                    width="20" height="15"> Snake</a>
+                <a href="#">
+                    <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20200630132502/eflag.jpg"
+                    width="20" height="15"> Pac-Man</a>
+                <a href="#">
+                    <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20200630132500/bflag.jpg"
+                    width="20" height="15"> Reaction Game</a>
+                    <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20200630132500/bflag.jpg"
+                    width="20" height="15"> Memory</a>
+                    <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20200630132500/bflag.jpg"
+                    width="20" height="15"> Hangman</a>
+            </div>
+        </div>
                             </select>  
                             </div>
                             </div>
