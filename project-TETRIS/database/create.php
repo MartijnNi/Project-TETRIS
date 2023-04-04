@@ -25,5 +25,4 @@ header('Location: /project-tetris/login/loginsucces.php');
 } else {
     echo "Username already exists.";
 }
-
 ?>

@@ -18,7 +18,6 @@ include "../database/dbconfig.php";
 	</head>
 	<body>
 		<!------------- Navbar -------------->
-
 		<nav class="navbar">
 			<div class="brand-titel">
 				<a href="#"><h1>RetroGen</h1></a>
