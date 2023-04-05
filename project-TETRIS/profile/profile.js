@@ -1,10 +1,13 @@
-document.getElementById("my-file").onchange = function() {
-    if (this.files && this.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function(e) {
-        // e.target.result is a base64-encoded url that contains the image data
-        document.getElementById('profile-pic').setAttribute('src', e.target.result);
-      };
-      reader.readAsDataURL(this.files[0]);
-    }
+
+// Get the textarea element
+const userStatusTextarea = document.getElementById("userStatus");
+
+userStatusTextarea.addEventListener("keydown", function(event) {
+  if (event.key === "Enter" && !event.shiftKey) {
+    event.preventDefault();
+    const form = document.querySelector("form");
+    form.submit();
   }
+}, {capture: true});
+
+

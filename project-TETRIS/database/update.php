@@ -19,4 +19,19 @@ if(isset($_POST['submit'])){
 
 }
 
+if (isset($_POST['userStatus'])) {
+    session_start();
+    $userStatus = $_POST["userStatus"];
+    $query = "UPDATE users SET userStatus=:userStatus WHERE userId=:userId";
+    echo $_SESSION["userId"];
+    $insert = $database->prepare($query);
+    $insert->bindParam(':userStatus', $userStatus);
+    $insert->bindParam(':userId', $_SESSION["userId"]);
+    $insert->execute();
+    //echo"<script>location.href='/project-TETRIS/profile/profile.php'</script>";
+}
+
+
+
+
 ?>
