@@ -59,9 +59,20 @@ checkInLog();
                             </div>
                             <div class="profilePictureContainerRight">
                                 <div class="status">
-                                <h1>Status</h1>
+                                <h1 id="statusTitle">Status</h1>
                                     <form method="post" action="/project-TETRIS/database/update.php">
-                                    <textarea type="textArea" placeholder="What's going on?!" id="userStatus" name="userStatus" rows="5" cols="100"></textarea>
+                                        <textarea type="textArea" placeholder="What's going on?!" id="userStatus" name="userStatus" rows="5" cols="100"></textarea>
+                                        <script>
+                                            const userStatus = document.getElementById("userStatus");
+                                            const statusTitle = document.getElementById("statusTitle");
+                                            userStatus.addEventListener("keydown", function (event) {
+                                                if (event.key === "Enter") {
+                                                    event.preventDefault();
+                                                    statusTitle.textContent = "Status Saved!";
+                                                }
+                                            });
+                                        </script>
+
                                     </form>
                                 </div>
                             <div class="favoriteGame">
@@ -89,6 +100,7 @@ checkInLog();
 
                             <div class="profileEditContainer">
                                 <h1>Account Information:</h1>
+                                <form method="post" action="/project-TETRIS/database/update.php">
                                 <div class="inputFields">
                                 <label for="username">Username</label><br>
                                 <input type="text" id="username" name="username" placeholder="<?php echo $_SESSION['username']; ?>" />
@@ -104,7 +116,7 @@ checkInLog();
                                 <button type="submit" name="submit">Change</button><br>
                                 </div>
                             </form>
-                            </div>
+                        </div>
 
 
                         </div>
@@ -132,8 +144,16 @@ checkInLog();
 					</div>
 				</div>
 			</div>
-		</section>
+</section>
 		<!----------- Js ------------>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const statusChanged = urlParams.get('statusChanged');
+
+            if (statusChanged === 'true') {
+                document.getElementById('statusTitle').innerHTML = 'Status Changed!';
+            }
+        </script>
 		<script src="/project-tetris/navbar/navToggle.js"></script>
         <script src="/project-TETRIS/profile/profile.js"></script>
 		<!----------- Eind Js ------------>
