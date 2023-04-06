@@ -21,9 +21,6 @@ function checkInLog() {
     }
 }
 
-function showUserInlog() {
-    "Welkom " . $_SESSION['username'] . "";
-}
 //session_start();
 //echo "inlog:" . $_SESSION["inlog"];
 
