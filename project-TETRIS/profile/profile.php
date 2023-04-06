@@ -50,49 +50,46 @@ checkInLog();
                                 <div class="profilePictureContainer">
                                     <div class="profilePictureContainerLeft">
                                         <div class="container">
-                               <div class="profilePicture"></div> 
-                               <input type="file" id="myFileInput" />
-                               <div class="middle">
-                                    <div class="text" onclick="document.getElementById('myFileInput').click()" value="select a file">Change Picture</div>
-                                </div>
-                                </div>
-                               </div>
-                               <div class="profilePictureContainerRight">
-                               <div class="status">
-                              <h1>Status</h1>
-                              <textarea placeholder="What's going on?!" id="msg" name="msg" rows="5" cols="100"></textarea>
+                            <div class="profilePicture"></div> 
+                                <input type="file" id="myFileInput" />
+                                    <div class="middle">
+                                        <div class="text" onclick="document.getElementById('myFileInput').click()" value="select a file">Change Picture</div>
+                                    </div>
+</div>
                             </div>
+                            <div class="profilePictureContainerRight">
+                                <div class="status">
+                                <h1 id="statusTitle">Status</h1>
+                                    <form method="post" action="/project-TETRIS/database/update.php">
+                                        <textarea type="textArea" placeholder="What's going on?!" id="userStatus" name="userStatus" rows="5" cols="100"></textarea>
+                                        <script>
+                                            const userStatus = document.getElementById("userStatus");
+                                            const statusTitle = document.getElementById("statusTitle");
+                                            userStatus.addEventListener("keydown", function (event) {
+                                                if (event.key === "Enter") {
+                                                    event.preventDefault();
+                                                    statusTitle.textContent = "Status Saved!";
+                                                }
+                                            });
+                                        </script>
+
+                                    </form>
+                                </div>
                             <div class="favoriteGame">
-                                <h1>Favorite Game<h1><br>
+                                <h1>Favorite Game<h1>
                             <div class="dropdown">
-            <button class="dropbtn">
-                <h1>Favorite Game<h1>
-            </button>
-              
-            <div class="dropdown-content">
-                <a href="#">
-                    <img url="/project-TETRIS/media/gamepage/reactinogame_thumbnail.png" 
-                    width="20" height="15"> Tetris</a>
-  
-                <a href="#">
-                    <img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20200630132504/uflag.jpg"
-                    width="20" height="15"> Snake</a>
-                <a href="#">
-                    <img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20200630132502/eflag.jpg"
-                    width="20" height="15"> Pac-Man</a>
-                <a href="#">
-                    <img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20200630132500/bflag.jpg"
-                    width="20" height="15"> Reaction Game</a>
-                    <img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20200630132500/bflag.jpg"
-                    width="20" height="15"> Memory</a>
-                    <img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20200630132500/bflag.jpg"
-                    width="20" height="15"> Hangman</a>
-            </div>
+                        <div class="select">
+                        <select>
+                            <option>Nothing Yet..</option>
+                            <option>Tetris</option>
+                            <option>Snake</option>
+                            <option>Reaction</option>
+                            <option>Pac-Man</option>
+                            <option>Hangman</option>
+                            <option>Whack a Mole</option>
+                            <option>Memory</option>
+                        </select>
+                    </div>
         </div>
                             </select>  
                             </div>
@@ -103,6 +100,7 @@ checkInLog();
 
                             <div class="profileEditContainer">
                                 <h1>Account Information:</h1>
+                                <form method="post" action="/project-TETRIS/database/update.php">
                                 <div class="inputFields">
                                 <label for="username">Username</label><br>
                                 <input type="text" id="username" name="username" placeholder="<?php echo $_SESSION['username']; ?>" />
@@ -118,28 +116,20 @@ checkInLog();
                                 <button type="submit" name="submit">Change</button><br>
                                 </div>
                             </form>
-                            </div>
+                        </div>
 
 
                         </div>
                         <div class="profileContainerRight">
-                            <div id="highScoresGamesContainerShow">
-                                <p>Test</p>
-                                <div id="infoTetris">
-                                    <p>Highscores:<p>
-
-                                </div>
-                            </div>
-
-                            <div id="highScoresContainerShow"  class="highScoresContainer">
+                            <div class="highScoresContainer">
                                 <p>Total Playtime:<p>
                                 <p>Total Playcount:<p>
+                                <p>Highscores:<p>
                             </div>
-
                             <div class="gamesContainer">
                                 <p>Game Information</p>
                                 <div class="gameButtons">
-                                    <button onclick="toggleInfo()">Tetris</button>
+                                    <button>Tetris</button>
                                     <button>Pac-Man</button>
                                     <button>Snake</button>
                                     <button>Hangman</button>
@@ -154,12 +144,18 @@ checkInLog();
 					</div>
 				</div>
 			</div>
-		</section>
-
+</section>
 		<!----------- Js ------------>
-		<script src="/project-tetris/navbar/navToggle.js"></script>
-        <script src="/project-tetris/profile/profile.js"></script>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const statusChanged = urlParams.get('statusChanged');
 
+            if (statusChanged === 'true') {
+                document.getElementById('statusTitle').innerHTML = 'Status Changed!';
+            }
+        </script>
+		<script src="/project-tetris/navbar/navToggle.js"></script>
+        <script src="/project-TETRIS/profile/profile.js"></script>
 		<!----------- Eind Js ------------>
 	</body>
 </html>
