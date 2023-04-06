@@ -31,7 +31,15 @@ checkInLog();
     <div class="navbar-links">
         <ul>
           <li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
-          <li><a href="/project-tetris/profile/profile.php"><?php echo $_SESSION['username']; ?></a></li>
+          <div class="dropdown">
+          <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
+          <div class="dropdown-content">
+            <a href="/project-TETRIS/profile/profile.php">Profile</a>
+            <a href="#">Friends</a>
+            <a href="#">Messages</a>
+            <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
+          </div>
+        </div>
           <img alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
         </ul>
     </div>
