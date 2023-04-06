@@ -21,28 +21,17 @@ body {
 	background-position: center top;
 	box-sizing: border-box;
 	overflow: hidden;
-}
-
-/*Section login container - page 1*/
-
-.login-container {
-	z-index: 99;
-	width: auto;
-	height: 100vh;
-	background-size: cover;
-	background-position: center top;
-	display: flex;
 	justify-content: center;
 }
-
 /*----------------flip card code----------------*/
 
 .flip-container {
 	/*border: 2px solid red;*/
 	height: 80%;
-	width: 95%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	top: 50%;
 }
 .flipper {
