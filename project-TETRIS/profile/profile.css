@@ -444,3 +444,26 @@ select {
             opacity: 0.5;
             pointer-events: none;
         }
+
+
+		#highScoresGamesContainerShow {
+			padding-left: 4rem;
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+			height: 50%;
+			background-color: white;
+			gap: 1rem;
+			font-size: 30px;
+			font-family: "Super Legend Boy", sans-serif;
+			color: white;
+			text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+		}
+		
+		#infoTetris{
+			display: none;
+		}
+		
+		#highScoresGamesContainerShow{
+			display: none;
+		}

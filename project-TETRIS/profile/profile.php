@@ -121,7 +121,13 @@ checkInLog();
 
                         </div>
                         <div class="profileContainerRight">
-                            <div class="highScoresContainer">
+                        <div id="highScoresGamesContainerShow">
+                                <p>Test</p>
+                                <div id="infoTetris">
+                                    <p>Highscores:<p>
+                                </div>
+                            </div>
+                            <div id="highScoresContainerShow"  class="highScoresContainer">
                                 <p>Total Playtime:<p>
                                 <p>Total Playcount:<p>
                                 <p>Highscores:<p>
@@ -129,7 +135,7 @@ checkInLog();
                             <div class="gamesContainer">
                                 <p>Game Information</p>
                                 <div class="gameButtons">
-                                    <button>Tetris</button>
+                                    <button onclick="toggleInfo()">Tetris</button>
                                     <button>Pac-Man</button>
                                     <button>Snake</button>
                                     <button>Hangman</button>
