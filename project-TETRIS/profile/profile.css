@@ -1,0 +1,446 @@
+@import url("https://fonts.cdnfonts.com/css/super-legend-boy?styles=62384");
+
+* {
+	padding: 0;
+	margin: 0;
+	z-index: 99;
+}
+
+body {
+	z-index: 100;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #0a2330;
+	font-family: "Super Legend Boy", sans-serif;
+	color: white;
+	background-image: url(/Project-TETRIS/media/gamepage/Synthwave.jpg);
+	background-color: black;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+/*Section login container - page 1*/
+
+.login-container {
+	z-index: 99;
+	width: auto;
+	height: 100vh;
+	background-size: cover;
+	background-position: center top;
+	display: flex;
+	justify-content: center;
+}
+
+/*----------------flip card code----------------*/
+
+.flip-container {
+	/*border: 2px solid red;*/
+	height: 80%;
+	width: 95%;
+	display: flex;
+	justify-content: center;
+	top: 50%;
+}
+.flipper {
+	justify-content: center;
+	padding: 30px;
+	width: 80rem;
+	height: 45rem;
+	position: relative;
+	background: #142347d2;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	-ms-transform: translateY(5%);
+	transform: translateY(5%);
+}
+
+/* CONTAINERS */
+
+/* ALGEMENE CONTAINER*/
+.profileContainer {
+	display: flex;
+	align-items: stretch;
+	height: 45rem;
+}
+
+/* LINKS EN RECHTS CONTAINER */
+.profileContainerLeft {
+	display: flex;
+	/* border: 2px solid green; */
+	width: 50%;
+	flex-direction: column;
+}
+
+/* CONTAINERS IN LINKS*/
+.profilePictureContainer {
+	padding-top: 1rem;
+	justify-content: center;
+	display: flex;
+	height: 50%;
+	flex-direction: stretch;
+	gap: 5rem;
+	background-color: #0a2330c0;
+	border-radius: 20px;
+	box-shadow: rgba(255, 255, 255, 0.288) 0px 48px 100px 0px;
+}
+
+.profileEditContainer {
+	padding-bottom: 0rem;
+	padding-left: 1rem;
+	justify-content: center;
+	display: flex;
+	/*border: 2px solid lime;*/
+	height: 50%;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.profileEditContainer input[type="text"],
+[type="email"],
+[type="password"] {
+	font-size: 1.5rem;
+	padding-left: 0.5rem;
+	background-color: rgba(255, 255, 255, 0.753);
+	border-radius: 10px;
+	font-family: "Super Legend Boy", sans-serif;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+.profileEditContainer input {
+	width: 20rem;
+	height: 2rem;
+}
+.profileEditContainer button {
+	height: 2.5rem;
+	width: 10rem;
+	margin-left: 4rem;
+	font-size: 1rem;
+	background-color: rgba(255, 255, 255, 0.753);
+	border-radius: 10px;
+	font-family: "Super Legend Boy", sans-serif;
+	color: white;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+	border: none;
+}
+
+.profileEditContainer input:hover {
+	width: 20rem;
+	height: 2rem;
+	background-color: rgba(218, 218, 218, 0.753);
+}
+.profileEditContainer label {
+	margin-left: 0.5rem;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+.profileEditContainer button:hover {
+	transform: scale(1.05);
+	transition: 0.1s;
+	background-color: rgba(218, 218, 218, 0.753);
+	height: 2.5rem;
+	width: 10rem;
+	margin-left: 4rem;
+	font-size: 1rem;
+	border-radius: 10px;
+	font-family: "Super Legend Boy", sans-serif;
+}
+/* ITEMS IN LINKS BOVEN */
+.profileName {
+	text-align: center;
+	/*border: 2px solid grey;*/
+	height: 2rem;
+	width: 100%;
+	color: rgb(255, 255, 255);
+	font-family: "Super Legend Boy", sans-serif;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+.profilePicture {
+	margin-top: 2rem;
+	-webkit-box-shadow: 0px 0px 50px -8px #000000;
+	box-shadow: 0px 0px 50px -8px #000000;
+	border-radius: 100%;
+	margin-left: 1rem;
+	width: 250px;
+	height: 250px;
+	background-image: url(../profile/profilePictures/ezgif.com-resize.jpg);
+	object-fit: contain;
+	transition: 0.3s;
+}
+
+.profilePicture:hover {
+	opacity: 0.3;
+	-webkit-box-shadow: 0px 0px 50px -8px #ffffff;
+	box-shadow: 0px 0px 50px -8px #ffffff;
+	transform: scale(1.02);
+	transition: 0.5s;
+	border-radius: 100%;
+	margin-left: 1rem;
+	width: 250px;
+	height: 250px;
+	background-image: url(../profile/profilePictures/ezgif.com-resize.jpg);
+	object-fit: contain;
+}
+.middle {
+	cursor: pointer;
+	transition: 0.5s ease;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	margin-left: 1.5rem;
+	top: 25%;
+}
+
+.container:hover .profilePicture {
+	opacity: 0.3;
+	transform: scale(1.02);
+	transition: 0.5s;
+}
+.container:hover .middle {
+	opacity: 1;
+}
+.text {
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+}
+.pictureEditButton {
+	margin-top: 1rem;
+	margin-left: 2.3rem;
+	justify-content: center;
+	width: 13rem;
+	height: 3rem;
+	background-color: rgba(255, 255, 255, 0.753);
+	border-radius: 10px;
+	font-family: "Super Legend Boy", sans-serif;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+.pictureEditButton:hover {
+	margin-top: 1rem;
+	margin-left: 2.3rem;
+	justify-content: center;
+	width: 13rem;
+	height: 3rem;
+	transform: scale(1.05);
+	transition: 0.1s;
+	background-color: rgba(218, 218, 218, 0.753);
+	border-radius: 10px;
+	font-family: "Super Legend Boy", sans-serif;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+.status {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.status textarea {
+	background-color: transparent;
+	border: 2px solid white;
+	margin-top: 0.5rem;
+	border-radius: 15px;
+	padding: 0.5rem;
+	max-width: 15rem;
+	resize: vertical;
+	font-family: "Super Legend Boy", sans-serif;
+	color: white;
+	width: 15rem;
+	height: 5rem;
+}
+.favoriteGame {
+	text-align: center;
+}
+
+select {
+	height: 50px;
+	line-height: 50px;
+	font-size: 12pt;
+}
+
+#myFileInput {
+	display: none;
+}
+.profileContainerRight {
+	display: flex;
+	/* border: 2px solid red; */
+	width: 50%;
+	flex-direction: column;
+}
+
+.highScoresContainer {
+	padding-left: 4rem;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	height: 50%;
+	gap: 1rem;
+	font-size: 30px;
+	font-family: "Super Legend Boy", sans-serif;
+	color: white;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+
+.gamesContainer {
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 15px;
+	font-family: "Super Legend Boy", sans-serif;
+	color: white;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+	font-size: 24px;
+	padding-bottom: 2rem;
+}
+
+.gameButtons {
+	padding-left: 5rem;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 500px;
+	height: 400px;
+	align-content: center;
+	gap: 10px;
+}
+.gameButtons button {
+	width: 17rem;
+	height: 5rem;
+	font-size: 1rem;
+	background-color: rgba(255, 255, 255, 0.842);
+	border-radius: 10px;
+	font-family: "Super Legend Boy", sans-serif;
+	color: white;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+	border: none;
+	border-radius: 10px;
+}
+
+.gameButtons button:hover {
+	width: 17rem;
+	height: 5rem;
+	font-size: 1rem;
+	background-color: rgba(255, 255, 255, 0.911);
+	border-radius: 10px;
+	font-family: "Super Legend Boy", sans-serif;
+	color: white;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+	border: none;
+	border-radius: 10px;
+	transform: scale(1.03);
+	transition: 0.1s;
+	background-color: rgba(218, 218, 218, 0.753);
+}
+
+@media (max-width: 1050px) {
+	.flip-container {
+		/*border: 2px solid red;*/
+		height: 20%;
+		width: 80%;
+		display: flex;
+		justify-content: center;
+		top: 50%;
+	}
+	.flipper {
+		width: 40rem;
+		height: 50rem;
+		align-items: column;
+		flex-direction: column;
+	}
+	.profileContainerLeft {
+		border: 2px solid green;
+		align-items: column;
+	}
+	.profileContainerRight {
+		display: none;
+	}
+	.profilePicture {
+		margin-left: 25rem;
+		border: 2px solid red;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+	}
+	.profileName {
+		display: flex;
+		justify-content: center;
+	}
+	.status {
+		margin-right: 15rem;
+		position: relative;
+		display: flex;
+		transform: scale(0.8);
+		align-items: center;
+		gap: 1rem;
+	}
+	.favoriteGame {
+		padding-right: 8rem;
+		padding-top: 3rem;
+		display: flex;
+		transform: scale(0.8);
+		align-items: column;
+	}
+	.inputFields {
+		display: none;
+	}
+	.profileContainerLeft {
+		width: 100%;
+	}
+	.profilePictureContainer {
+		width: 100%;
+		display: flex;
+		border: 2px solid red;
+	}
+	.profileEditContainer h1 {
+		display: flex;
+	}
+	*:hover {
+		pointer-events: none;
+	}
+}
+
+
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+	padding-top: 1rem;
+    width: 100%;
+	height: 7rem;
+}    .select select {
+		text-align: center;
+		padding-top: 1.5rem;
+		font-size: 20px;
+		font-family: "Super Legend Boy", sans-serif;
+		text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+        display: inline-block;
+        width: 100%;
+		height: 7rem;
+        cursor: pointer;
+        padding: 10px 15px;
+        outline: 0;
+        border: 2px solid white;
+        border-radius: 15px;
+        background: transparent;
+        color: #ffffff;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+        .select select::-ms-expand {
+            display: none;
+        }
+        .select select:focus {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+        }
+        .select select:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }

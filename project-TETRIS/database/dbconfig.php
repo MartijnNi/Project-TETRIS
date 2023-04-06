@@ -1,6 +1,6 @@
 <?php
 
-$dbhost = "172.17.0.3";
+$dbhost = "host.docker.internal";
 $dbname = "retrogen";
 $user = "root";
 $pass = "a3b6c9";
@@ -15,8 +15,9 @@ catch(PDOException $e) {
 
 function checkInLog() {
     session_start();
-    if($_SESSION["inlog"] != 'true'){
-        header("Location: /project-tetris/login/login.php");
+    if(!isset($_SESSION["inlog"]) || $_SESSION["inlog"] != 'true'){
+        echo"<script>location.href='/project-TETRIS/login/login.php'</script>";
+        die;
     }
 }
 

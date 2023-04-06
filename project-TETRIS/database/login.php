@@ -15,6 +15,10 @@ if(isset($_POST['submit'])){
             session_start();
             $_SESSION["inlog"] = 'true';
             $_SESSION["username"] = $account->username;
+            $_SESSION["firstname"] = $account->firstname;
+            $_SESSION["email"] = $account->email;
+            $_SESSION["userId"] = $account->userId;
+
             header('Location: /project-tetris/gamepage/games.php');
         } else {
             header("Location: /project-tetris/login/login.php");

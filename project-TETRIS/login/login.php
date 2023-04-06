@@ -1,6 +1,6 @@
 <?php
 include "../database/dbconfig.php";
-checkInLog();
+//checkInLog();
 ?>
 
 
@@ -18,7 +18,6 @@ checkInLog();
 	</head>
 	<body>
 		<!------------- Navbar -------------->
-
 		<nav class="navbar">
 			<div class="brand-titel">
 				<a href="#"><h1>RetroGen</h1></a>

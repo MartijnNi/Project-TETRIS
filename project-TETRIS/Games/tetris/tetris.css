@@ -80,10 +80,10 @@ body {
 	font-weight: 50;
 	font-size: 35px;
 	text-align: center;
-	font-family: "Super Legend Boy", sans-serif;
 	vertical-align: middle;
 	margin-top: 10rem;
 	color: rgb(255, 255, 255);
+	font-family: "Super Legend Boy", sans-serif;
 	text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);
 }
 #score2 {
