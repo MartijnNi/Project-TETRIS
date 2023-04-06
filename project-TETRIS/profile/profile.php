@@ -135,14 +135,15 @@ checkInLog();
                             <div class="gamesContainer">
                                 <p>Game Information</p>
                                 <div class="gameButtons">
-                                    <button onclick="toggleInfo()">Tetris</button>
-                                    <button>Pac-Man</button>
-                                    <button>Snake</button>
-                                    <button>Hangman</button>
-                                    <button>Reaction Game</button>
-                                    <button>Shooter</button>
+                                    <button id="pacmanButton" onclick="toggleInfo('pacmanButton', 'pacmanTarget')">Pac-Man</button>
+                                    <button id="snakeButton" onclick="toggleInfo('snakeButton', 'snakeTarget')">Snake</button>
+                                    <button id="tetrisButton" onclick="toggleInfo('tetrisButton', 'tetrisTarget')">Tetris</button>
+                                    <button id="hangmanButton" onclick="toggleInfo('hangmanButton', 'HangmanTarget')">Hangman</button>
+                                    <button id="reactionGameButton" onclick="toggleInfo('reactionGameButton', 'reactionGameTarget')">Reaction Game</button>
+                                    <button id="shooterButton" onclick="toggleInfo('shooterButton', 'shooterTarget')">Shooter</button>
                                     <button>???</button>
                                     <button>???</button>
+                                </div>
                                 </div>
                             </div>
                         </div>
