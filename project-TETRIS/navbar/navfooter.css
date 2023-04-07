@@ -29,7 +29,7 @@
 }
 
 .navbar-links {
-	margin-right: 2rem;
+	margin-right: 1rem;
 	margin-top: 0.9rem;
 	justify-items: baseline;
 }
@@ -148,7 +148,11 @@
 .navbar-links img {
 	border-radius: 100%;
 	margin-left: 1rem;
-}
+	width: 70px;
+	height: 70px;
+	object-fit: cover;
+	margin-top: -0.2rem;
+  }
 
 .dropbtn {
 	border-radius: none;

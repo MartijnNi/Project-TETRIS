@@ -50,3 +50,15 @@ function toggleInfo(buttonId, targetId) {
     }
   });
 }
+
+function previewImage() {
+  var fileInput = document.getElementById('myFileInput');
+  var file = fileInput.files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+      var imgSrc = e.target.result;
+      document.querySelector('.profilePicture').style.backgroundImage = 'url(' + imgSrc + ')';
+      document.querySelector('img').src = imgSrc;
+  }
+  reader.readAsDataURL(file);
+}

@@ -41,7 +41,7 @@ checkInLog();
             <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
           </div>
         </div>
-          <img alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
+          <img alt="profilepicture" height="60" src=""/>
         </ul>
     </div>
 		</nav>
@@ -58,30 +58,29 @@ checkInLog();
                                 <div class="profilePictureContainer">
                                     <div class="profilePictureContainerLeft">
                                         <div class="container">
-                            <div class="profilePicture"></div> 
-                                <input type="file" id="myFileInput" />
-                                    <div class="middle">
-                                        <div class="text" onclick="document.getElementById('myFileInput').click()" value="select a file">Change Picture</div>
-                                    </div>
-</div>
+                                        <div class="profilePicture"></div>
+                                        <input type="file" id="myFileInput" onchange="previewImage()" />
+                                        <div class="middle">
+                                            <div class="text" onclick="document.getElementById('myFileInput').click()">Change Picture</div>
+                                        </div>
+                                        </div>
                             </div>
                             <div class="profilePictureContainerRight">
                                 <div class="status">
                                 <h1 id="statusTitle">Status</h1>
-                                    <form method="post" action="/project-TETRIS/database/update.php">
-                                        <textarea type="textArea" placeholder="What's going on?!" id="userStatus" name="userStatus" rows="5" cols="100"></textarea>
-                                        <script>
-                                            const userStatus = document.getElementById("userStatus");
-                                            const statusTitle = document.getElementById("statusTitle");
-                                            userStatus.addEventListener("keydown", function (event) {
-                                                if (event.key === "Enter") {
-                                                    event.preventDefault();
-                                                    statusTitle.textContent = "Status Saved!";
-                                                }
-                                            });
-                                        </script>
-
-                                    </form>
+                                <form method="post" action="/project-TETRIS/database/update.php">
+                                    <textarea type="textArea" placeholder="What's going on?!" id="userStatus" name="userStatus" rows="5" cols="100"></textarea>
+                                    <script>
+                                        const userStatus = document.getElementById("userStatus");
+                                        const statusTitle = document.getElementById("statusTitle");
+                                        userStatus.addEventListener("keydown", function (event) {
+                                            if (event.key === "Enter") {
+                                                event.preventDefault();
+                                                statusTitle.textContent = "Status Saved!";
+                                            }
+                                        });
+                                    </script>
+                                </form>
                                 </div>
                             <div class="favoriteGame">
                                 <h1>Favorite Game<h1>
