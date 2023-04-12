@@ -151,7 +151,7 @@ body {
 .profilePicture {
 	background-image: url("/project-TETRIS/profile/ezgif.com-resize.jpg");
 	object-fit: scale-down;
-	border: 2px solid red;
+	border: 2px red;
 	margin-top: 2rem;
 	-webkit-box-shadow: 0px 0px 50px -8px #000000;
 	box-shadow: 0px 0px 50px -8px #000000;
@@ -188,6 +188,15 @@ body {
 	text-align: center;
 	margin-left: 1.5rem;
 	top: 25%;
+}
+
+.container .profilePicture{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 250px;
+	height: 250px;
+	border-radius: 100%;
 }
 
 .container:hover .profilePicture {
@@ -356,7 +365,6 @@ select {
 	}
 	.profilePicture {
 		margin-left: 25rem;
-		border: 2px solid red;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -390,7 +398,6 @@ select {
 	.profilePictureContainer {
 		width: 100%;
 		display: flex;
-		border: 2px solid red;
 	}
 	.profileEditContainer h1 {
 		display: flex;
@@ -401,7 +408,7 @@ select {
 }
 
 .profilePictureContainerLeft {
-	display: flex;
+	display:flexbox;
 	justify-content: center;
   }
 
