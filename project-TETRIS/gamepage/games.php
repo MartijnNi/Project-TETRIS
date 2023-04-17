@@ -35,7 +35,7 @@ checkInLog();
           <div class="dropdown">
             <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
             <div class="dropdown-content">
-              <img class="profilePictureMenu" alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
+              <div class="profilePictureMenu" style="background-image: url(/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>);"></div>
               <a href="/project-TETRIS/profile/profile.php">Profile</a>
               <a href="#">Friends</a>
             	<!-- De knop die de popup activeert -->
@@ -43,7 +43,8 @@ checkInLog();
               <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
             </div>
           </div>
-          <img class="profilePictureNav" alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
+          <div class="profilePictureNav" style="background-image: url(/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>);"></div>
+          
         </ul>
     </div>
 </nav>
