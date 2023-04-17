@@ -56,12 +56,14 @@
 	color: white;
 	text-align: center;
 	text-shadow: rgba(209, 209, 209, 0.7) 0px 0px 10px;
+	cursor: pointer;
 	display: block;
 }
 
 .navbar-links a:hover {
 	background-color: #25214b;
 	border-radius: 0.5rem;
+	cursor: pointer;
 }
 
 /*toggle menu*/
