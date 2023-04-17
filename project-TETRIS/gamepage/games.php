@@ -35,14 +35,15 @@ checkInLog();
           <div class="dropdown">
             <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
             <div class="dropdown-content">
-            <img alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
-            <a href="/project-TETRIS/profile/profile.php">Profile</a>
-            <a href="#">Friends</a>
+              <img class="profilePictureMenu" alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
+              <a href="/project-TETRIS/profile/profile.php">Profile</a>
+              <a href="#">Friends</a>
             	<!-- De knop die de popup activeert -->
-            <a onclick="openMessages()">Messages</a>
-            <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
+              <a onclick="openMessages()">Messages</a>
+              <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
+            </div>
           </div>
-        </div>
+          <img class="profilePictureNav" alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
         </ul>
     </div>
 </nav>
