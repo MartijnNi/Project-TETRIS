@@ -41,7 +41,7 @@ checkInLog();
             <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
           </div>
         </div>
-          <img alt="profilepicture" height="60" src=""/>
+          <div class="img" style="background-image: url(/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>);"></div>
         </ul>
     </div>
 		</nav>
@@ -59,7 +59,7 @@ checkInLog();
                                     <div class="profilePictureContainerLeft">
                                         <div class="container">
                                         <form action="../database/upload.php" method="post" enctype="multipart/form-data">
-                                            <div class="profilePicture"></div>
+                                           <div class="profilePicture" style="background-image: url(/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>);"></div>
                                                 <input type="file" name="file" id="myFileInput" onchange="previewImage()" />
                                                 <div class="middle">
                                                 <div class="text" onclick="document.getElementById('myFileInput').click()">Change Picture</div>

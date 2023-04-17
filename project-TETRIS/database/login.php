@@ -18,6 +18,7 @@ if(isset($_POST['submit'])){
             $_SESSION["firstname"] = $account->firstname;
             $_SESSION["email"] = $account->email;
             $_SESSION["userId"] = $account->userId;
+            $_SESSION["profileImage"] = $account->profileImage;
 
             header('Location: /project-tetris/gamepage/games.php');
         } else {
