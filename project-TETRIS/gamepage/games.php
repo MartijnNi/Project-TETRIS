@@ -12,6 +12,7 @@ checkInLog();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="/Project-TETRIS/gamepage/gamepage.css">
     <link rel="stylesheet" href="/Project-TETRIS/navbar/navfooter.css">    
+    <link rel="stylesheet" href="/Project-TETRIS/messages/messages.css">
     <title>RetroGen</title>
 </head>
 <body>
@@ -32,19 +33,34 @@ checkInLog();
         <ul>
           <li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
           <div class="dropdown">
-          <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
-          <div class="dropdown-content">
+            <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
+            <div class="dropdown-content">
+            <img alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
             <a href="/project-TETRIS/profile/profile.php">Profile</a>
             <a href="#">Friends</a>
-            <a href="#">Messages</a>
+            	<!-- De knop die de popup activeert -->
+            <a onclick="openMessages()">Messages</a>
             <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
           </div>
         </div>
-          <img alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
         </ul>
     </div>
 </nav>
 <!------------- Navbar End -------------->
+
+
+
+<!------------- messages -------------->
+
+	<!-- De popup zelf -->
+	<div id="Message" class="popupMessagesScreen">
+		<div class="Messages-content">
+			<span class="close" onclick="closeMessages()">&times;</span>
+			<p>Messages</p>
+		</div>
+	</div>
+
+<!------------- messages end -------------->
 
 
 
@@ -97,6 +113,7 @@ checkInLog();
 
 <!----------- Js ------------>
 <script src="/Project-TETRIS/navbar/navToggle.js"></script>
+<script src="/Project-TETRIS/messages/messages.js"></script>
 <!----------- Eind Js ------------>
 </body>
 </html>
