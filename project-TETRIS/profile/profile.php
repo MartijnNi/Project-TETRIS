@@ -58,12 +58,15 @@ checkInLog();
                                 <div class="profilePictureContainer">
                                     <div class="profilePictureContainerLeft">
                                         <div class="container">
-                                        <div class="profilePicture"></div>
-                                        <input type="file" id="myFileInput" onchange="previewImage()" />
-                                        <div class="middle">
-                                            <div class="text" onclick="document.getElementById('myFileInput').click()">Change Picture</div>
-                                        </div>
-                                        </div>
+                                        <form action="../database/upload.php" method="post" enctype="multipart/form-data">
+                                            <div class="profilePicture"></div>
+                                                <input type="file" name="file" id="myFileInput" onchange="previewImage()" />
+                                                <div class="middle">
+                                                <div class="text" onclick="document.getElementById('myFileInput').click()">Change Picture</div>
+                                                <input type="submit" name="postPfp" value="Upload">
+                                            </div>
+                                        </form>
+                                </div>
                             </div>
                             <div class="profilePictureContainerRight">
                                 <div class="status">
