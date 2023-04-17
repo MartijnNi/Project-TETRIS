@@ -18,34 +18,35 @@ checkInLog();
 	<body>
 		<!------------- Navbar -------------->
 
-		<nav class="navbar">
-			<div class="brand-titel">
-				<a href="/project-TETRIS/gamepage/games.php"><h1>RetroGen</h1></a>
-			</div>
+	
+<nav class="navbar">
+    <div class="brand-titel"><a href="/Project-TETRIS/gamepage/games.php"><h1>RetroGen</h1></a>
+    </div>
 
-			<a href="#" class="toggle-button">
-				<span class="bar"></span>
-				<span class="bar"></span>
-				<span class="bar"></span>
-			</a>
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
 
-			<div class="navbar-links">
+    <div class="navbar-links">
         <ul>
           <li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
           <div class="dropdown">
-          <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
-          <div class="dropdown-content">
-            <a href="/project-TETRIS/profile/profile.php">Profile</a>
-            <a href="#">Friends</a>
-            <a href="#">Messages</a>
-            <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
+            <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
+            <div class="dropdown-content">
+              <img class="profilePictureMenu" alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
+              <a href="/project-TETRIS/profile/profile.php">Profile</a>
+              <a href="#">Friends</a>
+            	<!-- De knop die de popup activeert -->
+              <a onclick="openMessages()">Messages</a>
+              <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
+            </div>
           </div>
-        </div>
-          <div class="img" style="background-image: url(/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>);"></div>
+          <img class="profilePictureNav" alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
         </ul>
     </div>
-		</nav>
-
+</nav>
 		<!----------- Navbar End ------------>
 
 		<section class="login-container">
