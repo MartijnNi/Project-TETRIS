@@ -8,7 +8,7 @@ include "dbconfig.php";
     
 
     // Check file size
-    if ($_FILES["file"]["size"] > 500000) {
+    if ($_FILES["file"]["size"] > 5000000) {
         echo "Sorry, your file is too large.";
           $uploadOk = 0;
     }
@@ -37,18 +37,4 @@ include "dbconfig.php";
        $query->bindParam(':username', $username);
        $query->execute();
        $filename = '';
-       
-
-       $user = $query->fetch();
-       
-       if ($username !== false) {
-           $filename = uniqid() . '-' . $user['userId'] . '.' . $imageFileType;
-           // ... the rest of your code for validating and moving the uploaded file ...
-       } else {
-           echo "No user found with that email address.";
-       }
-       
-       // Use the $filename variable here
-       echo "The uploaded file was saved as: " . $filename;
-       
 ?>
