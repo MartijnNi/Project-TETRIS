@@ -36,9 +36,12 @@
 
 .navbar-links a {
 	font-family: "Super Legend Boy", sans-serif;
-	margin-top: 0.5em;
+	margin-top: 0.3em;
 	padding: 1rem;
 	font-size: 1rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	width: 139px;
 }
 .navbar-links ul {
 	display: flex;
@@ -143,6 +146,7 @@
 	.navbar-links.active {
 		display: flex;
 		z-index: 100;
+		font-size: 1rem;
 	}
 }
 
