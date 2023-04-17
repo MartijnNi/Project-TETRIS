@@ -47,7 +47,7 @@ if(isset($_SESSION['username'])){
                 $query->bindParam(':filename', $filename);
                 $query->bindParam(':userId', $userId);
                 $query->execute();
-
+                $_SESSION['profileImage'] = $filename; // $filename is the new image filename
                 echo"<script>location.href='/project-TETRIS/profile/profile.php'</script>";
             } else {
                 echo "Sorry, there was an error uploading your file.";
