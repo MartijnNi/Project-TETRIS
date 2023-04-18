@@ -35,7 +35,7 @@ checkInLog();
           <div class="dropdown">
             <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
             <div class="dropdown-content">
-              <div class="profilePictureMenu" style="background-image: url(/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>);"></div>
+              <img class="profilePictureMenu" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
               <a href="/project-TETRIS/profile/profile.php">Profile</a>
               <a href="#">Friends</a>
             	<!-- De knop die de popup activeert -->
@@ -43,8 +43,7 @@ checkInLog();
               <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
             </div>
           </div>
-          <div class="profilePictureNav" style="background-image: url(/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>);"></div>
-          
+          <img class="profilePictureNav" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
         </ul>
     </div>
 </nav>
@@ -68,7 +67,7 @@ checkInLog();
 
 <!------------- Content -------------->
   
-<div class="titel-container">
+<div class="titel-container" id="titelContainer">
   <h1>Kies een spel!</h1>
   <h2>Oeps!<br><br>Het lijkt er op dat je niet op een Computer speelt?</h2>
 </div>
@@ -78,7 +77,7 @@ checkInLog();
 </div>
 
 <div class="carousel_wrapper">
-    <div class="carousel">
+    <div class="carousel" id="carousel">
       <div class="slide one">
         <a href="/Project-TETRIS/Games/tetris/tetris.php"><img src="/Project-TETRIS/media/gamepage/Tetris-Logo-1200x1200.jpg" /></a>
       </div>

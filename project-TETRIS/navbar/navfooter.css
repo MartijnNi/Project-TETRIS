@@ -3,13 +3,10 @@
 * {
 	padding: 0;
 	margin: 0;
-	z-index: 0;
+	z-index: 200;
+
 }
 
-.body {
-	margin: 0rem;
-	padding: 0rem;
-}
 .navbar {
 	height: 90px;
 	display: flex;
@@ -168,14 +165,13 @@
 
 }
 
-.navbar-links img {
+.navbar-links img{
 	border-radius: 100%;
 	margin-left: 1rem;
 	width: 70px;
 	height: 70px;
 	object-fit: cover;
 	margin-top: -0.2rem;
-	background-image: url("../profile/ezgif.com-resize.jpg");
   }
 
 .dropbtn {
@@ -183,7 +179,7 @@
 	background-color: transparent;
 	font-family: "Super Legend Boy", sans-serif;
 	color: white;
-
+	z-index: 110;
 	border: none;
   }
   
@@ -195,6 +191,7 @@
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
+	z-index: 110;
 	display: none;
 	position: absolute;
 	background-color: #25214b;
@@ -206,6 +203,7 @@
   
   /* Links inside the dropdown */
   .dropdown-content a {
+	z-index: 110;
 	color: rgb(255, 255, 255);
 	padding: 12px 16px;
 	text-decoration: none;

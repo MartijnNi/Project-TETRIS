@@ -3,7 +3,6 @@ include "../database/dbconfig.php";
 checkInLog();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -13,13 +12,13 @@ checkInLog();
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 		<link rel="stylesheet" href="/project-tetris/profile/profile.css" />
 		<link rel="stylesheet" href="/project-tetris/navbar/navfooter.css" />
+        <link rel="stylesheet" href="/Project-TETRIS/messages/messages.css">
 		<title>RetroGen</title>
 	</head>
 	<body>
 		<!------------- Navbar -------------->
 
-	
-<nav class="navbar">
+        <nav class="navbar">
     <div class="brand-titel"><a href="/Project-TETRIS/gamepage/games.php"><h1>RetroGen</h1></a>
     </div>
 
@@ -35,7 +34,7 @@ checkInLog();
           <div class="dropdown">
             <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
             <div class="dropdown-content">
-              <img class="profilePictureMenu" alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
+              <img class="profilePictureMenu" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
               <a href="/project-TETRIS/profile/profile.php">Profile</a>
               <a href="#">Friends</a>
             	<!-- De knop die de popup activeert -->
@@ -43,11 +42,19 @@ checkInLog();
               <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
             </div>
           </div>
-          <img class="profilePictureNav" alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
+          <img class="profilePictureNav" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
         </ul>
     </div>
 </nav>
 		<!----------- Navbar End ------------>
+
+        	<!-- De popup zelf -->
+	<div id="Message" class="popupMessagesScreen">
+		<div class="Messages-content">
+			<span class="close" onclick="closeMessages()">&times;</span>
+			<p>Messages</p>
+		</div>
+	</div>
 
 		<section class="login-container">
 			<div class="flip-container">
@@ -174,6 +181,7 @@ checkInLog();
         </script>
 		<script src="/project-tetris/navbar/navToggle.js"></script>
         <script src="/project-TETRIS/profile/profile.js"></script>
+        <script src="/Project-TETRIS/messages/messages.js"></script>
 		<!----------- Eind Js ------------>
 	</body>
 </html>

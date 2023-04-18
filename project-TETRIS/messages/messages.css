@@ -2,8 +2,9 @@
         
         /* Stijlen voor de popup */
 		.popupMessagesScreen {
+			overflow: hidden;
 			display: none; /* Maak het popup-scherm standaard verborgen */
-			position: fixed;
+			position: relative;
 			z-index: 1;
 			left: 0;
 			top: 0;
@@ -15,12 +16,13 @@
 		
 		/* Stijlen voor de inhoud van de popup */
 		.Messages-content {
+			overflow: hidden;
 			background-color: #fefefe;
-			margin: 13% auto;
+			margin: 6% auto;
 			padding: 20px;
 			border: 1px solid #888;
 			width: 90%;
-            height: 60%;
+            height: 70%;
             max-height: 1000px;
 			max-width: 1000px;
 			text-align: center;
