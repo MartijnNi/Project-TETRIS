@@ -5,6 +5,11 @@ $dbname = "retrogen";
 $user = "root";
 $pass = "a3b6c9";
 
+//$dbhost = "localhost";
+//$dbname = "rhdtsgzq_retrogen";
+//$user = "rhdtsgzq_database";
+//$pass = "1234";
+
 try {
     $database = new PDO("mysql:host=$dbhost;dbname=$dbname",$user,$pass);
     $database->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION );
