@@ -71,7 +71,7 @@ checkInLog();
                                                 <input type="file" name="file" id="myFileInput" onchange="previewImage()" />
                                                 <div class="middle">
                                                 <div class="text" onclick="document.getElementById('myFileInput').click()">Change Picture</div>
-                                                <input type="submit" name="postPfp" value="Upload">
+                                                <input type="submit" name="postPfp" class="submitPfp" value="Upload">
                                             </div>
                                         </form>
                                 </div>
@@ -80,17 +80,8 @@ checkInLog();
                                 <div class="status">
                                 <h1 id="statusTitle">Status</h1>
                                 <form method="post" action="/project-TETRIS/database/update.php">
-                                    <textarea type="textArea" placeholder="What's going on?!" id="userStatus" name="userStatus" rows="5" cols="100"></textarea>
-                                    <script>
-                                        const userStatus = document.getElementById("userStatus");
-                                        const statusTitle = document.getElementById("statusTitle");
-                                        userStatus.addEventListener("keydown", function (event) {
-                                            if (event.key === "Enter") {
-                                                event.preventDefault();
-                                                statusTitle.textContent = "Status Saved!";
-                                            }
-                                        });
-                                    </script>
+                                    <textarea type="textArea" placeholder="What's going on?!" id="userStatus" name="userStatus" rows="5" cols="100"><?php echo $_SESSION['userStatus']; ?></textarea>
+                                    <input type="submit" class="submitStatus" name="" id="submitStatus" value="Save"></input>
                                 </form>
                                 </div>
                             <div class="favoriteGame">

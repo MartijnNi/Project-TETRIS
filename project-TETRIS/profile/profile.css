@@ -472,3 +472,59 @@ select {
 		#highScoresGamesContainerShow{
 			display: none;
 		}
+.submitPfp {
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	font-family: "Super Legend Boy", sans-serif;
+	color: white;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+	background-color: #142347d2;
+	transition: 0.2s;
+}
+.submitPfp:hover {
+	transform: scale(1.1);
+	color: white;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+	background-color: #344775d2;
+	transition: 0.2s;
+}
+
+.submitStatus {
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	font-family: "Super Legend Boy", sans-serif;
+	color: white;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+	background-color: #142347d2;
+	transition: 0.2s;
+}
+.submitStatus:hover {
+	transform: scale(1.1);
+	color: white;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+	background-color: #344775d2;
+	transition: 0.2s;
+}
+
+#pacmanButton {
+	background-image: url(/project-TETRIS/profile/pac-man_ce2_game-thumbnail.jpg);
+	background-size: cover;
+}
+#snakeButton {
+	background-size: cover;
+}
+#tetrisButton {
+	background-image: url(/project-TETRIS/profile/tetrisThumbnail.png);
+	background-size: cover;
+}
+#hangmanButton {
+	background-size: cover;
+}
+#reactionGameButton {
+	background-size: cover;
+}
+#shooterButton {
+	background-size: cover;
+}

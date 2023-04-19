@@ -26,6 +26,7 @@ if (isset($_POST['userStatus'])) {
     $insert->bindParam(':userStatus', $userStatus);
     $insert->bindParam(':userId', $_SESSION["userId"]);
     $insert->execute();
+    $_SESSION['userStatus'] = $userStatus;
     echo "<script>location.href='/project-TETRIS/profile/profile.php'</script>";
 
 }
