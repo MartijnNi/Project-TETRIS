@@ -32,22 +32,32 @@ checkInLog();
 <!------------- Navbar -------------->
 
 <nav class="navbar">
-  <div class="brand-titel"><a href="/Project-TETRIS/gamepage/games.php"><h1>RetroGen</h1></a>
-  </div>
+    <div class="brand-titel"><a href="/Project-TETRIS/gamepage/games.php"><h1>RetroGen</h1></a>
+    </div>
 
-  <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-  </a>
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
 
-  <div class="navbar-links">
-      <ul>
-      <li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
-					<li><a href="/project-tetris/profile/profile.php"><?php echo $_SESSION['username']; ?></a></li>
-					<img alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
-      </ul>
-  </div>
+    <div class="navbar-links">
+        <ul>
+          <li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
+          <div class="dropdown">
+            <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
+            <div class="dropdown-content">
+              <img class="profilePictureMenu" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
+              <a href="/project-TETRIS/profile/profile.php">Profile</a>
+              <a href="#">Friends</a>
+            	<!-- De knop die de popup activeert -->
+              <a onclick="openMessages()">Messages</a>
+              <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
+            </div>
+          </div>
+          <img class="profilePictureNav" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
+        </ul>
+    </div>
 </nav>
 <!------------- Navbar End -------------->
 

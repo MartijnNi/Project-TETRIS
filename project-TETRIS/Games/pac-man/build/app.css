@@ -19,8 +19,8 @@ body {
   height: 100vh;
   justify-content: center;
   margin: 0;
-  overflow: hidden;
   position: relative;
+  z-index: 80;
   touch-action: manipulation; }
 
 .backdrop {

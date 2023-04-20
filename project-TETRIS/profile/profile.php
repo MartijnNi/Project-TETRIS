@@ -3,7 +3,6 @@ include "../database/dbconfig.php";
 checkInLog();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -13,32 +12,49 @@ checkInLog();
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 		<link rel="stylesheet" href="/project-tetris/profile/profile.css" />
 		<link rel="stylesheet" href="/project-tetris/navbar/navfooter.css" />
+        <link rel="stylesheet" href="/Project-TETRIS/messages/messages.css">
 		<title>RetroGen</title>
 	</head>
 	<body>
 		<!------------- Navbar -------------->
 
-		<nav class="navbar">
-			<div class="brand-titel">
-				<a href="/project-TETRIS/gamepage/games.php"><h1>RetroGen</h1></a>
-			</div>
+        <nav class="navbar">
+    <div class="brand-titel"><a href="/Project-TETRIS/gamepage/games.php"><h1>RetroGen</h1></a>
+    </div>
 
-			<a href="#" class="toggle-button">
-				<span class="bar"></span>
-				<span class="bar"></span>
-				<span class="bar"></span>
-			</a>
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
 
-			<div class="navbar-links">
-			<ul>
-					<li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
-					<li><a href="/project-tetris/profile/profile.php"><?php echo $_SESSION['username']; ?></a></li>
-					<img alt="profileP" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
-				</ul>
-			</div>
-		</nav>
-
+    <div class="navbar-links">
+        <ul>
+          <li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
+          <div class="dropdown">
+            <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
+            <div class="dropdown-content">
+              <img class="profilePictureMenu" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
+              <a href="/project-TETRIS/profile/profile.php">Profile</a>
+              <a href="#">Friends</a>
+            	<!-- De knop die de popup activeert -->
+              <a onclick="openMessages()">Messages</a>
+              <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
+            </div>
+          </div>
+          <img class="profilePictureNav" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
+        </ul>
+    </div>
+</nav>
 		<!----------- Navbar End ------------>
+
+        	<!-- De popup zelf -->
+	<div id="Message" class="popupMessagesScreen">
+		<div class="Messages-content">
+			<span class="close" onclick="closeMessages()">&times;</span>
+			<p>Messages</p>
+		</div>
+	</div>
 
 		<section class="login-container">
 			<div class="flip-container">
@@ -50,30 +66,23 @@ checkInLog();
                                 <div class="profilePictureContainer">
                                     <div class="profilePictureContainerLeft">
                                         <div class="container">
-                            <div class="profilePicture"></div> 
-                                <input type="file" id="myFileInput" />
-                                    <div class="middle">
-                                        <div class="text" onclick="document.getElementById('myFileInput').click()" value="select a file">Change Picture</div>
-                                    </div>
-</div>
+                                        <form action="../database/upload.php" method="post" enctype="multipart/form-data">
+                                           <div class="profilePicture" style="background-image: url(/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>);"></div>
+                                                <input type="file" name="file" id="myFileInput" onchange="previewImage()" />
+                                                <div class="middle">
+                                                <div class="text" onclick="document.getElementById('myFileInput').click()">Change Picture</div>
+                                                <input type="submit" name="postPfp" class="submitPfp" value="Upload">
+                                            </div>
+                                        </form>
+                                </div>
                             </div>
                             <div class="profilePictureContainerRight">
                                 <div class="status">
                                 <h1 id="statusTitle">Status</h1>
-                                    <form method="post" action="/project-TETRIS/database/update.php">
-                                        <textarea type="textArea" placeholder="What's going on?!" id="userStatus" name="userStatus" rows="5" cols="100"></textarea>
-                                        <script>
-                                            const userStatus = document.getElementById("userStatus");
-                                            const statusTitle = document.getElementById("statusTitle");
-                                            userStatus.addEventListener("keydown", function (event) {
-                                                if (event.key === "Enter") {
-                                                    event.preventDefault();
-                                                    statusTitle.textContent = "Status Saved!";
-                                                }
-                                            });
-                                        </script>
-
-                                    </form>
+                                <form method="post" action="/project-TETRIS/database/update.php">
+                                    <textarea type="textArea" placeholder="What's going on?!" id="userStatus" name="userStatus" rows="5" cols="100"><?php echo $_SESSION['userStatus']; ?></textarea>
+                                    <input type="submit" class="submitStatus" name="" id="submitStatus" value="Save"></input>
+                                </form>
                                 </div>
                             <div class="favoriteGame">
                                 <h1>Favorite Game<h1>
@@ -135,14 +144,15 @@ checkInLog();
                             <div class="gamesContainer">
                                 <p>Game Information</p>
                                 <div class="gameButtons">
-                                    <button onclick="toggleInfo()">Tetris</button>
-                                    <button>Pac-Man</button>
-                                    <button>Snake</button>
-                                    <button>Hangman</button>
-                                    <button>Reaction Game</button>
-                                    <button>Shooter</button>
+                                    <button id="pacmanButton" onclick="toggleInfo('pacmanButton', 'pacmanTarget')">Pac-Man</button>
+                                    <button id="snakeButton" onclick="toggleInfo('snakeButton', 'snakeTarget')">Snake</button>
+                                    <button id="tetrisButton" onclick="toggleInfo('tetrisButton', 'tetrisTarget')">Tetris</button>
+                                    <button id="hangmanButton" onclick="toggleInfo('hangmanButton', 'HangmanTarget')">Hangman</button>
+                                    <button id="reactionGameButton" onclick="toggleInfo('reactionGameButton', 'reactionGameTarget')">Reaction Game</button>
+                                    <button id="shooterButton" onclick="toggleInfo('shooterButton', 'shooterTarget')">Shooter</button>
                                     <button>???</button>
                                     <button>???</button>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -162,6 +172,7 @@ checkInLog();
         </script>
 		<script src="/project-tetris/navbar/navToggle.js"></script>
         <script src="/project-TETRIS/profile/profile.js"></script>
+        <script src="/Project-TETRIS/messages/messages.js"></script>
 		<!----------- Eind Js ------------>
 	</body>
 </html>

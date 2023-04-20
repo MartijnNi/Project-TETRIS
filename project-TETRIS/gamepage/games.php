@@ -12,6 +12,7 @@ checkInLog();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="/Project-TETRIS/gamepage/gamepage.css">
     <link rel="stylesheet" href="/Project-TETRIS/navbar/navfooter.css">    
+    <link rel="stylesheet" href="/Project-TETRIS/messages/messages.css">
     <title>RetroGen</title>
 </head>
 <body>
@@ -32,15 +33,17 @@ checkInLog();
         <ul>
           <li><a href="/Project-TETRIS/gamepage/games.php">Games</a></li>
           <div class="dropdown">
-          <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
-          <div class="dropdown-content">
-            <a href="/project-TETRIS/profile/profile.php">Profile</a>
-            <a href="#">Friends</a>
-            <a href="#">Messages</a>
-            <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
+            <li><a class="dropbtn"><?php echo $_SESSION['username']; ?></a></li>
+            <div class="dropdown-content">
+              <img class="profilePictureMenu" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
+              <a href="/project-TETRIS/profile/profile.php">Profile</a>
+              <a href="#">Friends</a>
+            	<!-- De knop die de popup activeert -->
+              <a onclick="openMessages()">Messages</a>
+              <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
+            </div>
           </div>
-        </div>
-          <img alt="profilepicture" height="60" src="/project-TETRIS/profile/ezgif.com-resize.jpg"/>
+          <img class="profilePictureNav" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
         </ul>
     </div>
 </nav>
@@ -48,9 +51,23 @@ checkInLog();
 
 
 
+<!------------- messages -------------->
+
+	<!-- De popup zelf -->
+	<div id="Message" class="popupMessagesScreen">
+		<div class="Messages-content">
+			<span class="close" onclick="closeMessages()">&times;</span>
+			<p>Messages</p>
+		</div>
+	</div>
+
+<!------------- messages end -------------->
+
+
+
 <!------------- Content -------------->
   
-<div class="titel-container">
+<div class="titel-container" id="titelContainer">
   <h1>Kies een spel!</h1>
   <h2>Oeps!<br><br>Het lijkt er op dat je niet op een Computer speelt?</h2>
 </div>
@@ -60,7 +77,7 @@ checkInLog();
 </div>
 
 <div class="carousel_wrapper">
-    <div class="carousel">
+    <div class="carousel" id="carousel">
       <div class="slide one">
         <a href="/Project-TETRIS/Games/tetris/tetris.php"><img src="/Project-TETRIS/media/gamepage/Tetris-Logo-1200x1200.jpg" /></a>
       </div>
@@ -97,6 +114,7 @@ checkInLog();
 
 <!----------- Js ------------>
 <script src="/Project-TETRIS/navbar/navToggle.js"></script>
+<script src="/Project-TETRIS/messages/messages.js"></script>
 <!----------- Eind Js ------------>
 </body>
 </html>

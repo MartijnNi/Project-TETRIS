@@ -5,10 +5,10 @@
     padding: 0;
     margin: 0;
     z-index: 99;
+
 }
 
 /* Titel */
-
 .titel-container{
     margin-left: auto;
     margin-right: auto;
@@ -29,11 +29,13 @@
 h2 {
   color: whitesmoke;
   text-shadow: rgba(209, 209, 209, 0.7) 2px 0px 0px;
+  font-family: 'Super Legend Boy', sans-serif;
   text-align: center;
   display: none;
 }
 
 h3 {
+  font-family: 'Super Legend Boy', sans-serif;
   display: none;
 }
 
@@ -74,6 +76,7 @@ h3 {
     background-size:cover;
     background-position: center top;
     box-sizing: border-box;
+    overflow: hidden;
   }
     
   .carousel_wrapper {

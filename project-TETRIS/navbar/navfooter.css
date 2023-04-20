@@ -3,13 +3,10 @@
 * {
 	padding: 0;
 	margin: 0;
-	z-index: 99;
+	z-index: 200;
+
 }
 
-.body {
-	margin: 0rem;
-	padding: 0rem;
-}
 .navbar {
 	height: 90px;
 	display: flex;
@@ -29,16 +26,19 @@
 }
 
 .navbar-links {
-	margin-right: 2rem;
+	margin-right: 1rem;
 	margin-top: 0.9rem;
 	justify-items: baseline;
 }
 
 .navbar-links a {
 	font-family: "Super Legend Boy", sans-serif;
-	margin-top: 0.5em;
+	margin-top: 0.3em;
 	padding: 1rem;
 	font-size: 1rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	width: 139px;
 }
 .navbar-links ul {
 	display: flex;
@@ -53,12 +53,22 @@
 	color: white;
 	text-align: center;
 	text-shadow: rgba(209, 209, 209, 0.7) 0px 0px 10px;
+	cursor: pointer;
 	display: block;
 }
 
 .navbar-links a:hover {
 	background-color: #25214b;
 	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+.profilePictureMenu{
+	display: none;
+}
+
+.profilePictureNav{
+	display: block;
 }
 
 /*toggle menu*/
@@ -106,8 +116,7 @@
 		padding: 1rem;
 		width: auto;
 		margin-top: 4rem;
-		margin-right: 0rem;
-		border: rgb(0, 0, 0) solid 2px;
+		border: rgb(0, 0, 0) solid 1px;
 		border-top: #191636;
 		float: right;
 	}
@@ -143,19 +152,34 @@
 	.navbar-links.active {
 		display: flex;
 		z-index: 100;
+		font-size: 1rem;
 	}
+
+	.profilePictureMenu{
+		display:flex;
+		margin: 0 auto !important; 
+	}
+	.profilePictureNav{
+		display: none;
+	}
+
 }
-.navbar-links img {
+
+.navbar-links img{
 	border-radius: 100%;
 	margin-left: 1rem;
-}
+	width: 70px;
+	height: 70px;
+	object-fit: cover;
+	margin-top: -0.2rem;
+  }
 
 .dropbtn {
 	border-radius: none;
 	background-color: transparent;
 	font-family: "Super Legend Boy", sans-serif;
 	color: white;
-
+	z-index: 110;
 	border: none;
   }
   
@@ -167,16 +191,19 @@
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
+	z-index: 110;
 	display: none;
 	position: absolute;
 	background-color: #25214b;
 	min-width: 139px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
+	z-index: 100;
+	border-radius: 10%;
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
+	z-index: 110;
 	color: rgb(255, 255, 255);
 	padding: 12px 16px;
 	text-decoration: none;
