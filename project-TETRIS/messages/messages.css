@@ -3,7 +3,7 @@
         /* Stijlen voor de popup */
 		.popupMessagesScreen {
 			overflow: hidden;
-			display: block; /* Maak het popup-scherm standaard verborgen */
+			display: none; /* Maak het popup-scherm standaard verborgen */
 			position: relative;
 			z-index: 1;
 			left: 0;
