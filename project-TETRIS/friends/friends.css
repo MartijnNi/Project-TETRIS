@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    z-index: 99;
+}
+body {
+    z-index: 100;
+    background-image:url(/project-TETRIS/friends/dikkefoto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    align-items: center;
+}
+
+.friends-container{
+    display: flex;
+    background-color: rgba(199, 199, 199, 0.357);
+    height: 45rem;
+    width: 95rem;
+    opacity: 1;
+    border-radius:25px ;
+    flex-direction: column;
+}
+
+.search-container{
+    padding-top: 1rem;
+    height: 15%;
+    width:100% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.548);
+    padding-bottom: 1rem;
+    width: 90%;
+    margin-left: 5%;
+    justify-content: center;
+}
+.friendsSearch {
+    background-color: transparent;
+    height: 5rem;
+    width: 40rem;
+    padding-left: 1rem;
+    border-radius: 15px;
+    font-size: 40px;
+    border: 2px solid white;
+    color: rgb(255, 255, 255);
+    font-family: "Super Legend Boy", sans-serif;
+	text-shadow: 1px 1px 2px rgb(194, 194, 194), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+}
+::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+.friendsButton{
+    background-color: transparent;
+    height: 5.1rem;
+    width: 25rem;
+    border-radius: 15px;
+    font-size: 40px;
+    border: 2px solid white;
+    color: white;
+    font-family: "Super Legend Boy", sans-serif;
+	text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+    transition: 0.2s;
+}
+.friendsButton:hover {
+    color: rgb(114, 255, 106);
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+.friends-display-container{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+.friend-display {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.friend1, .friend2, .friend2, .friend3, .friend4, .friend5, .friend6, .friend7, .friend8 {
+height: 15rem;
+width: 21rem;
+border: rgb(157, 0, 255) 2px solid;
+background-color: rgba(170, 0, 255, 0.446);
+margin: 1rem;
+display: flex;
+padding-top: 1rem;
+border-radius: 15px;
+}
+
