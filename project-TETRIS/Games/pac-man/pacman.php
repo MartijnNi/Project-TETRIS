@@ -49,7 +49,7 @@ checkInLog();
             <div class="dropdown-content">
               <img class="profilePictureMenu" alt="profilepicture" height="60" src="/project-tetris/profile/profileImages/<?php echo $_SESSION['profileImage']; ?>"/>
               <a href="/project-TETRIS/profile/profile.php">Profile</a>
-              <a href="#">Friends</a>
+              <a href="/project-TETRIS/friends/friends.php">Friends</a>
             	<!-- De knop die de popup activeert -->
               <a onclick="openMessages()">Messages</a>
               <a id="signout" href="/project-TETRIS/database/signout.php">Sign Out</a>
