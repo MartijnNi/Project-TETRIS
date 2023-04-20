@@ -1,0 +1,114 @@
+h1 {
+    text-align: center;
+    font-family: verdana;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+body {
+    background-color: #251b32;
+}
+.memoryContainer {
+    width: 720px;
+    height: 620px;
+    border: 5px solid #000000;
+    margin: auto;
+    background-color: #643173;
+    border-radius: 1%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+.memoryCard{ 
+    width:100px;
+    height: 100px;
+    margin:10px;
+    border:1px solid #6d5091;
+    float:left;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 30%;
+    background-size: cover !important;
+    background-color:#a48cc1;
+    background-position: center;
+    background: contain;
+}
+.memoryCard:hover {
+    background-color: #715295;
+    border:1px solid #715295
+}
+.tekst {
+    text-align: center;
+    gap: 10px;
+    font-family: verdana;
+    font-size: 25px;
+    font-weight: 650;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+.button {
+    align-self: center center;
+}
+.fouten {
+    margin-top: 31rem;
+    position: relative;
+    text-align: center;
+    font-family: verdana;
+    font-size: 25px;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    font-weight: 800;
+}
+span{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+    margin-left: 40.2rem;
+    margin-top: 1rem;
+    box-shadow: rgb(0, 0, 0) 0px 10px 20px -5px;
+  }
+  span a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  span a:before,
+  span a:after{
+    position: absolute;
+    content: "Shuffle";
+    text-transform: uppercase;
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  span a:before{
+    color: #fff;
+    font-weight: 650;
+    background: #a48cc1;
+    transform: rotateY(0deg) translateZ(25px);
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+  }
+  span a:after{
+    color: #a48cc1;
+    font-weight: 650;
+    transform: rotateX(90deg) translateZ(25px);
+    text-shadow: rgb(176, 176, 176) 1px 0 10px;
+  }
+  span a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+  
+
