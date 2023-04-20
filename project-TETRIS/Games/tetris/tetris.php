@@ -12,6 +12,7 @@ checkInLog();
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 		<link rel="stylesheet" href="/project-TETRIS/games/tetris/tetris.css" />
 		<link rel="stylesheet" href="/project-TETRIS/navbar/navfooter.css" />
+		<link rel="stylesheet" href="/project-TETRIS/messages/messages.css" />
 		<title>RetroGen</title>
 	</head>
 	<body>
@@ -46,12 +47,41 @@ checkInLog();
 </nav>
 		<!------------- Navbar End -------------->
 
+<!------------- messages -------------->
+
+	<!-- De popup zelf -->
+	<div id="Message" class="popupMessagesScreen">
+		<div class="Messages-content">
+			<span class="close" onclick="closeMessages()">&times;</span>
+      <div class="messages-titel">
+        <h4>Messages</h4>
+      </div>
+      <div class="friends-chat-container">
+        <div class="left-friendlist">
+          friendlijst
+        </div>
+        <div class="right-chatterbox">
+          <div class="textfield">
+            Tekstfield
+          </div>
+          <div class="inputfield">
+          <input type="text" id="typebox" name="typebox" value="" placeholder="type to chat..."><br>
+          <input type="submit" id="submitChat" value="Submit">
+          </div>
+        </div>
+      </div>
+		</div>
+	</div>
+
+<!------------- messages end -------------->
+		
+
 		<div class="containerTetris">
 			<div class="leftFlexbox">
 			<p>Hold</p>
 			<canvas class="holdDisplay" id="holdDisplay" width="196" height="118"></canvas>
 			</div>
-			<div class="middleFlexbox">
+			<div class="middleFlexbox" id="tetrisHide">
 				
 				<canvas class="tetrisCanvas" id="tetris" width="391" height="780">
 					<div class="content"></div>
@@ -87,12 +117,13 @@ checkInLog();
 					</div>
 				</div>
 			</div>
-			</div>
+		</div>
 
 		<!----------- Js ------------>
 		<script src="/project-TETRIS/navbar/navToggle.js"></script>
 		<script src="/project-TETRIS/games/tetris/tetrominoes.js"></script>
 		<script src="/project-TETRIS/games/tetris/tetris.js"></script>
+		<script src="/Project-TETRIS/messages/messages.js"></script>
 		<audio id="tetrisAudio"><source src="/project-TETRIS/tetris/tetrisAudio/03. A-Type Music (Korobeiniki).mp3" type="audio/mpeg" /></audio>
 	</body>
 </html>

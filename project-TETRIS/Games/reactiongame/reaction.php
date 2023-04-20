@@ -12,6 +12,7 @@ checkInLog();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="/project-TETRIS/Games/reactiongame/reaction.css">
     <link rel="stylesheet" href="/project-TETRIS/navbar/navfooter.css">    
+    <link rel="stylesheet" href="/project-TETRIS/messages/messages.css" />
     <title>RetroGen</title>
 </head>
 <body>
@@ -44,6 +45,36 @@ checkInLog();
     </div>
 </nav>
     <!-- Navbar End -->
+
+<!------------- messages -------------->
+
+	<!-- De popup zelf -->
+	<div id="Message" class="popupMessagesScreen">
+		<div class="Messages-content">
+			<span class="close" onclick="closeMessages()">&times;</span>
+      <div class="messages-titel">
+        <h4>Messages</h4>
+      </div>
+      <div class="friends-chat-container">
+        <div class="left-friendlist">
+          friendlijst
+        </div>
+        <div class="right-chatterbox">
+          <div class="textfield">
+            Tekstfield
+          </div>
+          <div class="inputfield">
+          <input type="text" id="typebox" name="typebox" value="" placeholder="type to chat..."><br>
+          <input type="submit" id="submitChat" value="Submit">
+          </div>
+        </div>
+      </div>
+		</div>
+	</div>
+
+<!------------- messages end -------------->
+
+
     <div class="reactText">
         <h1>Reaction Game!</h1>
     </div>
@@ -58,5 +89,7 @@ checkInLog();
     <!-- Javascript -->
     <script src="/project-TETRIS/Games/reactiongame/reaction.js"></script>
     <script src="/project-TETRIS/navbar/navToggle.js"></script>
+    <script src="/Project-TETRIS/messages/messages.js"></script>
+
 </body>
 </html>
