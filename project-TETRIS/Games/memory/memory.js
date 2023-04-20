@@ -11,7 +11,7 @@ function checkClickedCard(cardNum, cardId){
 //Geklikte kaart disablen, want je mag maar een keer op dezelfde kaart klikken
 document.getElementById(cardId).disabled = true;
 //juiste waarde op de kaart zetten
-document.getElementById(cardId).style = "background-image: url("+cardNum+".jpeg)";
+document.getElementById(cardId).style = "background-image: url(/project-tetris/games/memory/"+cardNum+".png)";
 //document.getElementById(cardId).style = "background: url(myimage.png)";
 
 //Lees en onthoudt klik1 en klik2
@@ -22,6 +22,24 @@ if(userClick1==0){
     userClick2 = cardNum;
     userSelectedCard2 = cardId;
 }
+
+let delay = 1000; // delay in milliseconds
+let canClick = true;
+
+function onClick() {
+  if (canClick) {
+    canClick = false;
+    setTimeout(function() {
+      canClick = true;
+    }, delay);
+    
+    // Put your click event code here
+    console.log("Clicked!");
+  }
+}
+
+// Attach the onClick function to your element
+document.getElementById("myButton").addEventListener("click", onClick);
 
 if(userClick2!=0){
 if(userClick1==userClick2){
