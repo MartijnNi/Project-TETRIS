@@ -47,6 +47,34 @@ checkInLog();
     </div>
 </nav>
 		<!----------- Navbar End ------------>
+
+<!------------- messages -------------->
+
+<div id="Message" class="popupMessagesScreen">
+		<div class="Messages-content">
+			<span class="close" onclick="closeMessages()">&times;</span>
+      <div class="messages-titel">
+        <h4>Messages</h4>
+      </div>
+      <div class="friends-chat-container">
+        <div class="left-friendlist">
+          friendlijst
+        </div>
+        <div class="right-chatterbox">
+          <div class="textfield">
+            Tekstfield
+          </div>
+          <div class="inputfield">
+          <input type="text" id="typebox" name="typebox" value="" placeholder="type to chat..."><br>
+          <input type="submit" id="submitChat" value="Submit">
+          </div>
+        </div>
+      </div>
+		</div>
+	</div>
+
+<!------------- messages end -------------->
+
 <div class="flex-container">
     <div class="friends-container">
         <div class="search-container">
