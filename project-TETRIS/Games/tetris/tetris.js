@@ -136,9 +136,7 @@ function randomPiece() {
 	return new Piece(PIECES[r][0], PIECES[r][1]);
 }
 
-function holdPiece() {
-alert("jeroen zn kleine piemeltje!");
-}
+
 
 function giveNextPiece() {
 	let newP = nextP;
