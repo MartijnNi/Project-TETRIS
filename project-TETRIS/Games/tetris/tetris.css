@@ -15,7 +15,22 @@ body {
 	background-position: center;
 }
 
+
+#game-over {
+	position: absolute;
+	margin-top: 7.6rem;
+	top: 0;
+	border: 3px solid white;
+	display: block;
+	height: 780px;
+	width: 391px;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	background: radial-gradient(circle, rgba(138, 32, 150, 0.7) 35%, rgba(32, 24, 62, 0.7) 100%);
+}
 .containerTetris {
+	margin-top: 2rem;
 	height: 100%;
 	width: 100%;
 	max-width: 100%;
@@ -61,23 +76,6 @@ body {
 	margin-left: 10rem;
 }
 
-#game-over {
-	margin-top: 7rem;
-	border: 3px solid white;
-	padding: 0;
-	margin: auto;
-	display: block;
-	width: 391px;
-	height: 780px;
-	position: absolute;
-	top: 4.9rem;
-	bottom: 0;
-	left: 0;
-	right: 0;
-
-	display: none;
-	background: radial-gradient(circle, rgba(138, 32, 150, 0.7) 35%, rgba(32, 24, 62, 0.7) 100%);
-}
 
 .screen p {
 	padding-top: 2rem;
