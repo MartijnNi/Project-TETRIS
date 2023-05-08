@@ -89,14 +89,95 @@ checkInLog();
         </div>
         <div class="friends-display-container">
             <div class="friend-display">
-                <div class="friend1"></div>
-                <div class="friend2"></div>
-                <div class="friend3"></div>
-                <div class="friend4"></div>
-                <div class="friend5"></div>
-                <div class="friend6"></div>
-                <div class="friend7"></div>
-                <div class="friend8"></div>
+            <div class="friend1">
+                  <div class="friendTop">
+                    <div class="friendPfp1"></div>
+                    <div class="friendUsername1">Je moeder</div>
+                  </div>
+                  <div class="friendBot">
+                    <div class="friendStatus1">"echo biablabal"</div>
+                    <div class="friendFavGame1">Favorite Game: Snake</div>
+                    <button class="profileBtn1">Show Profile</button>
+                  </div>
+                </div>
+                <div class="friend2">
+                  <div class="friendTop">
+                    <div class="friendPfp2"></div>
+                    <div class="friendUsername2">Lekkere klasgenoot</div>
+                  </div>
+                  <div class="friendBot">
+                    <div class="friendStatus2">status</div>
+                    <div class="friendFavGame2">friendfavgame</div>
+                    <button class="profileBtn2">Show Profile</button>
+                  </div>
+                </div>
+                <div class="friend3">
+                  <div class="friendTop">
+                    <div class="friendPfp3"></div>
+                    <div class="friendUsername3">Jezus</div>
+                  </div>
+                  <div class="friendBot">
+                    <div class="friendStatus3">status</div>
+                    <div class="friendFavGame3">friendfavgame</div>
+                    <button class="profileBtn3">Show Profile</button>
+                  </div>
+                </div>
+                <div class="friend4">
+                  <div class="friendTop">
+                    <div class="friendPfp4"></div>
+                    <div class="friendUsername4">Putin</div>
+                  </div>
+                  <div class="friendBot">
+                    <div class="friendStatus4">status</div>
+                    <div class="friendFavGame4">friendfavgame</div>
+                    <button class="profileBtn4">Show Profile</button>
+                  </div>
+                </div>
+                <div class="friend5">
+                  <div class="friendTop">
+                    <div class="friendPfp5"></div>
+                    <div class="friendUsername5">Elon Musk</div>
+                  </div>
+                  <div class="friendBot">
+                    <div class="friendStatus5">status</div>
+                    <div class="friendFavGame5">friendfavgame</div>
+                    <button class="profileBtn5">Show Profile</button>
+                  </div>
+                </div>
+                <div class="friend6">
+                  <div class="friendTop">
+                    <div class="friendPfp6"></div>
+                    <div class="friendUsername6">username</div>
+                  </div>
+                  <div class="friendBot">
+                    <div class="friendStatus6">status</div>
+                    <div class="friendFavGame6">friendfavgame</div>
+                    <button class="profileBtn6">Show Profile</button>
+                  </div>
+                </div>
+                <div class="friend7">
+                  <div class="friendTop">
+                    <div class="friendPfp7"></div>
+                    <div class="friendUsername7">username</div>
+                  </div>
+                  <div class="friendBot">
+                    <div class="friendStatus7">status</div>
+                    <div class="friendFavGame7">friendfavgame</div>
+                    <button class="profileBtn7">Show Profile</button>
+                  </div>
+                </div>
+                <div class="friend8">
+                  <div class="friendTop">
+                    <div class="friendPfp8"></div>
+                    <div class="friendUsername1">username</div>
+                  </div>
+                  <div class="friendBot">
+                    <div class="friendStatus8">status</div>
+                    <div class="friendFavGame8">friendfavgame</div>
+                    <button class="profileBtn8">Show Profile</button>
+                  </div>
+                </div>
+
         </div>
     </div>
 

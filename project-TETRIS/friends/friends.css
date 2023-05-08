@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     z-index: 99;
+    font-family: "Super Legend Boy", sans-serif;
 }
 body {
     z-index: 100;
@@ -20,10 +21,9 @@ body {
 
 .friends-container{
     display: flex;
-    background-color: rgba(199, 199, 199, 0.357);
+    background-color: rgba(172, 159, 159, 0);
     height: 45rem;
     width: 95rem;
-    opacity: 1;
     border-radius:25px ;
     flex-direction: column;
 }
@@ -70,7 +70,6 @@ body {
     font-size: 40px;
     border: 2px solid white;
     color: white;
-    font-family: "Super Legend Boy", sans-serif;
 	text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
     transition: 0.2s;
 }
@@ -100,11 +99,84 @@ body {
 .friend1, .friend2, .friend2, .friend3, .friend4, .friend5, .friend6, .friend7, .friend8 {
 height: 15rem;
 width: 21rem;
-border: rgb(157, 0, 255) 2px solid;
-background-color: rgba(170, 0, 255, 0.446);
+background-color: #442F38;
 margin: 1rem;
 display: flex;
 padding-top: 1rem;
 border-radius: 15px;
+display: flex;
+flex-direction: column;
+transition: 0.5s;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.friend1:hover, .friend2:hover, .friend2:hover, .friend3:hover, .friend4:hover, .friend5:hover, .friend6:hover, .friend7:hover, .friend8:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+    }
+
+.friendTop {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 40%;
+    width: 100%;
+}
+.friendBot {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 60%;
+   padding-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    background-color: #c6b38e8d;  
+    border-radius: 10px;
+    margin-top: 0.5rem;
+ 
+}
+
+.friendPfp1, .friendPfp2, .friendPfp3, .friendPfp4, .friendPfp5, .friendPfp6, .friendPfp7, .friendPfp8  {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    background-color: white;
+    margin-left: 1rem;
+    
+}
+
+.friendUsername1, .friendUsername2, .friendUsername3, .friendUsername4, .friendUsername5, .friendUsername6, .friendUsername7, .friendUsername8 {
+ padding-top: 2rem;
+ color: white;
+	text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(175, 175, 175), 0 0 0.2em rgb(209, 209, 209);
+ font-size: 20px;
+}
+
+.friendStatus1, .friendStatus2, .friendStatus3, .friendStatus4, .friendStatus5, .friendStatus6, .friendStatus7, .friendStatus8{
+    color: black;
+padding-left: 2rem;
+text-shadow: -1px 3px 5px rgba(0,0,0,0.56);
+}
+
+.friendFavGame1, .friendFavGame2, .friendFavGame3, .friendFavGame4, .friendFavGame5, .friendFavGame6, .friendFavGame7, .friendFavGame8 {
+ padding-left: 2rem;
+ color: black;
+ text-shadow: -1px 3px 5px rgba(0,0,0,0.56);
+}
+
+.profileBtn1, .profileBtn2, .profileBtn3, .profileBtn4, .profileBtn5, .profileBtn6, .profileBtn7, .profileBtn8 {
+    width: 50%;
+    height: 2rem;
+    margin-left: 25%;
+    color: black;
+    text-shadow: -1px 3px 5px rgba(0,0,0,0.56);
+    border-radius: 15px;
+    
+ 
+}
+.profileBtn1:hover, .profileBtn2:hover, .profileBtn3:hover, .profileBtn4:hover, .profileBtn5:hover, .profileBtn6:hover, .profileBtn7:hover, .profileBtn8:hover{
+    transition: 0.2s;
+    background-color: rgb(189, 189, 189);
+ 
 }
 
