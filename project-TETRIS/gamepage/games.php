@@ -104,7 +104,7 @@ checkInLog();
         <a href="/Project-TETRIS/Games/pac-man/pacman.php"><img src="/Project-TETRIS/media/gamepage/pac-man-peach-retro-games-hd-wallpaper-thumb.jpg" /></a>
       </div>
       <div class="slide four">
-        <a href="/Project-TETRIS/Games/hangman/hangman.php"><img src="/Project-TETRIS/media/gamepage/png-clipart-words-game-the-hanged-man-hangman-hang-the-pirate-free-word-game-android-game-sports-equipment-thumbnail.png" /></a>
+        <a href="/Project-TETRIS/Games/hangman/hangman.php"><img src="/Project-TETRIS/media/gamepage/Hangman cover.png"></a>
       </div>
       <div class="slide five">
         <img src="/Project-TETRIS/media/gamepage/Content not available.png" />
@@ -119,7 +119,7 @@ checkInLog();
       <img src="/Project-TETRIS/media/gamepage/Content not available.png" />
     </div>
     <div class="slide nine">
-      <a href="/Project-TETRIS/Games/snake/snake.php"><img src="/Project-TETRIS/media/gamepage/snakethumbnail.jpg" /></a>
+      <a href="/Project-TETRIS/Games/snake/snake.php"><img src="/Project-TETRIS/media/gamepage/Panda-cover.jpg" /></a>
     </div>
   </div>
 </div>

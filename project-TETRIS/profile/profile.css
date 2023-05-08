@@ -512,14 +512,19 @@ select {
 	background-size: cover;
 }
 #snakeButton {
+	background-image: url(/project-TETRIS/media/gamepage/Panda-cover.jpg);
 	background-size: cover;
+	background-size: contain
 }
 #tetrisButton {
 	background-image: url(/project-TETRIS/profile/tetrisThumbnail.png);
-	background-size: cover;
+	background: cover;
+	background-size:100%;
 }
 #hangmanButton {
-	background-size: cover;
+	background-image: url(/project-TETRIS/media/gamepage/Hangman\ cover.png);
+	background: cover;
+	background-size: contain;
 }
 #reactionGameButton {
 	background-size: cover;
