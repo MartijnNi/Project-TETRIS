@@ -1,5 +1,6 @@
 let green = false;
 let startTime;
+let clicked = false;
 
 function startGame() {
     document.getElementById("startGame").style.visibility = "hidden";
@@ -20,7 +21,8 @@ startButton.addEventListener("click", () => {
 });
 
 function field() {
-    if (green) {
+    if (green && !clicked) {
+        clicked = true;
         const elapsedTime = Date.now() - startTime;
         const restartButton = document.createElement("button");
         restartButton.innerHTML = "Restart";
@@ -29,8 +31,17 @@ function field() {
         document.getElementById("field").innerHTML = `You clicked in ${elapsedTime} milliseconds!<br><br>`;
         document.getElementById("field").appendChild(restartButton);
         restartButton.addEventListener("click", restart);
+
+        // Make the field unclickable
+        const fieldElement = document.getElementById("field");
+        const clickHandler = () => {
+            fieldElement.removeEventListener("click", clickHandler);
+        };
+        fieldElement.addEventListener("click", clickHandler);
     }
 }
+
+
 
 
 
