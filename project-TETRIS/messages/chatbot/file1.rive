@@ -1,0 +1,47 @@
+! version = 2.0
+! local concat = newline
+
+
+
+// Error out
++ *
+- I'm not sure how to reply to that.
+- Try asking your question a different way.
+- Need help? help 😉.
+
+//help
+
++ help
+- I am a chatbot made specifically for this website 😉.<br> So your mother has to write your SE again.<br>
+^ There is a lot you dont know about me even i dont know anything or do i? Do you know even know who i am? Dori?<br><br>
+^ Oh ya right the help command her it is.<br<br>
+^ ....Commands....<br> 
+^ type search followed with what you want or ask who i am!<br>
+^ type games
+
+
+//search function
++ search *
+- <a href="http://google.com/search?q=<star>">Click Here</a>
+
++ how *
+- <a href="http://google.com/search?q=how<star>">Click Here</a>
+
++ who *
+- <a href="http://google.com/search?q=who<star>">Click Here</a>
+
+//All games
+
++ [games|all games|what games do you have|game]
+- Online Game List<br><br>
+^ <a href="http://localhost/Project-TETRIS/Games/snake/snake.php">Panda Snake</a><br>
+^ <a href="http://localhost/Project-TETRIS/Games/tetris/tetris.php">Tetris</a><br>
+^ <a href="http://localhost/Project-TETRIS/Games/reactiongame/reaction.php">Reaction Game</a><br>
+^ <a href="http://localhost/Project-TETRIS/Games/pac-man/pacman.php">Pac-Man</a><br>
+^ <a href="http://localhost/Project-TETRIS/Games/hangman/hangman.php">Hangman</a>
+
+//---------------------------------------------------------------------
+
+
++ [hey|hello|hoi|hai|hi|wassup|yo|]
+- how are you? 

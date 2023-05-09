@@ -11,3 +11,12 @@
 			document.getElementById("carousel").style.display = "block";
 			document.getElementById("titelContainer").style.display = "block";
 		}
+
+
+		//mario div click
+		var div = document.getElementById("myDiv");
+		div.addEventListener("click", myFunction);
+	  
+		function myFunction() {
+		  // Do something when the div is clicked
+		}

@@ -42,9 +42,10 @@ body {
 #game-board {
 	background-color: #002f1cfb;
 	box-shadow: 0px 0px 100px 23px #067649f7;
-  opacity: 75%;
+  	opacity: 75%;
 	width: 70vmin;
 	height: 70vmin;
+	z-index: 100;
 	top: 0rem;
 	left: 0;
 	right: 0;
