@@ -12,23 +12,24 @@
 //help
 
 + help
-- I'm a chatbot made specifically for this website 😉.<br> So your mother has to write your SE again.<br>
-^ There is a lot you dont know about me even i dont know anything or do i? Do you know even know who i am? Dori?<br><br>
-^ Oh ya right the help command her it is.<br<br>
-^ ....Commands....<br> 
-^ type search followed with what you want or ask who i am!<br>
-^ type games
+- I'm a chatbot specifically made for this website 😉.<br> So your mother has to write your SE again.<br>
+^ There is a lot you don't know about me.<br> Even I dont know anything... or do I?<br> Do you know even know who I am? <br><br>Dori..?<br><br>
+^ Oh ya, right, the help commands.. here they are!<br<br>
+^ <br> 
+^ Try typing "Search" followed with what you want or ask who I am!<br>
+^ You can try typing "Games"!
+^ You can also ask me things, but make sure to use the words "Who" or "How"!
 
 
 //search function
 + search *
-- <a href="http://google.com/search?q=<star>">Click Here</a>
+- <a href="http://google.com/search?q=<star>" target="_blank">Click Here</a>
 
 + how *
-- <a href="http://google.com/search?q=how<star>">Click Here</a>
+- <a href="http://google.com/search?q=how <star>" target="_blank">Click Here</a>
 
 + who *
-- <a href="http://google.com/search?q=who<star>">Click Here</a>
+- <a href="http://google.com/search?q=who<star> target="_blank">Click Here</a>
 
 //All games
 
@@ -41,9 +42,3 @@
 ^ <a href="http://localhost/Project-TETRIS/Games/hangman/hangman.php">Hangman</a>
 
 //---------------------------------------------------------------------
-
-
-+ [hey|hello|hoi|hai|hi|wassup|sup]
-- Hey! How are you? 
-- Sup! Whatcha doin'?
-- Yoyo! 

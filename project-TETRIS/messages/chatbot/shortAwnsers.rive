@@ -33,8 +33,26 @@
 // mario story
 + [who are you|what are you] 
 - I am Mario the Bot! My creator has build me for no reason and now Im stuck here 😖<br><br>
-^ I think if they are done building on this site that i'll be in this program for ever... oh and before i forget you can ask me how or who with anything else behind it and i will surf it up for you.<br>
+^ I think if they are done building on this site that i'll be in this program for ever...
 
 + what is your favorite *color
 - that would be partial to #0000FF
+
++ [hey|hello|hoi|hai|hi|wassup|sup]
+- Hey! How are you? 
+- Sup! Whatcha doin'?
+- Yoyo! How are you?
+
++ [fine|well|great|awesome]
+- That's awesome! Wanna play some games?
+- Great! Try out Snake!
+- Thats nice. Check out Tetris!
+
++ [bad|shit|meh]
+- Talk to someone!
+- Want some distraction? Play Pac-Man!
+- I'm Here for you!
+
++ [how are you|good and you|good wby]
+- I'm fine aswell, thanks for asking!
 

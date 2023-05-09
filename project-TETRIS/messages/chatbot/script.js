@@ -53,12 +53,12 @@ userInput.addEventListener("keypress", function(event) {
 
 //Array chatbot splash screen
 var words = [
-	"Hi there! are you breaking records today? type 'help' for info",
-  "He how you doing. type 'help' for info",
+	"Hi there! Are you breaking records today? type 'help' for info!",
+  "Sup! How you doing? type 'help' for info",
   "Waddupp! type 'help' for info",
-  "What do you wanne know? type 'help' for info",
-  "I can goolge for you if you use search (something) type 'help' for info",
-  "Secerts arent real when you're bot",
+  "Hi! What do you wanna know? type 'help' for info",
+  "I can google anything for you! Type 'search' (something) or type 'help' for info",
+  "Secrets aren't real when you're bot",
   "Its a me Mario! type 'help' for info"
 ];
 
