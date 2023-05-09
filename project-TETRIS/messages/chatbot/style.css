@@ -5,6 +5,7 @@
   overflow-x: hidden;
   display: flex;
   flex-direction: column-reverse; /* Reverses the order of child elements */
+  display: none;
 }
 
 .chat-message {

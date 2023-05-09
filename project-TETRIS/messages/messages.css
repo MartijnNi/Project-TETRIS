@@ -1,5 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/super-legend-boy?styles=62384");
-
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
 		.span {
 			font-family: sans-serif !important;
 		}
@@ -90,8 +90,8 @@
 			height: fit-content;
 			min-height: 19%;
 			border-radius: 15px;
-			background-color:rgba(27, 135, 177, 0.772);
-			
+			background-color:rgb(64, 72, 162);
+			cursor: pointer;			
 		}
 
 		.bot-avatar{
@@ -108,10 +108,11 @@
 
 		.marioTitel h1{
 			text-align: center;
-			margin-left: 1.5rem;
+			margin-left: 3rem;
 			border: red solid 2px;
 			width: 100%;
 			height: 100%;
+			font-family: 'Lancelot', cursive;
 		}
 
 		.right-chatterbox{
@@ -119,7 +120,6 @@
 			border-radius: 10px;
 			display: flex;
 			flex-direction: column;
-
 			border: yellow 1px ;
 			margin-left: 1rem;
 			width: 70%;

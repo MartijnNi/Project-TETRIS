@@ -14,9 +14,14 @@
 
 
 		//mario div click
-		var div = document.getElementById("myDiv");
+		var div = document.getElementById("bot-friend");
 		div.addEventListener("click", myFunction);
 	  
-		function myFunction() {
-		  // Do something when the div is clicked
-		}
+		function MarioChat() {
+			var chatBox = document.getElementById("chat-box");
+			if (chatBox.style.display === "none") {
+			  chatBox.style.display = "block";
+			} else {
+			  chatBox.style.display = "none";
+			}
+		  }
