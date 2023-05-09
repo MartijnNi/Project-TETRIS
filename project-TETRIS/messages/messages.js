@@ -16,12 +16,18 @@
 		//mario div click
 		var div = document.getElementById("bot-friend");
 		div.addEventListener("click", myFunction);
-	  
 		function MarioChat() {
 			var chatBox = document.getElementById("chat-box");
-			if (chatBox.style.display === "none") {
-			  chatBox.style.display = "block";
-			} else {
+			if (chatBox.style.display === "block") {
 			  chatBox.style.display = "none";
+			  document.getElementById("send-btn").style.display = "none";
+			  document.getElementById("user-input").style.display = "none";
+			  document.getElementById("textField").style.display = "none";
+
+			} else {
+			  chatBox.style.display = "block";
+			  document.getElementById("textField").style.display = "block";
+			  document.getElementById("send-btn").style.display = "block";
+			  document.getElementById("user-input").style.display = "block";
 			}
 		  }

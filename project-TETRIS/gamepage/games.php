@@ -66,15 +66,15 @@ checkInLog();
           <div id="bot-friend"  onclick="MarioChat()">
             <div class="bot-avatar"></div>
             <div class="marioTitel">
-              <h1>Mario</h1>
+              <h1>🤖 Mario 🤖 </h1>
             </div>
-           </div>
+          </div>
           <div id="bot2-friend">
             test
           </div>
         </div>
         <div class="right-chatterbox">
-          <div class="textfield">
+          <div id="textField" class="textfield">
            <div id="chat-box" class="chat-box">
             <div class="chat-log">
               <div class="chat-message bot-message">

@@ -13,6 +13,7 @@ checkInLog();
     <link rel="stylesheet" href="/Project-TETRIS/Games/snake/snake.css">
     <link rel="stylesheet" href="/Project-TETRIS/navbar/navfooter.css">
     <link rel="stylesheet" href="/Project-TETRIS/messages/messages.css">
+    <link rel="stylesheet" href="/project-TETRIS/messages/chatbot/style.css">
 
     <title>RetroGen</title>
 	</head>
@@ -49,7 +50,6 @@ checkInLog();
     </div>
 </nav>
 <!------------- Navbar End -------------->
-
 <div id="Message" class="popupMessagesScreen">
 		<div class="Messages-content">
 			<span class="close" onclick="closeMessages()">&times;</span>
@@ -61,16 +61,16 @@ checkInLog();
           <div id="bot-friend"  onclick="MarioChat()">
             <div class="bot-avatar"></div>
             <div class="marioTitel">
-              <h1>MamaMiaBot</h1>
+              <h1>🤖 Mario 🤖 </h1>
             </div>
-           </div>
+          </div>
           <div id="bot2-friend">
             test
           </div>
         </div>
         <div class="right-chatterbox">
-          <div class="textfield">
-           <div class="chat-box">
+          <div id="textField" class="textfield">
+           <div id="chat-box" class="chat-box">
             <div class="chat-log">
               <div class="chat-message bot-message">
                 <div id="splash-sentence"></div>
@@ -117,8 +117,9 @@ checkInLog();
 
 <script src="/Project-TETRIS/navbar/navToggle.js"></script>
 <script src="/Project-TETRIS/Games/snake/game.js" defer type="module"></script>
-<script src="/Project-TETRIS/messages/messages.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/rivescript/dist/rivescript.js"></script>
+<script src="/Project-TETRIS/messages/chatbot/script.js"></script>
+<script src="/Project-TETRIS/messages/messages.js"></script>
 
 </body>
 </html>

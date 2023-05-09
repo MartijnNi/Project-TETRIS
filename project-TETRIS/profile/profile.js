@@ -29,14 +29,17 @@ function toggleInfo(buttonId, targetId) {
   });
 
   // change the button color to indicate which button is active
+  var buttons = document.querySelectorAll(".button");
   buttons.forEach(function(button) {
     if (button.id === buttonId) {
-      button.style.backgroundColor = 'gray';
+      button.style.transform = "scale(1.03)";
+      button.style.transition = "transform 0.1s";
     } else {
-      button.style.backgroundColor = '';
+      button.style.transform = "scale(1.0)";
+      button.style.transition = "transform 0.1s";
     }
   });
-}
+  
 
 function previewImage() {
   var fileInput = document.getElementById('myFileInput');
@@ -48,4 +51,5 @@ function previewImage() {
       document.querySelector('img').src = imgSrc;
   }
   reader.readAsDataURL(file);
+}
 }
