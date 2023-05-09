@@ -2,37 +2,37 @@
 - Where it belongs.
 
 + how (old|new) are you
-- im dead inside how about you?
+- Im dead inside how about you?
 
 + same
-- nice.
+- Nice.
 
 + yes
-- nice.
+- Nice.
 
 + (okey|oke|ok|oki)
-- sick!
+- Sick!
 
 + f
 - Respect
 
 + thanks
-- you are welcome.
+- You are welcome.
 
 + no
-- ok. then not.
+- Ok. then not.
 
 + [fine you|good|good and you|fine and you|great|good you]
-- im doing great as well how can i help you today.
+- Im doing great as well! How can I help you today?
 
 + (wadupp|wadup|wadupp|yooo|yoo|yo)
-- you hella sick, wanne play Panda snake?<br><br>
+- You hella sick! Wanna play Panda-Snake?<br><br>
 ^ <a href="http://localhost/Project-TETRIS/Games/snake/snake.php">Try it out!</a>
 
 
 // mario story
 + [who are you|what are you] 
-- I am Mario the search-Bot my creator has build me for no reason and now im stuck here.<br><br>
+- I am Mario the Bot! My creator has build me for no reason and now Im stuck here 😖<br><br>
 ^ I think if they are done building on this site that i'll be in this program for ever... oh and before i forget you can ask me how or who with anything else behind it and i will surf it up for you.<br>
 
 + what is your favorite *color
