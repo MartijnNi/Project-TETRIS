@@ -75,8 +75,42 @@
 		.left-friendlist {
 			background-color: #00000031;
 			border:  red 1px;
-			border-radius: 10px;
+			border-radius: 15px;
 			width: 30%;
+			height: 100%;
+			flex-direction: column;
+			overflow-y: scroll;
+			display: flex;
+		}
+
+		#bot-friend{
+			display: flex;
+			width: 95%;
+			margin: 10px;
+			height: fit-content;
+			min-height: 19%;
+			border-radius: 15px;
+			background-color:rgba(27, 135, 177, 0.772);
+			
+		}
+
+		.bot-avatar{
+			flex-direction: row;
+			border-radius: 100%;	
+			background-image: url(/project-TETRIS/messages/chatbot/Mario\ head\ cursed.jpg);
+			background-size:cover;
+			position:relative;	
+			width: 6.5rem;
+			height: 6.5rem;
+			margin-left: 0.3rem;
+			margin-top: 0.1rem;
+		}
+
+		.marioTitel h1{
+			text-align: center;
+			margin-left: 1.5rem;
+			border: red solid 2px;
+			width: 100%;
 			height: 100%;
 		}
 
@@ -106,7 +140,7 @@
 			flex-direction: row;
 		}
 
-		#typebox {
+		#user-input {
 			margin-top: 0.5rem;
 			width: 80%;
 			height: 2rem;
@@ -114,12 +148,15 @@
 			text-align: left;
 		}
 
-		#submitChat{
+		#send-btn{
 			margin-top: 0.5rem;
 			margin-left: 1%;
 			width: 18%;
 			height: 2rem;
 		}
+
+		
+		
 
 
 

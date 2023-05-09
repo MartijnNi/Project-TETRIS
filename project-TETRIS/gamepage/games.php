@@ -13,6 +13,7 @@ checkInLog();
     <link rel="stylesheet" href="/Project-TETRIS/gamepage/gamepage.css">
     <link rel="stylesheet" href="/Project-TETRIS/navbar/navfooter.css">    
     <link rel="stylesheet" href="/Project-TETRIS/messages/messages.css">
+    <link rel="stylesheet" href="/project-TETRIS/messages/chatbot/style.css">
     <title>RetroGen</title>
 </head>
 <body>
@@ -62,15 +63,29 @@ checkInLog();
       </div>
       <div class="friends-chat-container">
         <div class="left-friendlist">
-          friendlijst
+          <div id="bot-friend"  onclick="MarioChat()">
+            <div class="bot-avatar"></div>
+            <div class="marioTitel">
+              <h1>MamaMiaBot</h1>
+            </div>
+           </div>
+          <div id="bot2-friend">
+            test
+          </div>
         </div>
         <div class="right-chatterbox">
           <div class="textfield">
-            Tekstfield
+           <div class="chat-box">
+            <div class="chat-log">
+              <div class="chat-message bot-message">
+                <div id="splash-sentence"></div>
+            </div>
           </div>
+      </div>
+        </div>
           <div class="inputfield">
-          <input type="text" id="typebox" name="typebox" value="" placeholder="type to chat..."><br>
-          <input type="submit" id="submitChat" value="Submit">
+          <input type="text" id="user-input" name="typebox" value="" placeholder="Type your message here..."><br>
+          <input type="submit" id="send-btn" value="Send">
           </div>
         </div>
       </div>
@@ -129,6 +144,8 @@ checkInLog();
 
 
 <!----------- Js ------------>
+<script src="https://cdn.jsdelivr.net/npm/rivescript/dist/rivescript.js"></script>
+<script src="/Project-TETRIS/messages/chatbot/script.js"></script>
 <script src="/Project-TETRIS/navbar/navToggle.js"></script>
 <script src="/Project-TETRIS/messages/messages.js"></script>
 <!----------- Eind Js ------------>
