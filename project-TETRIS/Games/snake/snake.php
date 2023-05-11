@@ -100,15 +100,15 @@ checkInLog();
     <h1>Game Over!</h1>
     <p>Points earned: </p>
   <form method="post" name="scorePost" action="/project-TETRIS/Games/snake/snake.php">
-  <div id="score2" name="score" class="score2"> 0 <br></div> 
-  <input id="btn" name="submit" type="submit" class="restartButton" onclick="game_restart()">Restart</input>
+  <div id="score2" class="score2"> 0 <br></div> 
+  <input type="text" id="scoreTrack" name="score" value="0"></input>
+  <input id="btn" name="submit" type="submit" class="restartButton">Restart</input>
   </div>
 </form>
 
 <?php
 
 if(isset($_POST['submit'])){
-  echo ("hello");
   $userId = $_SESSION['userId'];
   $gameId = 2;
   $score = $_POST['score'];
