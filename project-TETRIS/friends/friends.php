@@ -92,7 +92,7 @@ checkInLog();
             <div class="friend1">
                   <div class="friendTop">
                     <div class="friendPfp1"></div>
-                    <div class="friendUsername1">Je moeder</div>
+                    <div class="friendUsername1"><?php echo $_SESSION['user_12']?></div>
                   </div>
                   <div class="friendBot">
                     <div class="friendStatus1">"echo biablabal"</div>
