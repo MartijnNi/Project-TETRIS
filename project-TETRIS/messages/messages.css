@@ -90,7 +90,7 @@
 			height: fit-content;
 			min-height: 19%;
 			border-radius: 15px;
-			background-color:rgb(64, 72, 162);
+			background-color:rgba(75, 83, 168, 0.787);
 			cursor: pointer;			
 		}
 
@@ -108,8 +108,11 @@
 
 		.marioTitel h1{
 			text-align: center;
-			margin-left: 3rem;
-			border: red solid 2px;
+			font-size: 2rem;
+			margin-left: 1.4rem;
+			margin-top: 1.5rem;
+			border: red  2px;
+			color: rgb(245, 212, 130);
 			width: 100%;
 			height: 100%;
 			font-family: 'Lancelot', cursive;
@@ -131,6 +134,7 @@
 			height: 90%;
 			background-color: #ffeac9cb;
 			border-radius: 10px;
+			display: none;
 		}
 
 		.inputfield{
@@ -146,6 +150,7 @@
 			height: 2rem;
 			border-radius: 10px;
 			text-align: left;
+			display: none;
 		}
 
 		#send-btn{
@@ -153,6 +158,7 @@
 			margin-left: 1%;
 			width: 18%;
 			height: 2rem;
+			display: none;
 		}
 
 		
