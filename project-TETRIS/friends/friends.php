@@ -92,10 +92,10 @@ checkInLog();
             <div class="friend1">
                   <div class="friendTop">
                     <div class="friendPfp1"></div>
-                    <div class="friendUsername1">Je moeder</div>
+                    <div class="friendUsername1">tempFriend</div>
                   </div>
                   <div class="friendBot">
-                    <div class="friendStatus1">"echo biablabal"</div>
+                    <div class="friendStatus1">status</div>
                     <div class="friendFavGame1">Favorite Game: Snake</div>
                     <button class="profileBtn1">Show Profile</button>
                   </div>
@@ -103,7 +103,7 @@ checkInLog();
                 <div class="friend2">
                   <div class="friendTop">
                     <div class="friendPfp2"></div>
-                    <div class="friendUsername2">Lekkere klasgenoot</div>
+                    <div class="friendUsername2">tempFriend</div>
                   </div>
                   <div class="friendBot">
                     <div class="friendStatus2">status</div>
@@ -114,7 +114,7 @@ checkInLog();
                 <div class="friend3">
                   <div class="friendTop">
                     <div class="friendPfp3"></div>
-                    <div class="friendUsername3">Jezus</div>
+                    <div class="friendUsername3">tempFriend</div>
                   </div>
                   <div class="friendBot">
                     <div class="friendStatus3">status</div>
@@ -125,7 +125,7 @@ checkInLog();
                 <div class="friend4">
                   <div class="friendTop">
                     <div class="friendPfp4"></div>
-                    <div class="friendUsername4">Putin</div>
+                    <div class="friendUsername4">tempFriend</div>
                   </div>
                   <div class="friendBot">
                     <div class="friendStatus4">status</div>
@@ -136,7 +136,7 @@ checkInLog();
                 <div class="friend5">
                   <div class="friendTop">
                     <div class="friendPfp5"></div>
-                    <div class="friendUsername5">Elon Musk</div>
+                    <div class="friendUsername5">tempFriend</div>
                   </div>
                   <div class="friendBot">
                     <div class="friendStatus5">status</div>
@@ -147,7 +147,7 @@ checkInLog();
                 <div class="friend6">
                   <div class="friendTop">
                     <div class="friendPfp6"></div>
-                    <div class="friendUsername6">username</div>
+                    <div class="friendUsername6">tempFriend</div>
                   </div>
                   <div class="friendBot">
                     <div class="friendStatus6">status</div>
@@ -158,7 +158,7 @@ checkInLog();
                 <div class="friend7">
                   <div class="friendTop">
                     <div class="friendPfp7"></div>
-                    <div class="friendUsername7">username</div>
+                    <div class="friendUsername7">tempFriend</div>
                   </div>
                   <div class="friendBot">
                     <div class="friendStatus7">status</div>
@@ -169,7 +169,7 @@ checkInLog();
                 <div class="friend8">
                   <div class="friendTop">
                     <div class="friendPfp8"></div>
-                    <div class="friendUsername1">username</div>
+                    <div class="friendUsername1">tempFriend</div>
                   </div>
                   <div class="friendBot">
                     <div class="friendStatus8">status</div>
