@@ -18,6 +18,8 @@ catch(PDOException $e) {
     echo $e->getMessage();
 }
 
+
+
 function checkInLog() {
     session_start();
     if(!isset($_SESSION["inlog"]) || $_SESSION["inlog"] != 'true'){

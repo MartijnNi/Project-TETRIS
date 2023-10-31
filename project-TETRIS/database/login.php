@@ -9,6 +9,7 @@ if(isset($_POST['submit'])){
     $query->execute();
 
     $account = $query->fetch(PDO::FETCH_OBJ);
+    
     if($account != NULL) {
         //Check of wachtwoord juist is
         if (password_verify($wachtwoord, $account->userpassword)){
